@@ -5,9 +5,7 @@ using System.Text;
 
 namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
-    public class WeaponPlayer
+    public class Evolution
     {
-        private string name;
-        private string description;
     }
 }
