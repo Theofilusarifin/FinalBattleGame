@@ -5,10 +5,8 @@ using System.Text;
 
 namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
-    public class GameActor
+    public class Enemy
     {
-        private string name;
-        private int life;
-        private int health;
+        private int speed;
     }
 }
