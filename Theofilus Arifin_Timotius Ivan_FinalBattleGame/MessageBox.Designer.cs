@@ -29,9 +29,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelInformation = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonOkay = new System.Windows.Forms.Button();
+            this.timerClick = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // labelInformation
@@ -65,7 +67,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonOkay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOkay.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonOkay.ForeColor = System.Drawing.Color.LightGreen;
-            this.buttonOkay.Location = new System.Drawing.Point(193, 79);
+            this.buttonOkay.Location = new System.Drawing.Point(193, 80);
             this.buttonOkay.Name = "buttonOkay";
             this.buttonOkay.Size = new System.Drawing.Size(139, 60);
             this.buttonOkay.TabIndex = 1;
@@ -74,6 +76,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonOkay.Click += new System.EventHandler(this.buttonOkay_Click);
             this.buttonOkay.MouseEnter += new System.EventHandler(this.buttonOkay_MouseEnter);
             this.buttonOkay.MouseLeave += new System.EventHandler(this.buttonOkay_MouseLeave);
+            // 
+            // timerClick
+            // 
+            this.timerClick.Tick += new System.EventHandler(this.timerClick_Tick);
             // 
             // MessageBox
             // 
@@ -89,7 +95,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Name = "MessageBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MessageBox";
-            this.Load += new System.EventHandler(this.MessageBox_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,5 +105,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.Label labelInformation;
         private System.Windows.Forms.Button buttonOkay;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Timer timerClick;
     }
 }

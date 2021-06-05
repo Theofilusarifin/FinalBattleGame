@@ -16,15 +16,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             InitializeComponent();
         }
-
-        private void MessageBox_Load(object sender, EventArgs e)
-        {
-            
-        }
-
+        int second = 1;
         private void buttonOkay_Click(object sender, EventArgs e)
         {
-            this.Close();
+            buttonOkay.BackgroundImage = Properties.Resources.Button_Click;
+            timerClick.Start();
         }
 
         private void buttonOkay_MouseLeave(object sender, EventArgs e)
@@ -37,6 +33,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             this.buttonOkay.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Button_Hover));
             buttonOkay.ForeColor = Color.White;
+        }
+
+        private void timerClick_Tick(object sender, EventArgs e)
+        {
+            second++;
+            if (second == 5)
+            {
+                timerClick.Stop();
+                this.Close();
+            }
         }
     }
 }

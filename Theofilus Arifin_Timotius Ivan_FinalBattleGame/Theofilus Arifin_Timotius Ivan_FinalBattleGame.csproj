@@ -120,5 +120,8 @@
   <ItemGroup>
     <None Include="Resources\Button Click.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dagger.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
