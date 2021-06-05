@@ -7,5 +7,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
     public class GameActor
     {
+        private int test;
     }
 }
