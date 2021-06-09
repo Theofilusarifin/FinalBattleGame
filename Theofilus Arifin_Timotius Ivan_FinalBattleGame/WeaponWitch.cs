@@ -5,8 +5,7 @@ using System.Text;
 
 namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
-    public class WeaponMonster
+    public class WeaponWitch
     {
-        private int name;
     }
 }

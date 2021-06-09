@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
-    public class GameActor
+    public class GameEntity
     {
         private string name;
         private int life;

@@ -7,7 +7,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
     public class Ultimate
     {
-        private string name;
         private bool active;
+        private int duration;
+        private int name;
     }
 }
