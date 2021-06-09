@@ -1,7 +1,7 @@
 ﻿
 namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
-    partial class FormAlmanac
+    partial class FormAlmanacMonster
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             this.SuspendLayout();
             // 
-            // FormAlmanac
+            // FormAlmanacMonster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1284, 952);
-            this.Name = "FormAlmanac";
+            this.Name = "FormAlmanacMonster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Almanac";
+            this.Text = "Almanac Monster";
             this.ResumeLayout(false);
 
         }

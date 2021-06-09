@@ -93,7 +93,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MessageBox";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MessageBox";
             this.ResumeLayout(false);
             this.PerformLayout();
