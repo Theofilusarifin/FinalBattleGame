@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
-    public partial class Form1 : Form
+    public partial class FormSelectDifficulty : Form
     {
-        public Form1()
+        public FormSelectDifficulty()
         {
             InitializeComponent();
         }

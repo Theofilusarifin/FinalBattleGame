@@ -1,7 +1,7 @@
 ﻿
 namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
-    partial class Form1
+    partial class FormMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -57,12 +57,19 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(325, 187);
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Button_Hover;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(376, 252);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(142, 65);
             this.button2.TabIndex = 3;
             this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -74,6 +81,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
