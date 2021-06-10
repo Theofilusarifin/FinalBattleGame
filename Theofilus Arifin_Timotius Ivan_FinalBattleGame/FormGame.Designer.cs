@@ -40,16 +40,19 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBoxRock = new System.Windows.Forms.PictureBox();
             this.panelRock = new System.Windows.Forms.Panel();
             this.panelKnife = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxKnife = new System.Windows.Forms.PictureBox();
             this.panelFire = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFire = new System.Windows.Forms.PictureBox();
+            this.radioButtonRock = new System.Windows.Forms.RadioButton();
+            this.radioButtonKnife = new System.Windows.Forms.RadioButton();
+            this.radioButtonFire = new System.Windows.Forms.RadioButton();
             this.panelOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRock)).BeginInit();
             this.panelRock.SuspendLayout();
             this.panelKnife.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKnife)).BeginInit();
             this.panelFire.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFire)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -146,6 +149,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // 
             this.pictureBoxRock.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxRock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxRock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxRock.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Rock;
             this.pictureBoxRock.Location = new System.Drawing.Point(13, 15);
             this.pictureBoxRock.Name = "pictureBoxRock";
@@ -153,6 +157,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBoxRock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxRock.TabIndex = 5;
             this.pictureBoxRock.TabStop = false;
+            this.pictureBoxRock.Click += new System.EventHandler(this.pictureBoxRock_Click);
+            this.pictureBoxRock.MouseEnter += new System.EventHandler(this.pictureBoxRock_MouseEnter);
+            this.pictureBoxRock.MouseLeave += new System.EventHandler(this.pictureBoxRock_MouseLeave);
             // 
             // panelRock
             // 
@@ -160,6 +167,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.panelRock.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Weapon_Over;
             this.panelRock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelRock.Controls.Add(this.pictureBoxRock);
+            this.panelRock.Controls.Add(this.radioButtonRock);
             this.panelRock.Location = new System.Drawing.Point(381, 175);
             this.panelRock.Name = "panelRock";
             this.panelRock.Size = new System.Drawing.Size(86, 86);
@@ -170,46 +178,112 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.panelKnife.BackColor = System.Drawing.Color.Transparent;
             this.panelKnife.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Weapon_Over;
             this.panelKnife.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelKnife.Controls.Add(this.pictureBox1);
+            this.panelKnife.Controls.Add(this.pictureBoxKnife);
+            this.panelKnife.Controls.Add(this.radioButtonKnife);
             this.panelKnife.Location = new System.Drawing.Point(485, 175);
             this.panelKnife.Name = "panelKnife";
             this.panelKnife.Size = new System.Drawing.Size(86, 86);
             this.panelKnife.TabIndex = 6;
             // 
-            // pictureBox1
+            // pictureBoxKnife
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Knife;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxKnife.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxKnife.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxKnife.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxKnife.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Knife;
+            this.pictureBoxKnife.Location = new System.Drawing.Point(17, 26);
+            this.pictureBoxKnife.Name = "pictureBoxKnife";
+            this.pictureBoxKnife.Size = new System.Drawing.Size(54, 36);
+            this.pictureBoxKnife.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxKnife.TabIndex = 5;
+            this.pictureBoxKnife.TabStop = false;
+            this.pictureBoxKnife.Click += new System.EventHandler(this.pictureBoxKnife_Click);
             // 
             // panelFire
             // 
             this.panelFire.BackColor = System.Drawing.Color.Transparent;
             this.panelFire.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Weapon_Over;
             this.panelFire.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelFire.Controls.Add(this.pictureBox2);
+            this.panelFire.Controls.Add(this.pictureBoxFire);
+            this.panelFire.Controls.Add(this.radioButtonFire);
             this.panelFire.Location = new System.Drawing.Point(588, 175);
             this.panelFire.Name = "panelFire";
             this.panelFire.Size = new System.Drawing.Size(86, 86);
             this.panelFire.TabIndex = 7;
             // 
-            // pictureBox2
+            // pictureBoxFire
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Fireball;
-            this.pictureBox2.Location = new System.Drawing.Point(18, 26);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(52, 36);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxFire.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxFire.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxFire.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxFire.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Fireball;
+            this.pictureBoxFire.Location = new System.Drawing.Point(18, 26);
+            this.pictureBoxFire.Name = "pictureBoxFire";
+            this.pictureBoxFire.Size = new System.Drawing.Size(52, 36);
+            this.pictureBoxFire.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFire.TabIndex = 5;
+            this.pictureBoxFire.TabStop = false;
+            this.pictureBoxFire.Click += new System.EventHandler(this.pictureBoxFire_Click);
+            // 
+            // radioButtonRock
+            // 
+            this.radioButtonRock.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonRock.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonRock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radioButtonRock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioButtonRock.FlatAppearance.BorderSize = 0;
+            this.radioButtonRock.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonRock.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonRock.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonRock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonRock.Location = new System.Drawing.Point(0, 0);
+            this.radioButtonRock.Name = "radioButtonRock";
+            this.radioButtonRock.Size = new System.Drawing.Size(86, 86);
+            this.radioButtonRock.TabIndex = 8;
+            this.radioButtonRock.TabStop = true;
+            this.radioButtonRock.Text = "                    ";
+            this.radioButtonRock.UseVisualStyleBackColor = false;
+            this.radioButtonRock.CheckedChanged += new System.EventHandler(this.radioButtonRock_CheckedChanged);
+            this.radioButtonRock.Click += new System.EventHandler(this.radioButtonRock_Click);
+            // 
+            // radioButtonKnife
+            // 
+            this.radioButtonKnife.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonKnife.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonKnife.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radioButtonKnife.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioButtonKnife.FlatAppearance.BorderSize = 0;
+            this.radioButtonKnife.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonKnife.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonKnife.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonKnife.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonKnife.Location = new System.Drawing.Point(0, 0);
+            this.radioButtonKnife.Name = "radioButtonKnife";
+            this.radioButtonKnife.Size = new System.Drawing.Size(86, 86);
+            this.radioButtonKnife.TabIndex = 9;
+            this.radioButtonKnife.TabStop = true;
+            this.radioButtonKnife.Text = "                    ";
+            this.radioButtonKnife.UseVisualStyleBackColor = false;
+            this.radioButtonKnife.CheckedChanged += new System.EventHandler(this.radioButtonKnife_CheckedChanged);
+            // 
+            // radioButtonFire
+            // 
+            this.radioButtonFire.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonFire.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonFire.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radioButtonFire.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.radioButtonFire.FlatAppearance.BorderSize = 0;
+            this.radioButtonFire.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonFire.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonFire.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonFire.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonFire.Location = new System.Drawing.Point(0, 0);
+            this.radioButtonFire.Name = "radioButtonFire";
+            this.radioButtonFire.Size = new System.Drawing.Size(86, 86);
+            this.radioButtonFire.TabIndex = 10;
+            this.radioButtonFire.TabStop = true;
+            this.radioButtonFire.Text = "                    ";
+            this.radioButtonFire.UseVisualStyleBackColor = false;
             // 
             // FormGame
             // 
@@ -232,9 +306,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRock)).EndInit();
             this.panelRock.ResumeLayout(false);
             this.panelKnife.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKnife)).EndInit();
             this.panelFire.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFire)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,8 +323,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.PictureBox pictureBoxRock;
         private System.Windows.Forms.Panel panelRock;
         private System.Windows.Forms.Panel panelKnife;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxKnife;
         private System.Windows.Forms.Panel panelFire;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxFire;
+        private System.Windows.Forms.RadioButton radioButtonRock;
+        private System.Windows.Forms.RadioButton radioButtonKnife;
+        private System.Windows.Forms.RadioButton radioButtonFire;
     }
 }
