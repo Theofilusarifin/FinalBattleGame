@@ -31,16 +31,19 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSelectCharacter));
             this.buttonPlay = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pictureBoxWomanPlayer = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBackgroundMan = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBackgroundWoman = new System.Windows.Forms.PictureBox();
+            this.pictureBoxManPlayer = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWomanPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundMan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundWoman)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxManPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonPlay
             // 
             this.buttonPlay.BackColor = System.Drawing.Color.Transparent;
-            this.buttonPlay.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Button_Play_Select_Character_Over;
             this.buttonPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonPlay.FlatAppearance.BorderSize = 0;
@@ -58,29 +61,49 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonPlay.MouseEnter += new System.EventHandler(this.buttonPlay_MouseEnter);
             this.buttonPlay.MouseLeave += new System.EventHandler(this.buttonPlay_MouseLeave);
             // 
-            // pictureBox1
+            // pictureBoxWomanPlayer
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Choose_Man_unscreen_min;
-            this.pictureBox1.Location = new System.Drawing.Point(202, 213);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(153, 187);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxWomanPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWomanPlayer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxWomanPlayer.Location = new System.Drawing.Point(575, 215);
+            this.pictureBoxWomanPlayer.Name = "pictureBoxWomanPlayer";
+            this.pictureBoxWomanPlayer.Size = new System.Drawing.Size(163, 187);
+            this.pictureBoxWomanPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxWomanPlayer.TabIndex = 2;
+            this.pictureBoxWomanPlayer.TabStop = false;
+            this.pictureBoxWomanPlayer.Click += new System.EventHandler(this.pictureBoxWomanPlayer_Click);
             // 
-            // pictureBox2
+            // pictureBoxBackgroundMan
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Choose_Woman_unscreen_min;
-            this.pictureBox2.Location = new System.Drawing.Point(580, 213);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(153, 187);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
+            this.pictureBoxBackgroundMan.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBackgroundMan.Location = new System.Drawing.Point(195, 180);
+            this.pictureBoxBackgroundMan.Name = "pictureBoxBackgroundMan";
+            this.pictureBoxBackgroundMan.Size = new System.Drawing.Size(169, 241);
+            this.pictureBoxBackgroundMan.TabIndex = 3;
+            this.pictureBoxBackgroundMan.TabStop = false;
+            this.pictureBoxBackgroundMan.Click += new System.EventHandler(this.pictureBoxBackgroundMan_Click);
+            // 
+            // pictureBoxBackgroundWoman
+            // 
+            this.pictureBoxBackgroundWoman.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBackgroundWoman.Location = new System.Drawing.Point(575, 180);
+            this.pictureBoxBackgroundWoman.Name = "pictureBoxBackgroundWoman";
+            this.pictureBoxBackgroundWoman.Size = new System.Drawing.Size(169, 241);
+            this.pictureBoxBackgroundWoman.TabIndex = 4;
+            this.pictureBoxBackgroundWoman.TabStop = false;
+            this.pictureBoxBackgroundWoman.Click += new System.EventHandler(this.pictureBoxBackgroundWoman_Click);
+            // 
+            // pictureBoxManPlayer
+            // 
+            this.pictureBoxManPlayer.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxManPlayer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxManPlayer.Location = new System.Drawing.Point(201, 215);
+            this.pictureBoxManPlayer.Name = "pictureBoxManPlayer";
+            this.pictureBoxManPlayer.Size = new System.Drawing.Size(163, 187);
+            this.pictureBoxManPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxManPlayer.TabIndex = 5;
+            this.pictureBoxManPlayer.TabStop = false;
+            this.pictureBoxManPlayer.Click += new System.EventHandler(this.pictureBoxManPlayer_Click);
             // 
             // FormSelectCharacter
             // 
@@ -89,15 +112,19 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(934, 608);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxManPlayer);
+            this.Controls.Add(this.pictureBoxBackgroundMan);
+            this.Controls.Add(this.pictureBoxWomanPlayer);
             this.Controls.Add(this.buttonPlay);
+            this.Controls.Add(this.pictureBoxBackgroundWoman);
             this.DoubleBuffered = true;
             this.Name = "FormSelectCharacter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Player";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWomanPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundMan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBackgroundWoman)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxManPlayer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -105,7 +132,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #endregion
 
         private System.Windows.Forms.Button buttonPlay;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxWomanPlayer;
+        private System.Windows.Forms.PictureBox pictureBoxBackgroundMan;
+        private System.Windows.Forms.PictureBox pictureBoxBackgroundWoman;
+        private System.Windows.Forms.PictureBox pictureBoxManPlayer;
     }
 }

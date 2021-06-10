@@ -9,5 +9,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
     {
         private string name;
         private string description;
+        private int image;
+        private int damage;
     }
 }

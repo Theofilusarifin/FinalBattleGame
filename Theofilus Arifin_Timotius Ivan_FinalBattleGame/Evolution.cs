@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
-    public class Evolution
+    public class Evolution : Monster
     {
-        private int damage;
+        private WeaponMonster weapon;
     }
 }

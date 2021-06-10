@@ -5,9 +5,11 @@ using System.Text;
 
 namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
-    public class PowerUps
+    public class PowerUp
     {
         private int name;
         private int duration;
+        private int image;
+        private int speed;
     }
 }
