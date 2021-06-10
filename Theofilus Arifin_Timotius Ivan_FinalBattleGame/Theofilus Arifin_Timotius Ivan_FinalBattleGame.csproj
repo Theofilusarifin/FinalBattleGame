@@ -273,5 +273,65 @@
   <ItemGroup>
     <None Include="Resources\Sword.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Exit Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Exit Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Options Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Options Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Resume Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Resume Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Save Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Save Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weapon Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weapon Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Weapon Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Exit Hover1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Resume Hover1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Save Hover1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fireball.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knife.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rock.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

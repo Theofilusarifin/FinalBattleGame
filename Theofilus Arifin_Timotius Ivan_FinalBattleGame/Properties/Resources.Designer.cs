@@ -143,6 +143,26 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Button_Exit_Hover {
+            get {
+                object obj = ResourceManager.GetObject("Button Exit Hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_Exit_Over {
+            get {
+                object obj = ResourceManager.GetObject("Button Exit Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button_Hover {
             get {
                 object obj = ResourceManager.GetObject("Button Hover", resourceCulture);
@@ -166,6 +186,26 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         internal static System.Drawing.Bitmap Button_New_Over {
             get {
                 object obj = ResourceManager.GetObject("Button New Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_Options_Hover {
+            get {
+                object obj = ResourceManager.GetObject("Button Options Hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_Options_Over {
+            get {
+                object obj = ResourceManager.GetObject("Button Options Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,6 +263,46 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Button_Resume_Hover {
+            get {
+                object obj = ResourceManager.GetObject("Button Resume Hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_Resume_Over {
+            get {
+                object obj = ResourceManager.GetObject("Button Resume Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_Save_Hover {
+            get {
+                object obj = ResourceManager.GetObject("Button Save Hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_Save_Over {
+            get {
+                object obj = ResourceManager.GetObject("Button Save Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap com_gif_maker_3__unscreen {
             get {
                 object obj = ResourceManager.GetObject("com-gif-maker-3--unscreen", resourceCulture);
@@ -233,9 +313,29 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Dagger {
+        internal static System.Drawing.Bitmap Fireball {
             get {
-                object obj = ResourceManager.GetObject("Dagger", resourceCulture);
+                object obj = ResourceManager.GetObject("Fireball", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Game_Background {
+            get {
+                object obj = ResourceManager.GetObject("Game Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Knife {
+            get {
+                object obj = ResourceManager.GetObject("Knife", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +366,36 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         internal static System.Drawing.Bitmap Non_Active_Background_Woman {
             get {
                 object obj = ResourceManager.GetObject("Non Active Background Woman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Options {
+            get {
+                object obj = ResourceManager.GetObject("Options", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Options1 {
+            get {
+                object obj = ResourceManager.GetObject("Options1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rock {
+            get {
+                object obj = ResourceManager.GetObject("Rock", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -336,6 +466,36 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         internal static System.Drawing.Bitmap Unselected_Woman {
             get {
                 object obj = ResourceManager.GetObject("Unselected Woman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Weapon_Click {
+            get {
+                object obj = ResourceManager.GetObject("Weapon Click", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Weapon_Hover {
+            get {
+                object obj = ResourceManager.GetObject("Weapon Hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Weapon_Over {
+            get {
+                object obj = ResourceManager.GetObject("Weapon Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
