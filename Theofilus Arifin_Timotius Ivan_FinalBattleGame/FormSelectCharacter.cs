@@ -15,17 +15,19 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region METHODS
         private void SelectedMan()
         {
-            pictureBoxBackgroundMan.BackgroundImage = Properties.Resources.Button_Click;
-            pictureBoxManPlayer.BackgroundImage = Properties.Resources.Button_Click;
-            pictureBoxBackgroundWoman.BackgroundImage = Properties.Resources.Button_Click;
-            pictureBoxWomanPlayer.BackgroundImage = Properties.Resources.Button_Click;
+            panelMan.BackgroundImage = Properties.Resources.Active_Background_Man;
+            pictureBoxManPlayer.Image = Properties.Resources.Selected_Man;
+            panelWoman.BackgroundImage = Properties.Resources.Non_Active_Background_Woman;
+            pictureBoxWomanPlayer.Image = Properties.Resources.Unselected_Woman;
+            pictureBoxText.BackgroundImage = Properties.Resources.Text_Man;
         }
         private void SelectedWoman()
         {
-            pictureBoxBackgroundMan.BackgroundImage = Properties.Resources.Button_Click;
-            pictureBoxManPlayer.BackgroundImage = Properties.Resources.Button_Click;
-            pictureBoxBackgroundWoman.BackgroundImage = Properties.Resources.Button_Click;
-            pictureBoxWomanPlayer.BackgroundImage = Properties.Resources.Button_Click;
+            panelWoman.BackgroundImage = Properties.Resources.Active_Background_Woman;
+            pictureBoxWomanPlayer.Image = Properties.Resources.Selected_Woman;
+            panelMan.BackgroundImage = Properties.Resources.Non_Active_Background_Man;
+            pictureBoxManPlayer.Image = Properties.Resources.Unselected_Man;
+            pictureBoxText.BackgroundImage = Properties.Resources.Text_Woman;
         }
         #endregion
         public FormSelectCharacter()

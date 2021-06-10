@@ -201,5 +201,77 @@
   <ItemGroup>
     <None Include="Resources\Woman Player.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Play Select Character Over1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unselected Woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unselected Woman1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unselected Man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Selected Man.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Active Background Man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Active Background Woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Non Active Background Man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Non Active Background Woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Selected Woman.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text Man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text Woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Almanac Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Almanac Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Continue Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Continue Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button New Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button New Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Quit Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Quit Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Main Menu Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sword.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

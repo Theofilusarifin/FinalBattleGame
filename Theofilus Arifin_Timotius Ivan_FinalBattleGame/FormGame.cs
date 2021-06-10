@@ -19,7 +19,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            pictureBoxDagger.Left -= 15;
+            //pictureBoxDagger.Left -= 15;
         }
 
         private void FormGame_Load(object sender, EventArgs e)

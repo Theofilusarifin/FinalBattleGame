@@ -29,54 +29,131 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonNewGame = new System.Windows.Forms.Button();
+            this.buttonContinue = new System.Windows.Forms.Button();
+            this.buttonAlmanac = new System.Windows.Forms.Button();
+            this.buttonQuit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // buttonNewGame
             // 
-            this.button1.Location = new System.Drawing.Point(149, 187);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 65);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonNewGame.BackColor = System.Drawing.Color.Transparent;
+            this.buttonNewGame.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Button_New_Over;
+            this.buttonNewGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonNewGame.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonNewGame.FlatAppearance.BorderSize = 0;
+            this.buttonNewGame.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonNewGame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNewGame.Font = new System.Drawing.Font("Montserrat Black", 20F, System.Drawing.FontStyle.Bold);
+            this.buttonNewGame.Location = new System.Drawing.Point(247, 504);
+            this.buttonNewGame.Name = "buttonNewGame";
+            this.buttonNewGame.Size = new System.Drawing.Size(206, 74);
+            this.buttonNewGame.TabIndex = 0;
+            this.buttonNewGame.UseVisualStyleBackColor = false;
+            this.buttonNewGame.MouseEnter += new System.EventHandler(this.buttonNewGame_MouseEnter);
+            this.buttonNewGame.MouseLeave += new System.EventHandler(this.buttonNewGame_MouseLeave);
             // 
-            // button2
+            // buttonContinue
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Button_Hover;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(376, 252);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 65);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonContinue.BackColor = System.Drawing.Color.Transparent;
+            this.buttonContinue.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Button_Continue_Over;
+            this.buttonContinue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonContinue.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonContinue.FlatAppearance.BorderSize = 0;
+            this.buttonContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonContinue.Font = new System.Drawing.Font("Montserrat Black", 20F, System.Drawing.FontStyle.Bold);
+            this.buttonContinue.Location = new System.Drawing.Point(539, 504);
+            this.buttonContinue.Name = "buttonContinue";
+            this.buttonContinue.Size = new System.Drawing.Size(206, 74);
+            this.buttonContinue.TabIndex = 1;
+            this.buttonContinue.UseVisualStyleBackColor = false;
+            this.buttonContinue.MouseEnter += new System.EventHandler(this.buttonContinue_MouseEnter);
+            this.buttonContinue.MouseLeave += new System.EventHandler(this.buttonContinue_MouseLeave);
+            // 
+            // buttonAlmanac
+            // 
+            this.buttonAlmanac.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAlmanac.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Button_Almanac_Over;
+            this.buttonAlmanac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonAlmanac.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAlmanac.FlatAppearance.BorderSize = 0;
+            this.buttonAlmanac.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonAlmanac.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonAlmanac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAlmanac.Font = new System.Drawing.Font("Montserrat Black", 20F, System.Drawing.FontStyle.Bold);
+            this.buttonAlmanac.Location = new System.Drawing.Point(836, 504);
+            this.buttonAlmanac.Name = "buttonAlmanac";
+            this.buttonAlmanac.Size = new System.Drawing.Size(206, 74);
+            this.buttonAlmanac.TabIndex = 2;
+            this.buttonAlmanac.UseVisualStyleBackColor = false;
+            this.buttonAlmanac.MouseEnter += new System.EventHandler(this.buttonAlmanac_MouseEnter);
+            this.buttonAlmanac.MouseLeave += new System.EventHandler(this.buttonAlmanac_MouseLeave);
+            // 
+            // buttonQuit
+            // 
+            this.buttonQuit.BackColor = System.Drawing.Color.Transparent;
+            this.buttonQuit.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Button_Quit_Over;
+            this.buttonQuit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonQuit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonQuit.FlatAppearance.BorderSize = 0;
+            this.buttonQuit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonQuit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonQuit.Font = new System.Drawing.Font("Montserrat Black", 20F, System.Drawing.FontStyle.Bold);
+            this.buttonQuit.Location = new System.Drawing.Point(1090, 621);
+            this.buttonQuit.Name = "buttonQuit";
+            this.buttonQuit.Size = new System.Drawing.Size(153, 53);
+            this.buttonQuit.TabIndex = 3;
+            this.buttonQuit.UseVisualStyleBackColor = false;
+            this.buttonQuit.MouseEnter += new System.EventHandler(this.buttonQuit_MouseEnter);
+            this.buttonQuit.MouseLeave += new System.EventHandler(this.buttonQuit_MouseLeave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Sword;
+            this.pictureBox1.Location = new System.Drawing.Point(448, 254);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(393, 219);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Main_Menu_Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1284, 708);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.buttonQuit);
+            this.Controls.Add(this.buttonAlmanac);
+            this.Controls.Add(this.buttonContinue);
+            this.Controls.Add(this.buttonNewGame);
+            this.DoubleBuffered = true;
             this.Name = "FormMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Final Battle";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonNewGame;
+        private System.Windows.Forms.Button buttonContinue;
+        private System.Windows.Forms.Button buttonAlmanac;
+        private System.Windows.Forms.Button buttonQuit;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
