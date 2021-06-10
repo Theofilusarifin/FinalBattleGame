@@ -10,5 +10,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private string name;
         private int life;
         private int health;
+        private System.Drawing.Image image;
+        private int speed;
     }
 }

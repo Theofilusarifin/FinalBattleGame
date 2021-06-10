@@ -5,9 +5,7 @@ using System.Text;
 
 namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
-    public class Enemy
+    public class Enemy : GameEntity
     {
-        private int speed;
-        private bool evolve;
     }
 }
