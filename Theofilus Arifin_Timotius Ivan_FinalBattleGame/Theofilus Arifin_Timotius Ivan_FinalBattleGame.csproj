@@ -182,5 +182,20 @@
   <ItemGroup>
     <None Include="Resources\Dagger.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Play Select Character Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Choose-Man-unscreen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Choose-Man-unscreen-min.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Choose-Woman-unscreen-min.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Play Select Character Hover.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

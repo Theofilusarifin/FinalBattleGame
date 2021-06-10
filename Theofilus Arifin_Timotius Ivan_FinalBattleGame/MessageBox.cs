@@ -25,13 +25,13 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
         private void buttonOkay_MouseLeave(object sender, EventArgs e)
         {
-            this.buttonOkay.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Button_Over));
+            buttonOkay.BackgroundImage = Properties.Resources.Button_Over;
             buttonOkay.ForeColor = Color.LightGreen;
         }
 
         private void buttonOkay_MouseEnter(object sender, EventArgs e)
         {
-            this.buttonOkay.BackgroundImage = ((System.Drawing.Image)(Properties.Resources.Button_Hover));
+            buttonOkay.BackgroundImage = Properties.Resources.Button_Hover;
             buttonOkay.ForeColor = Color.White;
         }
 

@@ -93,6 +93,56 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Button_Play_Select_Character_Hover {
+            get {
+                object obj = ResourceManager.GetObject("Button Play Select Character Hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_Play_Select_Character_Over {
+            get {
+                object obj = ResourceManager.GetObject("Button Play Select Character Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Choose_Man_unscreen {
+            get {
+                object obj = ResourceManager.GetObject("Choose-Man-unscreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Choose_Man_unscreen_min {
+            get {
+                object obj = ResourceManager.GetObject("Choose-Man-unscreen-min", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Choose_Woman_unscreen_min {
+            get {
+                object obj = ResourceManager.GetObject("Choose-Woman-unscreen-min", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap com_gif_maker_3__unscreen {
             get {
                 object obj = ResourceManager.GetObject("com-gif-maker-3--unscreen", resourceCulture);
