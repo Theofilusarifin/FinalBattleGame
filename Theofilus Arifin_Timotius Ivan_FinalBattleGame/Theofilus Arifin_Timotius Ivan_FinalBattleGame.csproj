@@ -118,8 +118,8 @@
     <Compile Include="Round.cs" />
     <Compile Include="Time.cs" />
     <Compile Include="Ultimate.cs" />
-    <Compile Include="Weapon.cs" />
-    <Compile Include="WeaponEnemy.cs" />
+    <Compile Include="WeaponPlayer.cs" />
+    <Compile Include="WeaponMonster.cs" />
     <Compile Include="WeaponWitch.cs" />
     <Compile Include="Witch.cs" />
     <EmbeddedResource Include="FormAlmanac.resx">

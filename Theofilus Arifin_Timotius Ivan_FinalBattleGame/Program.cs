@@ -16,7 +16,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAlmanac());
+            Application.Run(new FormMenu());
         }
     }
 }
