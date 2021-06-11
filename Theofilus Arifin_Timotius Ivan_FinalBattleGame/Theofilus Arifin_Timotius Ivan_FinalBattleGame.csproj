@@ -333,5 +333,41 @@
   <ItemGroup>
     <None Include="Resources\Rock.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Monster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Almanac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card Monster And Witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Almanac1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Card Evolution Monster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Back Almanac Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Back Almanac Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Close Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Close Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Almanac Monster And Witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Almanac Monster And Witch1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,13 +29,112 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlmanacWitch));
+            this.buttonBackToAlmanac = new System.Windows.Forms.Button();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.buttonTheBroom = new System.Windows.Forms.Button();
+            this.buttonAncientWitch = new System.Windows.Forms.Button();
+            this.buttonGreenWitch = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // buttonBackToAlmanac
+            // 
+            this.buttonBackToAlmanac.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBackToAlmanac.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Button_Back_Almanac_Over;
+            this.buttonBackToAlmanac.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonBackToAlmanac.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBackToAlmanac.FlatAppearance.BorderSize = 0;
+            this.buttonBackToAlmanac.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonBackToAlmanac.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonBackToAlmanac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBackToAlmanac.Location = new System.Drawing.Point(46, 29);
+            this.buttonBackToAlmanac.Name = "buttonBackToAlmanac";
+            this.buttonBackToAlmanac.Size = new System.Drawing.Size(216, 55);
+            this.buttonBackToAlmanac.TabIndex = 9;
+            this.buttonBackToAlmanac.UseVisualStyleBackColor = false;
+            this.buttonBackToAlmanac.Click += new System.EventHandler(this.buttonBackToAlmanac_Click);
+            this.buttonBackToAlmanac.MouseEnter += new System.EventHandler(this.buttonBackToAlmanac_MouseEnter);
+            this.buttonBackToAlmanac.MouseLeave += new System.EventHandler(this.buttonBackToAlmanac_MouseLeave);
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.Color.Transparent;
+            this.buttonClose.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Button_Close_Over;
+            this.buttonClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClose.Location = new System.Drawing.Point(700, 579);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(217, 86);
+            this.buttonClose.TabIndex = 10;
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.MouseEnter += new System.EventHandler(this.buttonClose_MouseEnter);
+            this.buttonClose.MouseLeave += new System.EventHandler(this.buttonClose_MouseLeave);
+            // 
+            // buttonTheBroom
+            // 
+            this.buttonTheBroom.BackColor = System.Drawing.Color.Transparent;
+            this.buttonTheBroom.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Card_Monster_And_Witch;
+            this.buttonTheBroom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonTheBroom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonTheBroom.FlatAppearance.BorderSize = 0;
+            this.buttonTheBroom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonTheBroom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonTheBroom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTheBroom.Location = new System.Drawing.Point(134, 325);
+            this.buttonTheBroom.Name = "buttonTheBroom";
+            this.buttonTheBroom.Size = new System.Drawing.Size(103, 147);
+            this.buttonTheBroom.TabIndex = 11;
+            this.buttonTheBroom.UseVisualStyleBackColor = false;
+            // 
+            // buttonAncientWitch
+            // 
+            this.buttonAncientWitch.BackColor = System.Drawing.Color.Transparent;
+            this.buttonAncientWitch.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Card_Monster_And_Witch;
+            this.buttonAncientWitch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonAncientWitch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonAncientWitch.FlatAppearance.BorderSize = 0;
+            this.buttonAncientWitch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonAncientWitch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonAncientWitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAncientWitch.Location = new System.Drawing.Point(266, 325);
+            this.buttonAncientWitch.Name = "buttonAncientWitch";
+            this.buttonAncientWitch.Size = new System.Drawing.Size(103, 147);
+            this.buttonAncientWitch.TabIndex = 12;
+            this.buttonAncientWitch.UseVisualStyleBackColor = false;
+            // 
+            // buttonGreenWitch
+            // 
+            this.buttonGreenWitch.BackColor = System.Drawing.Color.Transparent;
+            this.buttonGreenWitch.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Card_Monster_And_Witch;
+            this.buttonGreenWitch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonGreenWitch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonGreenWitch.FlatAppearance.BorderSize = 0;
+            this.buttonGreenWitch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonGreenWitch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonGreenWitch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonGreenWitch.Location = new System.Drawing.Point(399, 325);
+            this.buttonGreenWitch.Name = "buttonGreenWitch";
+            this.buttonGreenWitch.Size = new System.Drawing.Size(103, 147);
+            this.buttonGreenWitch.TabIndex = 13;
+            this.buttonGreenWitch.UseVisualStyleBackColor = false;
             // 
             // FormAlmanacWitch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1284, 952);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1084, 799);
+            this.Controls.Add(this.buttonGreenWitch);
+            this.Controls.Add(this.buttonAncientWitch);
+            this.Controls.Add(this.buttonTheBroom);
+            this.Controls.Add(this.buttonClose);
+            this.Controls.Add(this.buttonBackToAlmanac);
+            this.DoubleBuffered = true;
             this.Name = "FormAlmanacWitch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Almanac Witch";
@@ -44,5 +143,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
 
         #endregion
+
+        private System.Windows.Forms.Button buttonBackToAlmanac;
+        private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Button buttonTheBroom;
+        private System.Windows.Forms.Button buttonAncientWitch;
+        private System.Windows.Forms.Button buttonGreenWitch;
     }
 }

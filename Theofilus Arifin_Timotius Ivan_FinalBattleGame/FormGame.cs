@@ -84,56 +84,5 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             buttonOptions.BackgroundImage = Properties.Resources.Button_Options_Over;
         }
-
-        //Click picture box --> radio button active
-        private void pictureBoxRock_Click(object sender, EventArgs e)
-        {
-            radioButtonRock.Checked = true;
-        }
-        private void pictureBoxKnife_Click(object sender, EventArgs e)
-        {
-            radioButtonKnife.Checked = true;
-        }
-        private void pictureBoxFire_Click(object sender, EventArgs e)
-        {
-            radioButtonFire.Checked = true;
-        }
-
-        //Design Rock (Button) - Weapon
-        private void radioButtonRock_CheckedChanged(object sender, EventArgs e)
-        {
-            //DesignWeaponClick(panelRock);
-        }
-        private void radioButtonRock_Click(object sender, EventArgs e)
-        {
-            if (radioButtonRock.Checked)
-            {
-                DesignWeaponClick(panelRock);
-            }
-            else
-            {
-                DesignWeaponOver(panelRock);
-            }
-        }
-        private void pictureBoxRock_MouseEnter(object sender, EventArgs e)
-        {
-            if (radioButtonRock.Checked == false)
-            {
-                DesignWeaponHover(panelRock);
-            }
-        }
-        private void pictureBoxRock_MouseLeave(object sender, EventArgs e)
-        {
-            if (radioButtonRock.Checked == false)
-            {
-                DesignWeaponOver(panelRock);
-            }
-        }
-
-        //Design Knife (Button) - Weapon
-        private void radioButtonKnife_CheckedChanged(object sender, EventArgs e)
-        {
-            DesignWeaponClick(panelKnife);
-        }
     }
 }
