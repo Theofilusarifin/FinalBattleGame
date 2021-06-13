@@ -59,6 +59,38 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             buttonQuit.BackgroundImage = Properties.Resources.Button_Quit_Hover;
         }
+
+        private void buttonNewGame_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FormGame formGame = new FormGame();
+            formGame.ShowDialog();
+            formGame = null;
+            Show();
+        }
+
+        private void buttonContinue_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FormLoad formLoad = new FormLoad();
+            formLoad.ShowDialog();
+            formLoad = null;
+            Show();
+        }
+
+        private void buttonAlmanac_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FormAlmanac formAlmanac = new FormAlmanac();
+            formAlmanac.ShowDialog();
+            formAlmanac = null;
+            Show();
+        }
+
+        private void buttonQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         //End Design Button Quit
     }
 }

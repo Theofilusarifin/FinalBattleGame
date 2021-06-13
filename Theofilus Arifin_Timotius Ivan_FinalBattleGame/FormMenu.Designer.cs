@@ -47,12 +47,13 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonNewGame.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonNewGame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNewGame.Font = new System.Drawing.Font("Montserrat Black", 20F, System.Drawing.FontStyle.Bold);
+            this.buttonNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.buttonNewGame.Location = new System.Drawing.Point(247, 504);
             this.buttonNewGame.Name = "buttonNewGame";
             this.buttonNewGame.Size = new System.Drawing.Size(206, 74);
             this.buttonNewGame.TabIndex = 0;
             this.buttonNewGame.UseVisualStyleBackColor = false;
+            this.buttonNewGame.Click += new System.EventHandler(this.buttonNewGame_Click);
             this.buttonNewGame.MouseEnter += new System.EventHandler(this.buttonNewGame_MouseEnter);
             this.buttonNewGame.MouseLeave += new System.EventHandler(this.buttonNewGame_MouseLeave);
             // 
@@ -66,12 +67,13 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonContinue.Font = new System.Drawing.Font("Montserrat Black", 20F, System.Drawing.FontStyle.Bold);
+            this.buttonContinue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.buttonContinue.Location = new System.Drawing.Point(539, 504);
             this.buttonContinue.Name = "buttonContinue";
             this.buttonContinue.Size = new System.Drawing.Size(206, 74);
             this.buttonContinue.TabIndex = 1;
             this.buttonContinue.UseVisualStyleBackColor = false;
+            this.buttonContinue.Click += new System.EventHandler(this.buttonContinue_Click);
             this.buttonContinue.MouseEnter += new System.EventHandler(this.buttonContinue_MouseEnter);
             this.buttonContinue.MouseLeave += new System.EventHandler(this.buttonContinue_MouseLeave);
             // 
@@ -85,12 +87,13 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonAlmanac.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonAlmanac.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonAlmanac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAlmanac.Font = new System.Drawing.Font("Montserrat Black", 20F, System.Drawing.FontStyle.Bold);
+            this.buttonAlmanac.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.buttonAlmanac.Location = new System.Drawing.Point(836, 504);
             this.buttonAlmanac.Name = "buttonAlmanac";
             this.buttonAlmanac.Size = new System.Drawing.Size(206, 74);
             this.buttonAlmanac.TabIndex = 2;
             this.buttonAlmanac.UseVisualStyleBackColor = false;
+            this.buttonAlmanac.Click += new System.EventHandler(this.buttonAlmanac_Click);
             this.buttonAlmanac.MouseEnter += new System.EventHandler(this.buttonAlmanac_MouseEnter);
             this.buttonAlmanac.MouseLeave += new System.EventHandler(this.buttonAlmanac_MouseLeave);
             // 
@@ -104,12 +107,13 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonQuit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonQuit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonQuit.Font = new System.Drawing.Font("Montserrat Black", 20F, System.Drawing.FontStyle.Bold);
+            this.buttonQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
             this.buttonQuit.Location = new System.Drawing.Point(1090, 621);
             this.buttonQuit.Name = "buttonQuit";
             this.buttonQuit.Size = new System.Drawing.Size(153, 53);
             this.buttonQuit.TabIndex = 3;
             this.buttonQuit.UseVisualStyleBackColor = false;
+            this.buttonQuit.Click += new System.EventHandler(this.buttonQuit_Click);
             this.buttonQuit.MouseEnter += new System.EventHandler(this.buttonQuit_MouseEnter);
             this.buttonQuit.MouseLeave += new System.EventHandler(this.buttonQuit_MouseLeave);
             // 

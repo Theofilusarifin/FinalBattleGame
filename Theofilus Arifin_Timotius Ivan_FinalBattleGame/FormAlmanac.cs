@@ -16,19 +16,21 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             InitializeComponent();
         }
-
         private void buttonMonster_Click(object sender, EventArgs e)
         {
+            Hide();
             FormAlmanacMonster formAlmanacMonster = new FormAlmanacMonster();
-            formAlmanacMonster.Owner = this;
             formAlmanacMonster.ShowDialog();
+            formAlmanacMonster = null;
+            Show();
         }
-
         private void buttonWitch_Click(object sender, EventArgs e)
         {
+            Hide();
             FormAlmanacWitch formAlmanacWitch = new FormAlmanacWitch();
-            formAlmanacWitch.Owner = this;
             formAlmanacWitch.ShowDialog();
+            formAlmanacWitch = null;
+            Show();
         }
     }
 }
