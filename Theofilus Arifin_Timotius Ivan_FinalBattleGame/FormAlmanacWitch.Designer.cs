@@ -70,6 +70,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonClose.Size = new System.Drawing.Size(217, 86);
             this.buttonClose.TabIndex = 10;
             this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             this.buttonClose.MouseEnter += new System.EventHandler(this.buttonClose_MouseEnter);
             this.buttonClose.MouseLeave += new System.EventHandler(this.buttonClose_MouseLeave);
             // 

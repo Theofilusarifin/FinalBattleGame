@@ -37,9 +37,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
         private void buttonBackToAlmanac_Click(object sender, EventArgs e)
         {
-            FormAlmanac formAlmanac = new FormAlmanac();
-            formAlmanac.Owner = this;
-            formAlmanac.ShowDialog();
+            this.Close();
         }
 
         private void buttonDragon_Click(object sender, EventArgs e)

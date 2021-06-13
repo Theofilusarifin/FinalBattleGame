@@ -38,9 +38,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
         private void buttonBackToAlmanac_Click(object sender, EventArgs e)
         {
-            FormAlmanac formAlmanac = new FormAlmanac();
-            formAlmanac.Owner = this;
-            formAlmanac.ShowDialog();
+            this.Close();
         }
 
         private void buttonTheBroom_Click(object sender, EventArgs e)
@@ -54,6 +52,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
 
         private void buttonGreenWitch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
         {
 
         }
