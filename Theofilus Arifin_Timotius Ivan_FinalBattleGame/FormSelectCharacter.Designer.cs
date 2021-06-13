@@ -53,7 +53,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonPlay.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPlay.Font = new System.Drawing.Font("Montserrat Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPlay.ForeColor = System.Drawing.Color.White;
             this.buttonPlay.Location = new System.Drawing.Point(358, 463);
             this.buttonPlay.Name = "buttonPlay";

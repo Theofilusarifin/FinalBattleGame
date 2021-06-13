@@ -29,13 +29,56 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         /// </summary>
         private void InitializeComponent()
         {
+            this.buttonEasy = new System.Windows.Forms.Button();
+            this.buttonHard = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // buttonEasy
+            // 
+            this.buttonEasy.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEasy.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Button_Easy_Over;
+            this.buttonEasy.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonEasy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEasy.FlatAppearance.BorderSize = 0;
+            this.buttonEasy.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonEasy.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEasy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEasy.Location = new System.Drawing.Point(226, 317);
+            this.buttonEasy.Name = "buttonEasy";
+            this.buttonEasy.Size = new System.Drawing.Size(232, 110);
+            this.buttonEasy.TabIndex = 0;
+            this.buttonEasy.UseVisualStyleBackColor = false;
+            this.buttonEasy.MouseEnter += new System.EventHandler(this.buttonEasy_MouseEnter);
+            this.buttonEasy.MouseLeave += new System.EventHandler(this.buttonEasy_MouseLeave);
+            // 
+            // buttonHard
+            // 
+            this.buttonHard.BackColor = System.Drawing.Color.Transparent;
+            this.buttonHard.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Button_Hard_Over;
+            this.buttonHard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonHard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonHard.FlatAppearance.BorderSize = 0;
+            this.buttonHard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonHard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonHard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHard.Location = new System.Drawing.Point(226, 468);
+            this.buttonHard.Name = "buttonHard";
+            this.buttonHard.Size = new System.Drawing.Size(232, 110);
+            this.buttonHard.TabIndex = 1;
+            this.buttonHard.UseVisualStyleBackColor = false;
+            this.buttonHard.MouseEnter += new System.EventHandler(this.buttonHard_MouseEnter);
+            this.buttonHard.MouseLeave += new System.EventHandler(this.buttonHard_MouseLeave);
             // 
             // FormSelectDifficulty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(934, 608);
+            this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Background_Select_Difficulty;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(684, 667);
+            this.Controls.Add(this.buttonHard);
+            this.Controls.Add(this.buttonEasy);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormSelectDifficulty";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -45,5 +88,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
 
         #endregion
+
+        private System.Windows.Forms.Button buttonEasy;
+        private System.Windows.Forms.Button buttonHard;
     }
 }

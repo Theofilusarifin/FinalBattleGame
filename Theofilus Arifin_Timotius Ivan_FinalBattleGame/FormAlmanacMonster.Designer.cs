@@ -36,8 +36,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonMegaGodzilla = new System.Windows.Forms.Button();
             this.buttonMegaDino = new System.Windows.Forms.Button();
             this.buttonBackToAlmanac = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.buttonClose = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonDragon
@@ -161,13 +162,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonBackToAlmanac.MouseEnter += new System.EventHandler(this.buttonBackToAlmanac_MouseEnter);
             this.buttonBackToAlmanac.MouseLeave += new System.EventHandler(this.buttonBackToAlmanac_MouseLeave);
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 9;
-            // 
             // buttonClose
             // 
             this.buttonClose.BackColor = System.Drawing.Color.Transparent;
@@ -186,14 +180,24 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonClose.MouseEnter += new System.EventHandler(this.buttonClose_MouseEnter);
             this.buttonClose.MouseLeave += new System.EventHandler(this.buttonClose_MouseLeave);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(586, 135);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(446, 488);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormAlmanacMonster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Background_Almanac;
+            this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Background_Almanac_Monster_And_Witch;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1084, 799);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonBackToAlmanac);
             this.Controls.Add(this.buttonMegaDino);
@@ -202,12 +206,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Controls.Add(this.buttonDino);
             this.Controls.Add(this.buttonGodzilla);
             this.Controls.Add(this.buttonDragon);
+            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormAlmanacMonster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "r";
+            this.Text = "Almanac Monster";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -221,7 +227,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.Button buttonMegaGodzilla;
         private System.Windows.Forms.Button buttonMegaDino;
         private System.Windows.Forms.Button buttonBackToAlmanac;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -34,6 +34,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonTheBroom = new System.Windows.Forms.Button();
             this.buttonAncientWitch = new System.Windows.Forms.Button();
             this.buttonGreenWitch = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonBackToAlmanac
@@ -125,11 +127,22 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonGreenWitch.UseVisualStyleBackColor = false;
             this.buttonGreenWitch.Click += new System.EventHandler(this.buttonGreenWitch_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(585, 135);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(446, 488);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormAlmanacWitch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Background_Almanac;
+            this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Background_Almanac_Monster_And_Witch;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1084, 799);
             this.Controls.Add(this.buttonGreenWitch);
@@ -137,12 +150,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Controls.Add(this.buttonTheBroom);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.buttonBackToAlmanac);
+            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormAlmanacWitch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Almanac Witch";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,5 +169,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.Button buttonTheBroom;
         private System.Windows.Forms.Button buttonAncientWitch;
         private System.Windows.Forms.Button buttonGreenWitch;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

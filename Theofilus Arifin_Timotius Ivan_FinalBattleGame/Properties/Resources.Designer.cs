@@ -83,6 +83,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Almanac_Dragon {
+            get {
+                object obj = ResourceManager.GetObject("Almanac Dragon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Almanac_Monster {
             get {
                 object obj = ResourceManager.GetObject("Almanac Monster", resourceCulture);
@@ -116,6 +126,26 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         internal static System.Drawing.Bitmap Background_Almanac {
             get {
                 object obj = ResourceManager.GetObject("Background Almanac", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Background_Almanac_Monster_And_Witch {
+            get {
+                object obj = ResourceManager.GetObject("Background Almanac Monster And Witch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Background_Select_Difficulty {
+            get {
+                object obj = ResourceManager.GetObject("Background Select Difficulty", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,6 +243,26 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Button_Easy_Hover {
+            get {
+                object obj = ResourceManager.GetObject("Button Easy Hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_Easy_Over {
+            get {
+                object obj = ResourceManager.GetObject("Button Easy Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button_Exit_Hover {
             get {
                 object obj = ResourceManager.GetObject("Button Exit Hover", resourceCulture);
@@ -226,6 +276,26 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         internal static System.Drawing.Bitmap Button_Exit_Over {
             get {
                 object obj = ResourceManager.GetObject("Button Exit Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_Hard_Hover {
+            get {
+                object obj = ResourceManager.GetObject("Button Hard Hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Button_Hard_Over {
+            get {
+                object obj = ResourceManager.GetObject("Button Hard Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

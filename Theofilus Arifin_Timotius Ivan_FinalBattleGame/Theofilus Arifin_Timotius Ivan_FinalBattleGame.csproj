@@ -369,5 +369,26 @@
   <ItemGroup>
     <None Include="Resources\Background Almanac Monster And Witch1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Dragon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Almanac Monster And Witch2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Easy Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Easy Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Hard Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Hard Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Select Difficulty.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

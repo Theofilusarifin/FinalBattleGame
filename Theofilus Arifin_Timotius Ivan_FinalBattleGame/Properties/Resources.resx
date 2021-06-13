@@ -121,6 +121,9 @@
   <data name="Non Active Background Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Non Active Background Man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Button Hard Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Hard Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Weapon Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Weapon Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,8 +133,8 @@
   <data name="Unselected Woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Unselected Woman1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Active Background Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Active Background Man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button Save Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Save Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,14 +151,20 @@
   <data name="Button Options Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Options Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Button Hard Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Hard Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button Exit Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button Exit Hover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Weapon Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Weapon Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button Quit Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Quit Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button Easy Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Easy Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button New Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button New Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +172,14 @@
   <data name="Selected Woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Selected Woman.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Background Almanac Monster And Witch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background Almanac Monster And Witch2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Background Almanac" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background Almanac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button Easy Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Easy Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button Resume Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Resume Hover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -177,6 +192,9 @@
   </data>
   <data name="Text Woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Text Woman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button Almanac Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Almanac Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Options" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,14 +217,11 @@
   <data name="Button Save Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Save Hover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button Continue Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button Continue Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Button Back Almanac Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Back Almanac Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Almanac Witch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Almanac Witch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Almanac Dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Almanac Dragon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Non Active Background Woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Non Active Background Woman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,11 +229,11 @@
   <data name="Fireball" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fireball.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button Almanac Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button Almanac Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Button Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Active Background Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Active Background Man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Almanac Witch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Almanac Witch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Text Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Text Man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,6 +268,9 @@
   <data name="Button Almanac Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Almanac Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Button Continue Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Continue Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Knife" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Knife.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -262,11 +280,11 @@
   <data name="Sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sword.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button Continue Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button Continue Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Button Continue Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Continue Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Weapon Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Weapon Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Button Exit Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Exit Hover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Card Evolution Monster" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Card Evolution Monster.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -276,5 +294,8 @@
   </data>
   <data name="Button Play Select Character Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Play Select Character Over1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Background Select Difficulty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background Select Difficulty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
