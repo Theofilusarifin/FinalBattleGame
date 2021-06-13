@@ -88,6 +88,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonTheBroom.Size = new System.Drawing.Size(103, 147);
             this.buttonTheBroom.TabIndex = 11;
             this.buttonTheBroom.UseVisualStyleBackColor = false;
+            this.buttonTheBroom.Click += new System.EventHandler(this.buttonTheBroom_Click);
             // 
             // buttonAncientWitch
             // 
@@ -104,6 +105,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonAncientWitch.Size = new System.Drawing.Size(103, 147);
             this.buttonAncientWitch.TabIndex = 12;
             this.buttonAncientWitch.UseVisualStyleBackColor = false;
+            this.buttonAncientWitch.Click += new System.EventHandler(this.buttonAncientWitch_Click);
             // 
             // buttonGreenWitch
             // 
@@ -120,6 +122,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonGreenWitch.Size = new System.Drawing.Size(103, 147);
             this.buttonGreenWitch.TabIndex = 13;
             this.buttonGreenWitch.UseVisualStyleBackColor = false;
+            this.buttonGreenWitch.Click += new System.EventHandler(this.buttonGreenWitch_Click);
             // 
             // FormAlmanacWitch
             // 

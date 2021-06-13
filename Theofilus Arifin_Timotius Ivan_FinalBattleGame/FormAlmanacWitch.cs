@@ -42,5 +42,20 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             formAlmanac.Owner = this;
             formAlmanac.ShowDialog();
         }
+
+        private void buttonTheBroom_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAncientWitch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonGreenWitch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

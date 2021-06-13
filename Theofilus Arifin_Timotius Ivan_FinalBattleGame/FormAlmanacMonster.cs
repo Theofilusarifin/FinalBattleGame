@@ -15,8 +15,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         public FormAlmanacMonster()
         {
             InitializeComponent();
-        }
-
+        } 
         //Design Button Close
         private void buttonClose_MouseEnter(object sender, EventArgs e)
         {
@@ -41,6 +40,36 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             FormAlmanac formAlmanac = new FormAlmanac();
             formAlmanac.Owner = this;
             formAlmanac.ShowDialog();
+        }
+
+        private void buttonDragon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonGodzilla_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonDino_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonMegaDragon_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonMegaGodzilla_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonMegaDino_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
