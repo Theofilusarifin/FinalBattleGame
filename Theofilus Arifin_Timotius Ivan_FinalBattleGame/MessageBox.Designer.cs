@@ -38,6 +38,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // 
             // labelInformation
             // 
+            this.labelInformation.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelInformation.AutoSize = true;
             this.labelInformation.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelInformation.Location = new System.Drawing.Point(175, 29);
@@ -85,6 +86,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(521, 195);
             this.Controls.Add(this.buttonOkay);

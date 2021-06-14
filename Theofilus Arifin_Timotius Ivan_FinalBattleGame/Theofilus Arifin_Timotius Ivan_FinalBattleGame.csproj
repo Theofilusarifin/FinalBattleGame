@@ -527,5 +527,14 @@
   <ItemGroup>
     <None Include="Resources\In Game Background.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Power Up Attack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Power Up Heal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Power Up Shield.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
