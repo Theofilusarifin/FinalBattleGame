@@ -390,5 +390,59 @@
   <ItemGroup>
     <None Include="Resources\Background Select Difficulty.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Mega Dragon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Godzilla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Mega Godzilla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Dino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alamanac Mega DIno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Dragon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Dragon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Dragon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Godzilla.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Godzilla.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dino.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Dino.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Mega Dragon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Mega Godzilla1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Mega Dino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Dino1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Godzilla1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

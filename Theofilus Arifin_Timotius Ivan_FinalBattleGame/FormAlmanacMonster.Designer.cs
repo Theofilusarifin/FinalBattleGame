@@ -29,22 +29,33 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlmanacMonster));
             this.buttonDragon = new System.Windows.Forms.Button();
             this.buttonGodzilla = new System.Windows.Forms.Button();
-            this.buttonDino = new System.Windows.Forms.Button();
             this.buttonMegaDragon = new System.Windows.Forms.Button();
             this.buttonMegaGodzilla = new System.Windows.Forms.Button();
             this.buttonMegaDino = new System.Windows.Forms.Button();
             this.buttonBackToAlmanac = new System.Windows.Forms.Button();
-            this.buttonClose = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBoxMonster = new System.Windows.Forms.PictureBox();
+            this.buttonDino = new System.Windows.Forms.Button();
+            this.pictureBoxDragon = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMegaDragon = new System.Windows.Forms.PictureBox();
+            this.pictureBoxGodzilla = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMegaGodzilla = new System.Windows.Forms.PictureBox();
+            this.pictureBoxDino = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMegaDino = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMonster)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDragon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMegaDragon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGodzilla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMegaGodzilla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDino)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMegaDino)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonDragon
             // 
             this.buttonDragon.BackColor = System.Drawing.Color.Transparent;
-            this.buttonDragon.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Card_Monster_And_Witch;
             this.buttonDragon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonDragon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonDragon.FlatAppearance.BorderSize = 0;
@@ -61,7 +72,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // buttonGodzilla
             // 
             this.buttonGodzilla.BackColor = System.Drawing.Color.Transparent;
-            this.buttonGodzilla.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Card_Monster_And_Witch;
             this.buttonGodzilla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonGodzilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonGodzilla.FlatAppearance.BorderSize = 0;
@@ -75,27 +85,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonGodzilla.UseVisualStyleBackColor = false;
             this.buttonGodzilla.Click += new System.EventHandler(this.buttonGodzilla_Click);
             // 
-            // buttonDino
-            // 
-            this.buttonDino.BackColor = System.Drawing.Color.Transparent;
-            this.buttonDino.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Card_Monster_And_Witch;
-            this.buttonDino.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonDino.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonDino.FlatAppearance.BorderSize = 0;
-            this.buttonDino.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonDino.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonDino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonDino.Location = new System.Drawing.Point(399, 236);
-            this.buttonDino.Name = "buttonDino";
-            this.buttonDino.Size = new System.Drawing.Size(103, 147);
-            this.buttonDino.TabIndex = 3;
-            this.buttonDino.UseVisualStyleBackColor = false;
-            this.buttonDino.Click += new System.EventHandler(this.buttonDino_Click);
-            // 
             // buttonMegaDragon
             // 
             this.buttonMegaDragon.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMegaDragon.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Card_Evolution_Monster;
             this.buttonMegaDragon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonMegaDragon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonMegaDragon.FlatAppearance.BorderSize = 0;
@@ -112,7 +104,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // buttonMegaGodzilla
             // 
             this.buttonMegaGodzilla.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMegaGodzilla.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Card_Evolution_Monster;
             this.buttonMegaGodzilla.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonMegaGodzilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonMegaGodzilla.FlatAppearance.BorderSize = 0;
@@ -129,7 +120,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // buttonMegaDino
             // 
             this.buttonMegaDino.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMegaDino.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Card_Evolution_Monster;
             this.buttonMegaDino.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonMegaDino.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonMegaDino.FlatAppearance.BorderSize = 0;
@@ -162,43 +152,125 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonBackToAlmanac.MouseEnter += new System.EventHandler(this.buttonBackToAlmanac_MouseEnter);
             this.buttonBackToAlmanac.MouseLeave += new System.EventHandler(this.buttonBackToAlmanac_MouseLeave);
             // 
-            // buttonClose
+            // pictureBoxMonster
             // 
-            this.buttonClose.BackColor = System.Drawing.Color.Transparent;
-            this.buttonClose.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Button_Close_Over;
-            this.buttonClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonClose.FlatAppearance.BorderSize = 0;
-            this.buttonClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Location = new System.Drawing.Point(700, 578);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(217, 86);
-            this.buttonClose.TabIndex = 7;
-            this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.MouseEnter += new System.EventHandler(this.buttonClose_MouseEnter);
-            this.buttonClose.MouseLeave += new System.EventHandler(this.buttonClose_MouseLeave);
+            this.pictureBoxMonster.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxMonster.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Mega_Dino;
+            this.pictureBoxMonster.Location = new System.Drawing.Point(700, 199);
+            this.pictureBoxMonster.Name = "pictureBoxMonster";
+            this.pictureBoxMonster.Size = new System.Drawing.Size(281, 202);
+            this.pictureBoxMonster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMonster.TabIndex = 16;
+            this.pictureBoxMonster.TabStop = false;
             // 
-            // pictureBox1
+            // buttonDino
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(586, 135);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(446, 488);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.buttonDino.BackColor = System.Drawing.Color.Transparent;
+            this.buttonDino.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonDino.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDino.FlatAppearance.BorderSize = 0;
+            this.buttonDino.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonDino.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonDino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDino.Location = new System.Drawing.Point(399, 236);
+            this.buttonDino.Name = "buttonDino";
+            this.buttonDino.Size = new System.Drawing.Size(103, 147);
+            this.buttonDino.TabIndex = 3;
+            this.buttonDino.UseVisualStyleBackColor = false;
+            this.buttonDino.Click += new System.EventHandler(this.buttonDino_Click);
+            // 
+            // pictureBoxDragon
+            // 
+            this.pictureBoxDragon.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxDragon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxDragon.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Dragon;
+            this.pictureBoxDragon.Location = new System.Drawing.Point(146, 261);
+            this.pictureBoxDragon.Name = "pictureBoxDragon";
+            this.pictureBoxDragon.Size = new System.Drawing.Size(90, 90);
+            this.pictureBoxDragon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxDragon.TabIndex = 17;
+            this.pictureBoxDragon.TabStop = false;
+            this.pictureBoxDragon.Click += new System.EventHandler(this.pictureBoxDragon_Click);
+            // 
+            // pictureBoxMegaDragon
+            // 
+            this.pictureBoxMegaDragon.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxMegaDragon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxMegaDragon.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Mega_Dragon;
+            this.pictureBoxMegaDragon.Location = new System.Drawing.Point(136, 448);
+            this.pictureBoxMegaDragon.Name = "pictureBoxMegaDragon";
+            this.pictureBoxMegaDragon.Size = new System.Drawing.Size(100, 78);
+            this.pictureBoxMegaDragon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMegaDragon.TabIndex = 18;
+            this.pictureBoxMegaDragon.TabStop = false;
+            this.pictureBoxMegaDragon.Click += new System.EventHandler(this.pictureBoxMegaDragon_Click);
+            // 
+            // pictureBoxGodzilla
+            // 
+            this.pictureBoxGodzilla.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxGodzilla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxGodzilla.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Godzilla;
+            this.pictureBoxGodzilla.Location = new System.Drawing.Point(274, 273);
+            this.pictureBoxGodzilla.Name = "pictureBoxGodzilla";
+            this.pictureBoxGodzilla.Size = new System.Drawing.Size(90, 75);
+            this.pictureBoxGodzilla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxGodzilla.TabIndex = 19;
+            this.pictureBoxGodzilla.TabStop = false;
+            this.pictureBoxGodzilla.Click += new System.EventHandler(this.pictureBoxGodzilla_Click);
+            // 
+            // pictureBoxMegaGodzilla
+            // 
+            this.pictureBoxMegaGodzilla.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxMegaGodzilla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxMegaGodzilla.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Mega_Godzilla;
+            this.pictureBoxMegaGodzilla.Location = new System.Drawing.Point(267, 448);
+            this.pictureBoxMegaGodzilla.Name = "pictureBoxMegaGodzilla";
+            this.pictureBoxMegaGodzilla.Size = new System.Drawing.Size(93, 86);
+            this.pictureBoxMegaGodzilla.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMegaGodzilla.TabIndex = 23;
+            this.pictureBoxMegaGodzilla.TabStop = false;
+            this.pictureBoxMegaGodzilla.Click += new System.EventHandler(this.pictureBoxMegaGodzilla_Click);
+            // 
+            // pictureBoxDino
+            // 
+            this.pictureBoxDino.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxDino.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxDino.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Dino;
+            this.pictureBoxDino.Location = new System.Drawing.Point(410, 285);
+            this.pictureBoxDino.Name = "pictureBoxDino";
+            this.pictureBoxDino.Size = new System.Drawing.Size(84, 53);
+            this.pictureBoxDino.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxDino.TabIndex = 24;
+            this.pictureBoxDino.TabStop = false;
+            this.pictureBoxDino.Click += new System.EventHandler(this.pictureBoxDino_Click);
+            // 
+            // pictureBoxMegaDino
+            // 
+            this.pictureBoxMegaDino.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxMegaDino.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxMegaDino.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Mega_Dino;
+            this.pictureBoxMegaDino.Location = new System.Drawing.Point(417, 459);
+            this.pictureBoxMegaDino.Name = "pictureBoxMegaDino";
+            this.pictureBoxMegaDino.Size = new System.Drawing.Size(72, 63);
+            this.pictureBoxMegaDino.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMegaDino.TabIndex = 25;
+            this.pictureBoxMegaDino.TabStop = false;
+            this.pictureBoxMegaDino.Click += new System.EventHandler(this.pictureBoxMegaDino_Click);
             // 
             // FormAlmanacMonster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Background_Almanac_Monster_And_Witch;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1084, 799);
-            this.Controls.Add(this.buttonClose);
+            this.Controls.Add(this.pictureBoxMegaDragon);
+            this.Controls.Add(this.pictureBoxMegaDino);
+            this.Controls.Add(this.pictureBoxDino);
+            this.Controls.Add(this.pictureBoxMegaGodzilla);
+            this.Controls.Add(this.pictureBoxGodzilla);
+            this.Controls.Add(this.pictureBoxDragon);
+            this.Controls.Add(this.pictureBoxMonster);
             this.Controls.Add(this.buttonBackToAlmanac);
             this.Controls.Add(this.buttonMegaDino);
             this.Controls.Add(this.buttonMegaGodzilla);
@@ -206,14 +278,20 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Controls.Add(this.buttonDino);
             this.Controls.Add(this.buttonGodzilla);
             this.Controls.Add(this.buttonDragon);
-            this.Controls.Add(this.pictureBox1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormAlmanacMonster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Almanac Monster";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.FormAlmanacMonster_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMonster)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDragon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMegaDragon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGodzilla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMegaGodzilla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDino)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMegaDino)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -222,12 +300,17 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
         private System.Windows.Forms.Button buttonDragon;
         private System.Windows.Forms.Button buttonGodzilla;
-        private System.Windows.Forms.Button buttonDino;
         private System.Windows.Forms.Button buttonMegaDragon;
         private System.Windows.Forms.Button buttonMegaGodzilla;
         private System.Windows.Forms.Button buttonMegaDino;
         private System.Windows.Forms.Button buttonBackToAlmanac;
-        private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxMonster;
+        private System.Windows.Forms.Button buttonDino;
+        private System.Windows.Forms.PictureBox pictureBoxDragon;
+        private System.Windows.Forms.PictureBox pictureBoxMegaDragon;
+        private System.Windows.Forms.PictureBox pictureBoxGodzilla;
+        private System.Windows.Forms.PictureBox pictureBoxMegaGodzilla;
+        private System.Windows.Forms.PictureBox pictureBoxDino;
+        private System.Windows.Forms.PictureBox pictureBoxMegaDino;
     }
 }
