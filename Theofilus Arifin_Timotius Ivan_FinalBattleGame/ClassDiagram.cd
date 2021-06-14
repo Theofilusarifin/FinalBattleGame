@@ -3,9 +3,12 @@
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.GameEntity">
     <Position X="6.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAiAAAAIAAAAAAAAAABAQAAAAEAAAAQAAAAAABAAg=</HashCode>
+      <HashCode>AAEAiAAAAIAAAQAAAAAABAQAAAAEAAAAQAAAAAABAAg=</HashCode>
       <FileName>GameActor.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Difficulty" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Player">
     <Position X="5.25" Y="5.25" Width="1.5" />
@@ -14,9 +17,9 @@
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="PowerUp" />
-      <Property Name="Weapon" />
       <Property Name="Ultimate" />
+      <Property Name="Weapon" />
+      <Property Name="PowerUp" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Enemy">
@@ -36,21 +39,27 @@
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Monster">
     <Position X="7.25" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAEAgAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAEAgAAAALAAAAAQAAAAEAAAAAAA=</HashCode>
       <FileName>Monster.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WeaponMonster" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Witch">
     <Position X="9.75" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <HashCode>AAAAQAAAAAAAAAAQAAAAAAAACAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Witch.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WeaponWitch" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Time">
     <Position X="10.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAgAAAAIAAAAAACIAAAAiAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAABAAAAAAgAAAAIAAAAAAWIAAAAiAAAAAAA=</HashCode>
       <FileName>Time.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -61,16 +70,6 @@
       <FileName>Ultimate.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Evolution">
-    <Position X="7.25" Y="10.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAA=</HashCode>
-      <FileName>Evolution.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Weapon" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.PowerUp">
     <Position X="2.75" Y="9.5" Width="1.5" />
     <TypeIdentifier>
@@ -79,28 +78,25 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.WeaponMonster">
-    <Position X="4.75" Y="10.75" Width="1.5" />
+    <Position X="7.25" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgACAAIAAgAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>WeaponMonster.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.WeaponWitch">
-    <Position X="12" Y="10.75" Width="1.5" />
+    <Position X="12.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgACAAIAAgAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>WeaponWitch.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Rage">
-    <Position X="9.75" Y="10.75" Width="1.5" />
+  <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Difficulty">
+    <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAA=</HashCode>
-      <FileName>Rage.cs</FileName>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Difficulty.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Weapon" />
-    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

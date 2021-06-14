@@ -61,6 +61,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonPlay.TabIndex = 0;
             this.buttonPlay.Text = "Play";
             this.buttonPlay.UseVisualStyleBackColor = false;
+            this.buttonPlay.Click += new System.EventHandler(this.buttonPlay_Click);
             this.buttonPlay.MouseEnter += new System.EventHandler(this.buttonPlay_MouseEnter);
             this.buttonPlay.MouseLeave += new System.EventHandler(this.buttonPlay_MouseLeave);
             // 
@@ -95,7 +96,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // panelMan
             // 
             this.panelMan.BackColor = System.Drawing.Color.Transparent;
-            this.panelMan.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Active_Background_Man;
+            this.panelMan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMan.BackgroundImage")));
             this.panelMan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelMan.Controls.Add(this.pictureBoxManPlayer);
             this.panelMan.Location = new System.Drawing.Point(195, 180);
@@ -106,7 +107,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // panelWoman
             // 
             this.panelWoman.BackColor = System.Drawing.Color.Transparent;
-            this.panelWoman.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Non_Active_Background_Woman;
+            this.panelWoman.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelWoman.BackgroundImage")));
             this.panelWoman.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelWoman.Controls.Add(this.pictureBoxWomanPlayer);
             this.panelWoman.Location = new System.Drawing.Point(575, 180);
@@ -117,7 +118,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // pictureBoxText
             // 
             this.pictureBoxText.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxText.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Text_Man;
+            this.pictureBoxText.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxText.BackgroundImage")));
             this.pictureBoxText.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxText.Location = new System.Drawing.Point(381, 262);
             this.pictureBoxText.Name = "pictureBoxText";
@@ -130,7 +131,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Background;
+            this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Select_Character_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(934, 608);
             this.Controls.Add(this.pictureBoxText);

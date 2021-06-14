@@ -16,6 +16,17 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             InitializeComponent();
         }
+        //Optimized Form (Loading Screen)
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+
+                return cp;
+            }
+        }
 
         //Design Button New Game
         private void buttonNewGame_MouseLeave(object sender, EventArgs e)
@@ -63,9 +74,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private void buttonNewGame_Click(object sender, EventArgs e)
         {
             Hide();
-            FormGame formGame = new FormGame();
-            formGame.ShowDialog();
-            formGame = null;
+            FormSelectDifficulty formSelectDifficulty = new FormSelectDifficulty();
+            formSelectDifficulty.ShowDialog();
+            formSelectDifficulty = null;
             Show();
         }
 

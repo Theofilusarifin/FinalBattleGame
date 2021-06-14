@@ -16,6 +16,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             InitializeComponent();
         }
+        //Optimized Form (Loading Screen)
         protected override CreateParams CreateParams
         {
             get

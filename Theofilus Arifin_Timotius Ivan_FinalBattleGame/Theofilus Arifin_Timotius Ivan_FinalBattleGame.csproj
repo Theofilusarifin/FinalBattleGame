@@ -46,9 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Difficulty.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemyWeapon.cs" />
-    <Compile Include="Evolution.cs" />
     <Compile Include="FormAlmanac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,7 +114,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Rage.cs" />
     <Compile Include="Round.cs" />
     <Compile Include="Time.cs" />
     <Compile Include="Ultimate.cs" />
@@ -184,9 +183,6 @@
     <None Include="Resources\Dagger.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Button Play Select Character Over.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Choose-Man-unscreen.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -196,25 +192,139 @@
     <None Include="Resources\Choose-Woman-unscreen-min.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Button Play Select Character Hover.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Woman Player.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Button Play Select Character Over1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Unselected Woman.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Unselected Woman1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Unselected Man.png" />
+    <None Include="Resources\Selected Man.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Selected Man.gif" />
+    <None Include="Resources\Selected Woman.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giphy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Game Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Exit Hover1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Resume Hover1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Save Hover1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knife.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Monster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Almanac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Almanac1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Close Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Close Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Almanac Monster And Witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Almanac Monster And Witch1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Dragon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Almanac Monster And Witch2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Mega Dragon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Godzilla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Mega Godzilla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Dino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alamanac Mega DIno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Dragon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Dragon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Mega Dragon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Mega Godzilla1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Mega Dino.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Dino1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Godzilla1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Ancient Witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Broom Witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Green Witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Almanac2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unselect Weapon Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Select Difficulty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Easy Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Easy Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Hard Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Hard Over.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Active Background Man.png" />
@@ -223,13 +333,19 @@
     <None Include="Resources\Active Background Woman.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Button Play Select Character Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Play Select Character Over.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Non Active Background Man.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Non Active Background Woman.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Selected Woman.gif" />
+    <None Include="Resources\Select Character Background.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Text Man.png" />
@@ -238,7 +354,13 @@
     <None Include="Resources\Text Woman.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background.png" />
+    <None Include="Resources\Unselected Man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unselected Woman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sword.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Button Almanac Hover.png" />
@@ -268,15 +390,6 @@
     <None Include="Resources\Main Menu Background.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\giphy.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sword.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Options.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Button Exit Hover.png" />
   </ItemGroup>
   <ItemGroup>
@@ -301,10 +414,7 @@
     <None Include="Resources\Button Save Over.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Game Background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Options1.png" />
+    <None Include="Resources\Options.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Weapon Click.png" />
@@ -316,160 +426,106 @@
     <None Include="Resources\Weapon Over.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Button Exit Hover1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Resume Hover1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Save Hover1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Fireball.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Knife.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Rock.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Monster.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Witch.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Background Almanac.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Card Monster And Witch.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Background Almanac1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Card Evolution Monster.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Button Back Almanac Hover.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Button Back Almanac Over.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Button Close Hover.png" />
+    <None Include="Resources\Card Evolution Monster.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Button Close Over.png" />
+    <None Include="Resources\Card Monster And Witch.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background Almanac Monster And Witch.png" />
+    <None Include="Resources\Knive.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background Almanac Monster And Witch1.png" />
+    <None Include="Resources\Fireball.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Almanac Dragon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Background Almanac Monster And Witch2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Easy Over.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Easy Hover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Hard Hover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Hard Over.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Background Select Difficulty.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Mega Dragon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Godzilla.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Mega Godzilla.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Dino.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Alamanac Mega DIno.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Dragon.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Dragon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Dragon2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Mega Dragon.gif" />
+    <None Include="Resources\Godzilla Weapon.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Godzilla.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Mega Godzilla.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Dino.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Mega Dino.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Mega Dragon1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Mega Godzilla1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Mega Dino.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Dino1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Godzilla1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Ancient Witch.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Broom Witch.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Almanac Green Witch.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Broom Witch.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Ancient Witch.gif" />
+    <None Include="Resources\Green Witch Weapon.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Green Witch.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Background Almanac2.png" />
+    <None Include="Resources\Man Death.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man Fire.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man Knife.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man Rock.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Dino Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Dino.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Dragon Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Godzilla Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Godzilla.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rock.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Woman Death.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Woman Fire.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Woman Knife.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Woman Rock.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ancient Witch Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ancient Witch.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Broom Witch Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Broom Witch.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dino Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dino.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragon Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Dragon.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\In Game Background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Unselect Weapon Background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

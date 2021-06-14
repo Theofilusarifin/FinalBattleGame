@@ -12,23 +12,20 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
     public partial class FormGame : Form
     {
-        #region METHODS
-        private void DesignWeaponHover(Panel panel)
-        {
-            panel.BackgroundImage = Properties.Resources.Weapon_Hover;
-        }
-        private void DesignWeaponOver(Panel panel)
-        {
-            panel.BackgroundImage = Properties.Resources.Weapon_Over;
-        }
-        private void DesignWeaponClick(Panel panel)
-        {
-            panel.BackgroundImage = Properties.Resources.Weapon_Click;
-        }
-        #endregion
         public FormGame()
         {
             InitializeComponent();
+        }
+        //Optimized Form (Loading Screen)
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+
+                return cp;
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -111,11 +108,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             SelectRock();
         }
-        private void pictureBoxButtonKnife_Click(object sender, EventArgs e)
+        private void pictureBoxKnife_Click(object sender, EventArgs e)
         {
             SelectKnife();
         }
-        private void pictureBoxKnife_Click(object sender, EventArgs e)
+        private void pictureBoxButtonKnife_Click(object sender, EventArgs e)
         {
             SelectKnife();
         }
@@ -128,5 +125,15 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             SelectFire();
         }
         #endregion
+
+        private void buttonResume_Click(object sender, EventArgs e)
+        {
+            panelOptions.Visible = false;
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

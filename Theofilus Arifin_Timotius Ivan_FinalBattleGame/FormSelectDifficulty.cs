@@ -36,5 +36,21 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             buttonHard.BackgroundImage = Properties.Resources.Button_Hard_Over;
         }
+
+        private void buttonEasy_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FormSelectCharacter formSelectCharacter = new FormSelectCharacter();
+            formSelectCharacter.ShowDialog();
+            Close();
+        }
+
+        private void buttonHard_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FormSelectCharacter formSelectCharacter = new FormSelectCharacter();
+            formSelectCharacter.ShowDialog();
+            Close();
+        }
     }
 }

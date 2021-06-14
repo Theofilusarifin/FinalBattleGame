@@ -10,7 +10,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
     {
         #region FIELDS
         private int healthDamage;
+        private WeaponWitch weapon;
         #endregion
+
         #region CONSTRUCTORS
         public Witch(string name, int life, int health, Image image, Point position, Size size, int healthDamage) :
         base(name, life, health, image, position, size)
@@ -18,13 +20,22 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.HealthDamage = healthDamage;
         }
         #endregion
+
         #region PROPERTIES
         public int HealthDamage 
         { 
             get => healthDamage; 
             set => healthDamage = value;
         }
+        public WeaponWitch WeaponWitch
+        {
+            get => default;
+            set
+            {
+            }
+        }
         #endregion
+
         #region METHODS
         #endregion
     }

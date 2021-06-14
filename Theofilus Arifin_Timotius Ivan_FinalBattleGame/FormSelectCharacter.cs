@@ -68,5 +68,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             SelectedWoman();
         }
+
+        private void buttonPlay_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FormGame formGame = new FormGame();
+            formGame.Owner = this;
+            formGame.ShowDialog();
+            Close();
+        }
     }
 }
