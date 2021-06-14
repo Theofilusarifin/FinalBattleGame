@@ -84,5 +84,49 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             buttonOptions.BackgroundImage = Properties.Resources.Button_Options_Over;
         }
+        #region SetWeapon
+        public void SelectRock()
+        {
+            panelRock.Hide();
+            panelKnife.Show();
+            panelFire.Show();
+        }
+        public void SelectKnife()
+        {
+            panelRock.Show();
+            panelKnife.Hide();
+            panelFire.Show();
+        }
+        public void SelectFire()
+        {
+            panelRock.Show();
+            panelKnife.Show();
+            panelFire.Hide();
+        }
+        private void pictureBoxButtonRock_Click_1(object sender, EventArgs e)
+        {
+            SelectRock();
+        }
+        private void pictureBoxRock_Click(object sender, EventArgs e)
+        {
+            SelectRock();
+        }
+        private void pictureBoxButtonKnife_Click(object sender, EventArgs e)
+        {
+            SelectKnife();
+        }
+        private void pictureBoxKnife_Click(object sender, EventArgs e)
+        {
+            SelectKnife();
+        }
+        private void pictureBoxButtonFire_Click(object sender, EventArgs e)
+        {
+            SelectFire();
+        }
+        private void pictureBoxFire_Click(object sender, EventArgs e)
+        {
+            SelectFire();
+        }
+        #endregion
     }
 }

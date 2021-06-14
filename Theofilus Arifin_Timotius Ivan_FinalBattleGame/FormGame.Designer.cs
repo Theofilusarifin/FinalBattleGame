@@ -30,7 +30,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGame));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelOptions = new System.Windows.Forms.Panel();
             this.buttonExit = new System.Windows.Forms.Button();
@@ -41,15 +40,27 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.panelRock = new System.Windows.Forms.Panel();
             this.panelKnife = new System.Windows.Forms.Panel();
             this.pictureBoxKnife = new System.Windows.Forms.PictureBox();
+            this.pictureBoxButtonKnife = new System.Windows.Forms.PictureBox();
             this.panelFire = new System.Windows.Forms.Panel();
             this.pictureBoxFire = new System.Windows.Forms.PictureBox();
+            this.pictureBoxButtonFire = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxButtonRock = new System.Windows.Forms.PictureBox();
             this.panelOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRock)).BeginInit();
             this.panelRock.SuspendLayout();
             this.panelKnife.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKnife)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonKnife)).BeginInit();
             this.panelFire.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFire)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonFire)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonRock)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -154,13 +165,15 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBoxRock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxRock.TabIndex = 5;
             this.pictureBoxRock.TabStop = false;
+            this.pictureBoxRock.Click += new System.EventHandler(this.pictureBoxRock_Click);
             // 
             // panelRock
             // 
             this.panelRock.BackColor = System.Drawing.Color.Transparent;
-            this.panelRock.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Weapon_Over;
+            this.panelRock.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Unselect_Weapon_Background;
             this.panelRock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelRock.Controls.Add(this.pictureBoxRock);
+            this.panelRock.Controls.Add(this.pictureBoxButtonRock);
             this.panelRock.Location = new System.Drawing.Point(381, 175);
             this.panelRock.Name = "panelRock";
             this.panelRock.Size = new System.Drawing.Size(86, 86);
@@ -169,9 +182,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // panelKnife
             // 
             this.panelKnife.BackColor = System.Drawing.Color.Transparent;
-            this.panelKnife.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Weapon_Over;
+            this.panelKnife.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Unselect_Weapon_Background;
             this.panelKnife.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelKnife.Controls.Add(this.pictureBoxKnife);
+            this.panelKnife.Controls.Add(this.pictureBoxButtonKnife);
             this.panelKnife.Location = new System.Drawing.Point(485, 175);
             this.panelKnife.Name = "panelKnife";
             this.panelKnife.Size = new System.Drawing.Size(86, 86);
@@ -189,13 +203,25 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBoxKnife.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxKnife.TabIndex = 5;
             this.pictureBoxKnife.TabStop = false;
+            this.pictureBoxKnife.Click += new System.EventHandler(this.pictureBoxKnife_Click);
+            // 
+            // pictureBoxButtonKnife
+            // 
+            this.pictureBoxButtonKnife.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxButtonKnife.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxButtonKnife.Name = "pictureBoxButtonKnife";
+            this.pictureBoxButtonKnife.Size = new System.Drawing.Size(86, 86);
+            this.pictureBoxButtonKnife.TabIndex = 7;
+            this.pictureBoxButtonKnife.TabStop = false;
+            this.pictureBoxButtonKnife.Click += new System.EventHandler(this.pictureBoxButtonKnife_Click);
             // 
             // panelFire
             // 
             this.panelFire.BackColor = System.Drawing.Color.Transparent;
-            this.panelFire.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Weapon_Over;
+            this.panelFire.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Unselect_Weapon_Background;
             this.panelFire.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelFire.Controls.Add(this.pictureBoxFire);
+            this.panelFire.Controls.Add(this.pictureBoxButtonFire);
             this.panelFire.Location = new System.Drawing.Point(588, 175);
             this.panelFire.Name = "panelFire";
             this.panelFire.Size = new System.Drawing.Size(86, 86);
@@ -213,19 +239,82 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBoxFire.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFire.TabIndex = 5;
             this.pictureBoxFire.TabStop = false;
+            this.pictureBoxFire.Click += new System.EventHandler(this.pictureBoxFire_Click);
+            // 
+            // pictureBoxButtonFire
+            // 
+            this.pictureBoxButtonFire.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxButtonFire.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxButtonFire.Name = "pictureBoxButtonFire";
+            this.pictureBoxButtonFire.Size = new System.Drawing.Size(86, 86);
+            this.pictureBoxButtonFire.TabIndex = 8;
+            this.pictureBoxButtonFire.TabStop = false;
+            this.pictureBoxButtonFire.Click += new System.EventHandler(this.pictureBoxButtonFire_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Rock;
+            this.pictureBox1.Location = new System.Drawing.Point(394, 188);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(61, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Knife;
+            this.pictureBox2.Location = new System.Drawing.Point(500, 201);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(54, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Fireball;
+            this.pictureBox3.Location = new System.Drawing.Point(605, 201);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(52, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBoxButtonRock
+            // 
+            this.pictureBoxButtonRock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxButtonRock.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxButtonRock.Name = "pictureBoxButtonRock";
+            this.pictureBoxButtonRock.Size = new System.Drawing.Size(86, 86);
+            this.pictureBoxButtonRock.TabIndex = 8;
+            this.pictureBoxButtonRock.TabStop = false;
+            this.pictureBoxButtonRock.Click += new System.EventHandler(this.pictureBoxButtonRock_Click_1);
             // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.In_Game_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1055, 961);
             this.Controls.Add(this.panelFire);
             this.Controls.Add(this.panelKnife);
+            this.Controls.Add(this.panelRock);
             this.Controls.Add(this.buttonOptions);
             this.Controls.Add(this.panelOptions);
-            this.Controls.Add(this.panelRock);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox3);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -238,8 +327,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.panelRock.ResumeLayout(false);
             this.panelKnife.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxKnife)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonKnife)).EndInit();
             this.panelFire.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFire)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonFire)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonRock)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,5 +352,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.PictureBox pictureBoxKnife;
         private System.Windows.Forms.Panel panelFire;
         private System.Windows.Forms.PictureBox pictureBoxFire;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBoxButtonKnife;
+        private System.Windows.Forms.PictureBox pictureBoxButtonFire;
+        private System.Windows.Forms.PictureBox pictureBoxButtonRock;
     }
 }

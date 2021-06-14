@@ -465,5 +465,11 @@
   <ItemGroup>
     <None Include="Resources\Background Almanac2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Game Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unselect Weapon Background.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

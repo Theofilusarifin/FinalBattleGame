@@ -603,6 +603,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap In_Game_Background {
+            get {
+                object obj = ResourceManager.GetObject("In Game Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Knife {
             get {
                 object obj = ResourceManager.GetObject("Knife", resourceCulture);
@@ -746,6 +756,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         internal static System.Drawing.Bitmap Text_Woman {
             get {
                 object obj = ResourceManager.GetObject("Text Woman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Unselect_Weapon_Background {
+            get {
+                object obj = ResourceManager.GetObject("Unselect Weapon Background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
