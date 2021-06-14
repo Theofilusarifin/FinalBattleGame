@@ -16,10 +16,20 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             InitializeComponent();
         }
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+
+                return cp;
+            }
+        }
         private void FormAlmanacMonster_Load(object sender, EventArgs e)
         {
-            //this.BackgroundImage = Properties.Resources.Almanac_Dragon;
-            //SetImage(Properties.Resources.Dragon, 713, 180, 254, 226);
+            this.BackgroundImage = Properties.Resources.Almanac_Dragon;
+            SetImage(Properties.Resources.Dragon, 713, 180, 254, 226);
         }
         //Design Button Back To Almanac Index
         private void buttonBackToAlmanac_MouseEnter(object sender, EventArgs e)

@@ -83,6 +83,26 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Almanac_Ancient_Witch {
+            get {
+                object obj = ResourceManager.GetObject("Almanac Ancient Witch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Almanac_Broom_Witch {
+            get {
+                object obj = ResourceManager.GetObject("Almanac Broom Witch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Almanac_Dino {
             get {
                 object obj = ResourceManager.GetObject("Almanac Dino", resourceCulture);
@@ -106,6 +126,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         internal static System.Drawing.Bitmap Almanac_Godzilla {
             get {
                 object obj = ResourceManager.GetObject("Almanac Godzilla", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Almanac_Green_Witch {
+            get {
+                object obj = ResourceManager.GetObject("Almanac Green Witch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,19 +173,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Almanac_Monster {
+        internal static System.Drawing.Bitmap Ancient_Witch {
             get {
-                object obj = ResourceManager.GetObject("Almanac Monster", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Almanac_Witch {
-            get {
-                object obj = ResourceManager.GetObject("Almanac Witch", resourceCulture);
+                object obj = ResourceManager.GetObject("Ancient Witch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +206,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         internal static System.Drawing.Bitmap Background_Select_Difficulty {
             get {
                 object obj = ResourceManager.GetObject("Background Select Difficulty", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Broom_Witch {
+            get {
+                object obj = ResourceManager.GetObject("Broom Witch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -556,6 +586,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         internal static System.Drawing.Bitmap Godzilla {
             get {
                 object obj = ResourceManager.GetObject("Godzilla", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Green_Witch {
+            get {
+                object obj = ResourceManager.GetObject("Green Witch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -130,23 +130,23 @@
   <data name="Non Active Background Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Non Active Background Man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Almanac Mega Dino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Almanac Mega Dino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Card Evolution Monster" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Card Evolution Monster.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Almanac Witch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Almanac Witch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Almanac Green Witch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Almanac Green Witch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fireball" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fireball.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Button Continue Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Continue Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button Close Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Close Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Card Monster And Witch" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Card Monster And Witch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Button Continue Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button Continue Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Non Active Background Woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Non Active Background Woman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,8 +160,11 @@
   <data name="Active Background Woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Active Background Woman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button Quit Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button Quit Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Broom Witch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Broom Witch.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Text Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Text Man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +172,8 @@
   <data name="Selected Woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Selected Woman.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Almanac Mega Dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Almanac Mega Dragon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -186,9 +189,6 @@
   </data>
   <data name="Button Almanac Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Almanac Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mega Dino" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Mega Dino.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button Back Almanac Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Back Almanac Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,14 +211,17 @@
   <data name="Selected Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Selected Man.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button Hard Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button Hard Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Mega Dino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Mega Dino.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button Exit Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Exit Hover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Weapon Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Weapon Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ancient Witch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ancient Witch.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button Play Select Character Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Play Select Character Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,11 +235,20 @@
   <data name="Weapon Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Weapon Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Almanac Mega Godzilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Almanac Mega Godzilla1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Rock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rock.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Unselected Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Unselected Man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button Quit Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Quit Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Almanac Broom Witch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Almanac Broom Witch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button Back Almanac Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Back Almanac Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,14 +256,20 @@
   <data name="Button Options Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Options Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Button Play Select Character Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Play Select Character Over1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Game Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Game Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fireball" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fireball.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Knife" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Knife.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Dragon.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Almanac Ancient Witch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Almanac Ancient Witch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="com-gif-maker-3--unscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\com-gif-maker-3--unscreen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -261,6 +279,9 @@
   </data>
   <data name="Button New Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button New Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Dragon.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Options1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Options1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,9 +295,6 @@
   <data name="Background Select Difficulty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background Select Difficulty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button Continue Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button Continue Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Button Easy Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Easy Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -285,6 +303,12 @@
   </data>
   <data name="Active Background Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Active Background Man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Almanac Godzilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Almanac Godzilla1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Button Hard Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Hard Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button Click" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Click.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,14 +319,14 @@
   <data name="Mega Godzilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mega Godzilla.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Button Play Select Character Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Button Play Select Character Over1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Button Continue Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Button Continue Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Almanac Dino" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Almanac Dino1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Dino" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dino.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Almanac Monster" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Almanac Monster.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Button Save Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Save Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -310,22 +334,10 @@
   <data name="Text Woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Text Woman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Green Witch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Green Witch.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Background Almanac" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background Almanac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Almanac Mega Dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Almanac Mega Dragon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Almanac Mega Godzilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Almanac Mega Godzilla1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Almanac Mega Dino" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Almanac Mega Dino.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Almanac Dino" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Almanac Dino1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Almanac Godzilla" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Almanac Godzilla1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    <value>..\Resources\Background Almanac2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

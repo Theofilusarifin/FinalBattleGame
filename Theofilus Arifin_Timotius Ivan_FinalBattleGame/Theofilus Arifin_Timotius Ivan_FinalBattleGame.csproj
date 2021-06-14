@@ -444,5 +444,26 @@
   <ItemGroup>
     <None Include="Resources\Almanac Godzilla1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Ancient Witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Broom Witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Almanac Green Witch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Broom Witch.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ancient Witch.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green Witch.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background Almanac2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

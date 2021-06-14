@@ -29,31 +29,18 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonMonster = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlmanac));
             this.buttonWitch = new System.Windows.Forms.Button();
+            this.buttonMonster = new System.Windows.Forms.Button();
+            this.pictureBoxWitch = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMonster = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWitch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMonster)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonMonster
-            // 
-            this.buttonMonster.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMonster.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Almanac_Monster;
-            this.buttonMonster.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonMonster.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMonster.FlatAppearance.BorderSize = 0;
-            this.buttonMonster.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonMonster.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonMonster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMonster.Location = new System.Drawing.Point(86, 203);
-            this.buttonMonster.Name = "buttonMonster";
-            this.buttonMonster.Size = new System.Drawing.Size(447, 488);
-            this.buttonMonster.TabIndex = 0;
-            this.buttonMonster.UseVisualStyleBackColor = false;
-            this.buttonMonster.Click += new System.EventHandler(this.buttonMonster_Click);
             // 
             // buttonWitch
             // 
             this.buttonWitch.BackColor = System.Drawing.Color.Transparent;
-            this.buttonWitch.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Almanac_Witch;
             this.buttonWitch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonWitch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonWitch.FlatAppearance.BorderSize = 0;
@@ -67,13 +54,57 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonWitch.UseVisualStyleBackColor = false;
             this.buttonWitch.Click += new System.EventHandler(this.buttonWitch_Click);
             // 
+            // buttonMonster
+            // 
+            this.buttonMonster.BackColor = System.Drawing.Color.Transparent;
+            this.buttonMonster.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonMonster.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonMonster.FlatAppearance.BorderSize = 0;
+            this.buttonMonster.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonMonster.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonMonster.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMonster.Location = new System.Drawing.Point(86, 203);
+            this.buttonMonster.Name = "buttonMonster";
+            this.buttonMonster.Size = new System.Drawing.Size(447, 488);
+            this.buttonMonster.TabIndex = 0;
+            this.buttonMonster.UseVisualStyleBackColor = false;
+            this.buttonMonster.Click += new System.EventHandler(this.buttonMonster_Click);
+            // 
+            // pictureBoxWitch
+            // 
+            this.pictureBoxWitch.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxWitch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxWitch.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Broom_Witch;
+            this.pictureBoxWitch.Location = new System.Drawing.Point(653, 355);
+            this.pictureBoxWitch.Name = "pictureBoxWitch";
+            this.pictureBoxWitch.Size = new System.Drawing.Size(263, 236);
+            this.pictureBoxWitch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxWitch.TabIndex = 2;
+            this.pictureBoxWitch.TabStop = false;
+            this.pictureBoxWitch.Click += new System.EventHandler(this.pictureBoxWitch_Click);
+            // 
+            // pictureBoxMonster
+            // 
+            this.pictureBoxMonster.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxMonster.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxMonster.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Dragon;
+            this.pictureBoxMonster.Location = new System.Drawing.Point(163, 274);
+            this.pictureBoxMonster.Name = "pictureBoxMonster";
+            this.pictureBoxMonster.Size = new System.Drawing.Size(331, 317);
+            this.pictureBoxMonster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxMonster.TabIndex = 3;
+            this.pictureBoxMonster.TabStop = false;
+            this.pictureBoxMonster.Click += new System.EventHandler(this.pictureBoxMonster_Click);
+            // 
             // FormAlmanac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Background_Almanac;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1084, 799);
+            this.Controls.Add(this.pictureBoxMonster);
+            this.Controls.Add(this.pictureBoxWitch);
             this.Controls.Add(this.buttonWitch);
             this.Controls.Add(this.buttonMonster);
             this.DoubleBuffered = true;
@@ -82,6 +113,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Name = "FormAlmanac";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Almanac";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWitch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMonster)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -90,5 +123,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
         private System.Windows.Forms.Button buttonMonster;
         private System.Windows.Forms.Button buttonWitch;
+        private System.Windows.Forms.PictureBox pictureBoxWitch;
+        private System.Windows.Forms.PictureBox pictureBoxMonster;
     }
 }
