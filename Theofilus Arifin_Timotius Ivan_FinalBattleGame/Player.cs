@@ -29,6 +29,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Speed = speed;
         }
         #endregion
+
         #region PROPERTIES
         public string Description 
         { 

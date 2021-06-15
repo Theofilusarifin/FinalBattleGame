@@ -98,11 +98,11 @@
       <DependentUpon>FormAlmanacWitch.cs</DependentUpon>
     </Compile>
     <Compile Include="GameActor.cs" />
-    <Compile Include="MessageBox.cs">
+    <Compile Include="FormMessageBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MessageBox.Designer.cs">
-      <DependentUpon>MessageBox.cs</DependentUpon>
+    <Compile Include="FormMessageBox.Designer.cs">
+      <DependentUpon>FormMessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Monster.cs" />
     <Compile Include="Player.cs" />
@@ -145,8 +145,8 @@
     <EmbeddedResource Include="FormAlmanacWitch.resx">
       <DependentUpon>FormAlmanacWitch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MessageBox.resx">
-      <DependentUpon>MessageBox.cs</DependentUpon>
+    <EmbeddedResource Include="FormMessageBox.resx">
+      <DependentUpon>FormMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -544,6 +544,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Active Ultimate Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man Idle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Woman Idle.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

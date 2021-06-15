@@ -15,17 +15,19 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private int health;
         private PictureBox picture;
         #endregion
+
         #region CONSTRUCTORS
         public GameEntity(string name, int life, int health, Image image, Point position, Size size)
         {
             this.Name = name;
             this.Life = life;
             this.Health = health;
-            this.Picture.Image = image;
-            this.Picture.Location = position;
-            this.Picture.Size = size;
+            //this.Picture.Image = image;
+            //this.Picture.Location = position;
+            //this.Picture.Size = size;
         }
         #endregion
+
         #region PROPERTIES
         public string Name 
         { 

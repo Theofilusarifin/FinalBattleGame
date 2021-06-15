@@ -36,6 +36,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.panelMan = new System.Windows.Forms.Panel();
             this.panelWoman = new System.Windows.Forms.Panel();
             this.pictureBoxText = new System.Windows.Forms.PictureBox();
+            this.radioButtonMan = new System.Windows.Forms.RadioButton();
+            this.radioButtonWoman = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWomanPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxManPlayer)).BeginInit();
             this.panelMan.SuspendLayout();
@@ -103,6 +105,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.panelMan.Name = "panelMan";
             this.panelMan.Size = new System.Drawing.Size(169, 241);
             this.panelMan.TabIndex = 6;
+            this.panelMan.Click += new System.EventHandler(this.panelMan_Click);
             // 
             // panelWoman
             // 
@@ -114,6 +117,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.panelWoman.Name = "panelWoman";
             this.panelWoman.Size = new System.Drawing.Size(169, 241);
             this.panelWoman.TabIndex = 7;
+            this.panelWoman.Click += new System.EventHandler(this.panelWoman_Click);
             // 
             // pictureBoxText
             // 
@@ -127,6 +131,44 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBoxText.TabIndex = 8;
             this.pictureBoxText.TabStop = false;
             // 
+            // radioButtonMan
+            // 
+            this.radioButtonMan.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonMan.AutoSize = true;
+            this.radioButtonMan.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonMan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radioButtonMan.FlatAppearance.BorderSize = 0;
+            this.radioButtonMan.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonMan.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonMan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonMan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonMan.Location = new System.Drawing.Point(273, 161);
+            this.radioButtonMan.Name = "radioButtonMan";
+            this.radioButtonMan.Size = new System.Drawing.Size(6, 6);
+            this.radioButtonMan.TabIndex = 6;
+            this.radioButtonMan.TabStop = true;
+            this.radioButtonMan.UseVisualStyleBackColor = false;
+            this.radioButtonMan.CheckedChanged += new System.EventHandler(this.radioButtonMan_CheckedChanged);
+            // 
+            // radioButtonWoman
+            // 
+            this.radioButtonWoman.Appearance = System.Windows.Forms.Appearance.Button;
+            this.radioButtonWoman.AutoSize = true;
+            this.radioButtonWoman.BackColor = System.Drawing.Color.Transparent;
+            this.radioButtonWoman.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.radioButtonWoman.FlatAppearance.BorderSize = 0;
+            this.radioButtonWoman.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonWoman.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonWoman.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.radioButtonWoman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.radioButtonWoman.Location = new System.Drawing.Point(656, 161);
+            this.radioButtonWoman.Name = "radioButtonWoman";
+            this.radioButtonWoman.Size = new System.Drawing.Size(6, 6);
+            this.radioButtonWoman.TabIndex = 9;
+            this.radioButtonWoman.TabStop = true;
+            this.radioButtonWoman.UseVisualStyleBackColor = false;
+            this.radioButtonWoman.CheckedChanged += new System.EventHandler(this.radioButtonWoman_CheckedChanged);
+            // 
             // FormSelectCharacter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -134,6 +176,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Select_Character_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(934, 608);
+            this.Controls.Add(this.radioButtonWoman);
+            this.Controls.Add(this.radioButtonMan);
             this.Controls.Add(this.pictureBoxText);
             this.Controls.Add(this.buttonPlay);
             this.Controls.Add(this.panelMan);
@@ -144,12 +188,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Name = "FormSelectCharacter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Player";
+            this.Load += new System.EventHandler(this.FormSelectCharacter_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWomanPlayer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxManPlayer)).EndInit();
             this.panelMan.ResumeLayout(false);
             this.panelWoman.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxText)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -161,5 +207,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.Panel panelMan;
         private System.Windows.Forms.Panel panelWoman;
         private System.Windows.Forms.PictureBox pictureBoxText;
+        private System.Windows.Forms.RadioButton radioButtonMan;
+        private System.Windows.Forms.RadioButton radioButtonWoman;
     }
 }

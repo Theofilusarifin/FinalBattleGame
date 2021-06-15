@@ -693,6 +693,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Man_Idle {
+            get {
+                object obj = ResourceManager.GetObject("Man_Idle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Man_Knife {
             get {
                 object obj = ResourceManager.GetObject("Man_Knife", resourceCulture);
@@ -946,6 +956,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         internal static System.Drawing.Bitmap Woman_Fire {
             get {
                 object obj = ResourceManager.GetObject("Woman_Fire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Woman_Idle {
+            get {
+                object obj = ResourceManager.GetObject("Woman_Idle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
