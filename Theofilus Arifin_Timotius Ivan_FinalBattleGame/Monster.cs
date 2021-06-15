@@ -15,8 +15,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #endregion
 
         #region CONSTRUCTRORS
-        public Monster(string name, int life, int health, Image image, Point position, Size size, string hint, bool evolution) : 
-        base (name, life, health, image, position, size)
+        public Monster(int speed, string name, int life, int health, Image image, Point position, Size size, string hint, bool evolution) : 
+        base (speed, name, life, health, image, position, size)
         {
             this.Hint = hint;
             this.Evolution = evolution;

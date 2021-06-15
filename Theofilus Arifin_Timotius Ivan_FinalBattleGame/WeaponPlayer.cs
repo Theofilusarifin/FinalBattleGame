@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
@@ -10,15 +11,15 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
     {
         #region FIELDS
         private string name;
-        private Image image;
-        private int damage;
+        private PictureBox picture = new PictureBox();
         #endregion
         #region CONSTRUCTORS
-        public WeaponPlayer(string name, Image image, int damage)
+        public WeaponPlayer(string name, Image image, Point position, Size size)
         {
             this.Name = name;
-            this.Image = image;
-            this.Damage = damage;
+            Picture.Image = image;
+            Picture.Location = position;
+            Picture.Size = size;
         }
         #endregion
         #region PROPERTIES
@@ -27,15 +28,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             get => name; 
             set => name = value; 
         }
-        public Image Image 
+        public PictureBox Picture
         { 
-            get => image; 
-            set => image = value; 
-        }
-        public int Damage 
-        { 
-            get => damage; 
-            set => damage = value; 
+            get => picture; 
+            set => picture = value; 
         }
         #endregion
         #region METHODS

@@ -12,7 +12,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private int speed;
         #endregion
         #region CONSTRUCTORS
-        public Enemy(string name, int life, int health, Image image, Point position, Size size) :
+        public Enemy(int speed, string name, int life, int health, Image image, Point position, Size size) :
         base (name, life, health, image, position, size)
         {
 
@@ -22,7 +22,17 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         public int Speed 
         { 
             get => speed;
-            set => speed = 15;
+            set 
+            {
+                if (value >= 10)
+                {
+                    speed = value;
+                }
+                else
+                {
+                    throw new Exception("Speed must be greater that 10");
+                }
+            }
         }
         #endregion
         #region METHODS

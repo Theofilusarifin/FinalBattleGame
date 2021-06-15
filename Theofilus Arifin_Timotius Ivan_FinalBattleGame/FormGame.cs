@@ -12,6 +12,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
     public partial class FormGame : Form
     {
+        Player player;
+        bool moveUp, moveDown;
         public FormGame()
         {
             InitializeComponent();
@@ -27,17 +29,29 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 return cp;
             }
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
+        public void StartGame()
         {
-            //pictureBoxDagger.Left -= 15;
-        }
+            SelectRock();
+            player.DisplayPicture(this);
 
+            //Start Time Disini
+        }
+        public void CreateEnemy()
+        {
+            Random random = new Random();
+            int enemyType = random.Next(2); // 0 Monster || 1 Witch
+        }
         private void FormGame_Load(object sender, EventArgs e)
         {
             panelOptions.Visible = false;
+            timerPlayerMove.Start();
+            Point startingPoint = new Point(87, 497);
+            Size PlayerSize = new Size(108, 120);
+            Image playerImage = Properties.Resources.Active_Background_Man;
+            player = new Player("name", 10, 100, playerImage, startingPoint, PlayerSize, "desc", 0, 20, false);
         }
-        
+
+        #region OptionButton
         //Design Button Resume (Options)
         private void buttonResume_MouseEnter(object sender, EventArgs e)
         {
@@ -81,18 +95,22 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             buttonOptions.BackgroundImage = Properties.Resources.Button_Options_Over;
         }
+        #endregion
+
         #region SetWeapon
         public void SelectRock()
         {
             panelRock.Hide();
             panelKnife.Show();
             panelFire.Show();
+            player.SetWeapon("Rock", "It's a heavy giant rock", Properties.Resources.Rock);
         }
         public void SelectKnife()
         {
             panelRock.Show();
             panelKnife.Hide();
             panelFire.Show();
+            player.SetWeapon("Rock", "It's a heavy giant rock", Properties.Resources.Rock);
         }
         public void SelectFire()
         {
@@ -125,17 +143,15 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             SelectFire();
         }
         #endregion
-
         private void buttonResume_Click(object sender, EventArgs e)
         {
             panelOptions.Visible = false;
         }
-
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
+        #region UseUltimate
         private void pictureBoxButtonUltimate_Click(object sender, EventArgs e)
         {
             panelUltimate.BackgroundImage = Properties.Resources.Inactive_Ultimate;
@@ -147,6 +163,41 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             panelUltimate.BackgroundImage = Properties.Resources.Inactive_Ultimate;
             pictureBoxUltimateIcon.Hide();
             pictureBoxButtonUltimate.Hide();
+        }
+        #endregion
+        private void timerPlayerMove_Tick(object sender, EventArgs e)
+        {
+            //pictureBoxEnemy.Top -= 20;
+            if (moveUp)
+            {
+                pictureBoxPlayer.Top -= player.Speed;
+            }
+            if (moveDown)
+            {
+                pictureBoxPlayer.Top += player.Speed;
+            }
+        }
+        private void FormGame_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                moveUp = true;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                moveDown = true;
+            }
+        }
+        private void FormGame_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                moveUp = false;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                moveDown = false;
+            }
         }
     }
 }

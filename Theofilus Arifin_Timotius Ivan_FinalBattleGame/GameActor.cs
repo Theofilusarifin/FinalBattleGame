@@ -35,12 +35,32 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         public int Life 
         { 
             get => life; 
-            set => life = value; 
+            set
+            {
+                if (value >= 0)
+                {
+                    life = value;
+                }
+                else
+                {
+                    throw new Exception("Life must be grater than 0");
+                }
+            }
         }
         public int Health 
         { 
-            get => health; 
-            set => health = value; 
+            get => health;
+            set 
+            {
+                if (value >= 0 && value <= 100)
+                {
+                    health = value;
+                }
+                else
+                {
+                    throw new Exception("Health must be between 0 and 100");
+                }
+            }
         }
         public PictureBox Picture
         { 

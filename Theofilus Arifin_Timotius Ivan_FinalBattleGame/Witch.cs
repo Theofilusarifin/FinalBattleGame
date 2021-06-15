@@ -14,8 +14,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #endregion
 
         #region CONSTRUCTORS
-        public Witch(string name, int life, int health, Image image, Point position, Size size, int healthDamage) :
-        base(name, life, health, image, position, size)
+        public Witch(int speed, string name, int life, int health, Image image, Point position, Size size, int healthDamage) :
+        base(speed, name, life, health, image, position, size)
         {
             this.HealthDamage = healthDamage;
         }
@@ -25,7 +25,17 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         public int HealthDamage 
         { 
             get => healthDamage; 
-            set => healthDamage = value;
+            set
+            {
+                if (value > 0 && value <= 100)
+                {
+                    healthDamage = value;
+                }
+                else
+                {
+                    throw new Exception("Health Damage must be between 1% and 100%");
+                }
+            }
         }
         public WeaponWitch WeaponWitch
         {
