@@ -49,8 +49,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxPowerUp = new System.Windows.Forms.PictureBox();
-            this.panelPowerUp = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,6 +68,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.label17 = new System.Windows.Forms.Label();
             this.labelHint = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.panelUltimate = new System.Windows.Forms.Panel();
+            this.pictureBoxUltimateIcon = new System.Windows.Forms.PictureBox();
+            this.pictureBoxButtonUltimate = new System.Windows.Forms.PictureBox();
             this.panelOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRock)).BeginInit();
             this.panelRock.SuspendLayout();
@@ -83,8 +84,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerUp)).BeginInit();
-            this.panelPowerUp.SuspendLayout();
+            this.panelUltimate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUltimateIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonUltimate)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -184,7 +186,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBoxRock.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxRock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxRock.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxRock.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxRock.Image")));
+            this.pictureBoxRock.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Rock;
             this.pictureBoxRock.Location = new System.Drawing.Point(13, 15);
             this.pictureBoxRock.Name = "pictureBoxRock";
             this.pictureBoxRock.Size = new System.Drawing.Size(61, 58);
@@ -268,7 +270,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBoxFire.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxFire.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxFire.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxFire.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxFire.Image")));
+            this.pictureBoxFire.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Fireball;
             this.pictureBoxFire.Location = new System.Drawing.Point(18, 26);
             this.pictureBoxFire.Name = "pictureBoxFire";
             this.pictureBoxFire.Size = new System.Drawing.Size(52, 36);
@@ -326,37 +328,15 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBoxPowerUp
-            // 
-            this.pictureBoxPowerUp.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxPowerUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxPowerUp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxPowerUp.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPowerUp.Image")));
-            this.pictureBoxPowerUp.Location = new System.Drawing.Point(12, 15);
-            this.pictureBoxPowerUp.Name = "pictureBoxPowerUp";
-            this.pictureBoxPowerUp.Size = new System.Drawing.Size(61, 58);
-            this.pictureBoxPowerUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPowerUp.TabIndex = 9;
-            this.pictureBoxPowerUp.TabStop = false;
-            // 
-            // panelPowerUp
-            // 
-            this.panelPowerUp.BackColor = System.Drawing.Color.Transparent;
-            this.panelPowerUp.Controls.Add(this.pictureBoxPowerUp);
-            this.panelPowerUp.Location = new System.Drawing.Point(24, 853);
-            this.panelPowerUp.Name = "panelPowerUp";
-            this.panelPowerUp.Size = new System.Drawing.Size(86, 86);
-            this.panelPowerUp.TabIndex = 11;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Montserrat Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(409, 92);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 37);
+            this.label1.Size = new System.Drawing.Size(128, 31);
             this.label1.TabIndex = 12;
             this.label1.Text = "00:00:00";
             // 
@@ -368,7 +348,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(70, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 22);
+            this.label2.Size = new System.Drawing.Size(166, 22);
             this.label2.TabIndex = 13;
             this.label2.Text = "INCREDIBLE BOY";
             // 
@@ -380,7 +360,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(70, 150);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 20);
+            this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 14;
             this.label3.Text = "Health:";
             // 
@@ -392,7 +372,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(70, 175);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 20);
+            this.label4.Size = new System.Drawing.Size(58, 20);
             this.label4.TabIndex = 15;
             this.label4.Text = "Score:";
             // 
@@ -404,7 +384,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(70, 201);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 20);
+            this.label5.Size = new System.Drawing.Size(77, 20);
             this.label5.TabIndex = 16;
             this.label5.Text = "Weapon:";
             // 
@@ -416,7 +396,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(732, 119);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 22);
+            this.label6.Size = new System.Drawing.Size(90, 22);
             this.label6.TabIndex = 17;
             this.label6.Text = "DRAGON";
             // 
@@ -428,7 +408,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.labelHealthPlayer.ForeColor = System.Drawing.Color.White;
             this.labelHealthPlayer.Location = new System.Drawing.Point(139, 150);
             this.labelHealthPlayer.Name = "labelHealthPlayer";
-            this.labelHealthPlayer.Size = new System.Drawing.Size(46, 20);
+            this.labelHealthPlayer.Size = new System.Drawing.Size(48, 20);
             this.labelHealthPlayer.TabIndex = 21;
             this.labelHealthPlayer.Text = "100%";
             // 
@@ -440,7 +420,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.labelLifePlayer.ForeColor = System.Drawing.Color.White;
             this.labelLifePlayer.Location = new System.Drawing.Point(269, 150);
             this.labelLifePlayer.Name = "labelLifePlayer";
-            this.labelLifePlayer.Size = new System.Drawing.Size(24, 20);
+            this.labelLifePlayer.Size = new System.Drawing.Size(25, 20);
             this.labelLifePlayer.TabIndex = 23;
             this.labelLifePlayer.Text = "10";
             // 
@@ -452,7 +432,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(224, 150);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(39, 20);
+            this.label12.Size = new System.Drawing.Size(42, 20);
             this.label12.TabIndex = 22;
             this.label12.Text = "Life:";
             // 
@@ -476,7 +456,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.labelWeapon.ForeColor = System.Drawing.Color.White;
             this.labelWeapon.Location = new System.Drawing.Point(147, 201);
             this.labelWeapon.Name = "labelWeapon";
-            this.labelWeapon.Size = new System.Drawing.Size(45, 20);
+            this.labelWeapon.Size = new System.Drawing.Size(48, 20);
             this.labelWeapon.TabIndex = 25;
             this.labelWeapon.Text = "Rock";
             // 
@@ -488,7 +468,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.labelLifeEnemy.ForeColor = System.Drawing.Color.White;
             this.labelLifeEnemy.Location = new System.Drawing.Point(931, 150);
             this.labelLifeEnemy.Name = "labelLifeEnemy";
-            this.labelLifeEnemy.Size = new System.Drawing.Size(24, 20);
+            this.labelLifeEnemy.Size = new System.Drawing.Size(25, 20);
             this.labelLifeEnemy.TabIndex = 29;
             this.labelLifeEnemy.Text = "10";
             // 
@@ -500,7 +480,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(886, 150);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 20);
+            this.label8.Size = new System.Drawing.Size(42, 20);
             this.label8.TabIndex = 28;
             this.label8.Text = "Life:";
             // 
@@ -512,7 +492,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.labelHealthEnemy.ForeColor = System.Drawing.Color.White;
             this.labelHealthEnemy.Location = new System.Drawing.Point(801, 150);
             this.labelHealthEnemy.Name = "labelHealthEnemy";
-            this.labelHealthEnemy.Size = new System.Drawing.Size(46, 20);
+            this.labelHealthEnemy.Size = new System.Drawing.Size(48, 20);
             this.labelHealthEnemy.TabIndex = 27;
             this.labelHealthEnemy.Text = "100%";
             // 
@@ -524,7 +504,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.label15.ForeColor = System.Drawing.Color.White;
             this.label15.Location = new System.Drawing.Point(732, 150);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(63, 20);
+            this.label15.Size = new System.Drawing.Size(65, 20);
             this.label15.TabIndex = 26;
             this.label15.Text = "Health:";
             // 
@@ -536,7 +516,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.labelSpeed.ForeColor = System.Drawing.Color.White;
             this.labelSpeed.Location = new System.Drawing.Point(798, 175);
             this.labelSpeed.Name = "labelSpeed";
-            this.labelSpeed.Size = new System.Drawing.Size(34, 20);
+            this.labelSpeed.Size = new System.Drawing.Size(35, 20);
             this.labelSpeed.TabIndex = 31;
             this.labelSpeed.Text = "100";
             // 
@@ -548,7 +528,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(732, 175);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(60, 20);
+            this.label17.Size = new System.Drawing.Size(61, 20);
             this.label17.TabIndex = 30;
             this.label17.Text = "Speed:";
             // 
@@ -560,7 +540,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.labelHint.ForeColor = System.Drawing.Color.White;
             this.labelHint.Location = new System.Drawing.Point(782, 201);
             this.labelHint.Name = "labelHint";
-            this.labelHint.Size = new System.Drawing.Size(193, 20);
+            this.labelHint.Size = new System.Drawing.Size(205, 20);
             this.labelHint.TabIndex = 26;
             this.labelHint.Text = "Only the heat can defeat";
             // 
@@ -572,9 +552,45 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(732, 201);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(44, 20);
+            this.label19.Size = new System.Drawing.Size(47, 20);
             this.label19.TabIndex = 25;
             this.label19.Text = "Hint:";
+            // 
+            // panelUltimate
+            // 
+            this.panelUltimate.BackColor = System.Drawing.Color.Transparent;
+            this.panelUltimate.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Active_Ultimate_Background;
+            this.panelUltimate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelUltimate.Controls.Add(this.pictureBoxUltimateIcon);
+            this.panelUltimate.Controls.Add(this.pictureBoxButtonUltimate);
+            this.panelUltimate.Location = new System.Drawing.Point(42, 853);
+            this.panelUltimate.Name = "panelUltimate";
+            this.panelUltimate.Size = new System.Drawing.Size(86, 86);
+            this.panelUltimate.TabIndex = 9;
+            // 
+            // pictureBoxUltimateIcon
+            // 
+            this.pictureBoxUltimateIcon.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxUltimateIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxUltimateIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxUltimateIcon.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Active_Ultimate_Gif;
+            this.pictureBoxUltimateIcon.Location = new System.Drawing.Point(11, 11);
+            this.pictureBoxUltimateIcon.Name = "pictureBoxUltimateIcon";
+            this.pictureBoxUltimateIcon.Size = new System.Drawing.Size(65, 67);
+            this.pictureBoxUltimateIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxUltimateIcon.TabIndex = 9;
+            this.pictureBoxUltimateIcon.TabStop = false;
+            this.pictureBoxUltimateIcon.Click += new System.EventHandler(this.pictureBoxUltimateIcon_Click);
+            // 
+            // pictureBoxButtonUltimate
+            // 
+            this.pictureBoxButtonUltimate.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxButtonUltimate.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxButtonUltimate.Name = "pictureBoxButtonUltimate";
+            this.pictureBoxButtonUltimate.Size = new System.Drawing.Size(86, 86);
+            this.pictureBoxButtonUltimate.TabIndex = 32;
+            this.pictureBoxButtonUltimate.TabStop = false;
+            this.pictureBoxButtonUltimate.Click += new System.EventHandler(this.pictureBoxButtonUltimate_Click);
             // 
             // FormGame
             // 
@@ -583,6 +599,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.In_Game_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1055, 961);
+            this.Controls.Add(this.panelUltimate);
             this.Controls.Add(this.labelHint);
             this.Controls.Add(this.labelSpeed);
             this.Controls.Add(this.label19);
@@ -610,13 +627,12 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.panelPowerUp);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FormGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Game";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.FormGame_Load);
             this.panelOptions.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRock)).EndInit();
@@ -631,8 +647,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPowerUp)).EndInit();
-            this.panelPowerUp.ResumeLayout(false);
+            this.panelUltimate.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUltimateIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonUltimate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -657,8 +674,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.PictureBox pictureBoxButtonKnife;
         private System.Windows.Forms.PictureBox pictureBoxButtonFire;
         private System.Windows.Forms.PictureBox pictureBoxButtonRock;
-        private System.Windows.Forms.PictureBox pictureBoxPowerUp;
-        private System.Windows.Forms.Panel panelPowerUp;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -678,5 +693,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label labelHint;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel panelUltimate;
+        private System.Windows.Forms.PictureBox pictureBoxUltimateIcon;
+        private System.Windows.Forms.PictureBox pictureBoxButtonUltimate;
     }
 }

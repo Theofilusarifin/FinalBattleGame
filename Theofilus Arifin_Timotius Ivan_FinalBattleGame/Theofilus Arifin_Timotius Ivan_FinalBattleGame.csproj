@@ -536,5 +536,14 @@
   <ItemGroup>
     <None Include="Resources\Power Up Shield.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inactive Ultimate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Active Ultimate Gif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Active Ultimate Background.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

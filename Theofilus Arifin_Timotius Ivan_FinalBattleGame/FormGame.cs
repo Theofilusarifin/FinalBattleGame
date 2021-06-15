@@ -135,5 +135,18 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             this.Close();
         }
+
+        private void pictureBoxButtonUltimate_Click(object sender, EventArgs e)
+        {
+            panelUltimate.BackgroundImage = Properties.Resources.Inactive_Ultimate;
+            pictureBoxUltimateIcon.Hide();
+            pictureBoxButtonUltimate.Hide();
+        }
+        private void pictureBoxUltimateIcon_Click(object sender, EventArgs e)
+        {
+            panelUltimate.BackgroundImage = Properties.Resources.Inactive_Ultimate;
+            pictureBoxUltimateIcon.Hide();
+            pictureBoxButtonUltimate.Hide();
+        }
     }
 }
