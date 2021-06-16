@@ -315,11 +315,13 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region PlayerMove
         private void timerPlayerMove_Tick(object sender, EventArgs e)
         {
+            //Pada saat pictureBox Enemy ada di di bawah koordinat 280 pictureBox akan turun
             if (moveUp && player.Picture.Top >= 280)
             {
                 player.MoveUp();
                 player.DisplayPicture(this);
             }
+            //Pada saat pictureBox Enemy ada di atas  koordinat 710, pictureBox akan naik
             if (moveDown && player.Picture.Top <= 710)
             {
                 player.MoveDown();
@@ -351,12 +353,12 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #endregion
         private void timerEnemy_Tick(object sender, EventArgs e)
         {
-            //Pada saat pictureBox Enemy ada di di bawah (labelHintHealthDamage + 50), pictureBox akan turun
+            //Pada saat pictureBox Enemy ada di di bawah koordinat 280 pictureBox akan turun
             if (enemy.Picture.Top <= 280)
             {
                 enemyMoveUp = false;
             }
-            //Pada saat pictureBox Enemy ada di atas bagian bawah FormGame, pictureBox akan naik
+            //Pada saat pictureBox Enemy ada di atas  koordinat 710, pictureBox akan naik
             else if (enemy.Picture.Top >= 710)
             {
                 enemyMoveUp = true;
