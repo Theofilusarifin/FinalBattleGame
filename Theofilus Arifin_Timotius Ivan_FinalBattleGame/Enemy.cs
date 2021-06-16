@@ -15,7 +15,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         public Enemy(int speed, string name, int life, int health, Image image, Point position, Size size) :
         base (name, life, health, image, position, size)
         {
-
+            this.Speed = speed;
         }
         #endregion
         #region PROPERTIES
@@ -24,7 +24,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             get => speed;
             set 
             {
-                if (value >= 10)
+                if (value >= 0)
                 {
                     speed = value;
                 }
@@ -42,7 +42,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
         public override void MoveDown()
         {
-            Picture.Top -= Speed;
+            Picture.Top += Speed;
         }
         #endregion
     }

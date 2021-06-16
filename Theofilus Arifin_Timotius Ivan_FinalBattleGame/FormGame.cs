@@ -31,12 +31,74 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 return cp;
             }
         }
-        public void StartGame()
+        #region SetWeapon
+        public void SelectRock()
+        {
+            panelRock.Hide();
+            panelKnife.Show();
+            panelFire.Show();
+            player.SetWeapon("Rock", "It's a heavy giant rock", Properties.Resources.Rock);
+        }
+        public void SelectKnife()
+        {
+            panelRock.Show();
+            panelKnife.Hide();
+            panelFire.Show();
+            player.SetWeapon("Knife", "It's a sharp rusty knives", Properties.Resources.Knife);
+        }
+        public void SelectFireBall()
+        {
+            panelRock.Show();
+            panelKnife.Show();
+            panelFire.Hide();
+            player.SetWeapon("Knife", "It's a hot bluish flame", Properties.Resources.Fireball);
+        }
+        private void pictureBoxButtonRock_Click_1(object sender, EventArgs e)
         {
             SelectRock();
+        }
+        private void pictureBoxRock_Click(object sender, EventArgs e)
+        {
+            SelectRock();
+        }
+        private void pictureBoxKnife_Click(object sender, EventArgs e)
+        {
+            SelectKnife();
+        }
+        private void pictureBoxButtonKnife_Click(object sender, EventArgs e)
+        {
+            SelectKnife();
+        }
+        private void pictureBoxButtonFire_Click(object sender, EventArgs e)
+        {
+            SelectFireBall();
+        }
+        private void pictureBoxFire_Click(object sender, EventArgs e)
+        {
+            SelectFireBall();
+        }
+        #endregion
 
-            //SET WEAPON/////////////////////////////////////////////////////////////////////////////////
+        #region UseUltimate
+        private void pictureBoxButtonUltimate_Click(object sender, EventArgs e)
+        {
+            panelUltimate.BackgroundImage = Properties.Resources.Inactive_Ultimate;
+            pictureBoxUltimateIcon.Hide();
+            pictureBoxButtonUltimate.Hide();
+        }
+        private void pictureBoxUltimateIcon_Click(object sender, EventArgs e)
+        {
+            panelUltimate.BackgroundImage = Properties.Resources.Inactive_Ultimate;
+            pictureBoxUltimateIcon.Hide();
+            pictureBoxButtonUltimate.Hide();
+        }
+        #endregion
+        public void StartGame()
+        {
+            //Set Rock as default weapon
+            SelectRock();
 
+            //Display player picture
             player.DisplayPicture(this);
 
             //Start Time Disini
@@ -46,6 +108,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             //Create Enemy
             CreateEnemy();
         }
+        #region Display
         public void DisplayPlayerInfo()
         {
             labelPlayerName.Text = player.Name;
@@ -74,13 +137,15 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 labelHintHealthDamage.Text = "Health Damage: ";
             }
         }
+        #endregion
+        #region CreateEnemy
         public void CreateEnemy()
         {
             Random random = new Random();
             int enemyType = random.Next(2); // 0 Monster || 1 Witch
 
-            Point startingPoint = new Point(824, 387);
-            Size enemySize = new Size(163, 120);
+            Point startingPoint = new Point(824, 475);
+            Size enemySize;
 
             //Kalau enemy sudah ada, maka akan diremove
             if (enemy != null)
@@ -94,20 +159,47 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 //Daftar random --> 0 = Dragon, 1 = Godzilla, 2 = Dino (Easy) || 0 = MegaDragon, 1 = MegaGodzilla, 2 = MegaDino (Hard)
                 int monsterType = random.Next(3);
 
-                //Buat Dragon or MegaDragon ==> 0
-                if (monsterType == 0)
+                if (FormMenu.LevelDifficulty == "Easy")
                 {
-                    enemy = new Monster(100, "Dragon", 3, 100, Properties.Resources.Dragon, startingPoint, enemySize, "Only the heat can defeat me", false);
+                    //Buat Dragon ==> 0
+                    if (monsterType == 0)
+                    {
+                        enemySize = new Size(167, 156);
+                        enemy = new Monster(5, "Dragon", 3, 100, Properties.Resources.Dragon, startingPoint, enemySize, "Only the heat can defeat me");
+                    }
+                    //Buat Godzilla ==> 1
+                    else if (monsterType == 1)
+                    {
+                        enemySize = new Size(157, 149);
+                        enemy = new Monster(5, "Godzilla", 5, 100, Properties.Resources.Godzilla, startingPoint, enemySize, "Really can't help the hard stuff upon me");
+                    }
+                    //Buat Dino ==> 2
+                    else
+                    {
+                        enemySize = new Size(182, 104);
+                        enemy = new Monster(5, "Dino", 7, 100, Properties.Resources.Dino, startingPoint, enemySize, "Ouch.. no sharp item please..");
+                    }
                 }
-                //Buat Godzilla or MegaGodzilla ==> 1
-                else if (monsterType == 1)
-                {
-                    enemy = new Monster(30, "Godzilla", 5, 100, Properties.Resources.Godzilla, startingPoint, enemySize, "Really can't help the hard stuff upon me", false);
-                }
-                //Buat Dino or MegaDino ==> 2
                 else
                 {
-                    enemy = new Monster(150, "Dino", 7, 100, Properties.Resources.Dino, startingPoint, enemySize, "Ouch.. no sharp item please..", false);
+                    //Buat MegaDragon ==> 0
+                    if (monsterType == 0)
+                    {
+                        enemySize = new Size(163, 120);
+                        enemy = new Monster(5, "Dragon", 3, 100, Properties.Resources.Mega_Dragon, startingPoint, enemySize, "Only the heat can defeat me");
+                    }
+                    //Buat MegaGodzilla ==> 1
+                    else if (monsterType == 1)
+                    {
+                        enemySize = new Size(167, 149);
+                        enemy = new Monster(5, "Godzilla", 5, 100, Properties.Resources.Mega_Godzilla, startingPoint, enemySize, "Really can't help the hard stuff upon me");
+                    }
+                    //Buat MegaDino ==> 2
+                    else
+                    {
+                        enemySize = new Size(186, 149);
+                        enemy = new Monster(5, "Dino", 7, 100, Properties.Resources.Mega_Dino, startingPoint, enemySize, "Ouch.. no sharp item please..");
+                    }
                 }
             }
 
@@ -119,17 +211,20 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 //Buat Broom Witch ==> 0
                 if (witchType == 0)
                 {
-                    enemy = new Witch(100, "Broom Witch", 1, 100, Properties.Resources.Broom_Witch, startingPoint, enemySize, 10);
+                    enemySize = new Size(117, 103);
+                    enemy = new Witch(5, "Broom Witch", 1, 100, Properties.Resources.Broom_Witch, startingPoint, enemySize, 10);
                 }
                 //Buat Ancient Witch ==> 1
                 else if (witchType == 1)
                 {
-                    enemy = new Witch(150, "Ancient Witch", 2, 100, Properties.Resources.Ancient_Witch, startingPoint, enemySize, 20);
+                    enemySize = new Size(94, 114);
+                    enemy = new Witch(5, "Ancient Witch", 2, 100, Properties.Resources.Ancient_Witch, startingPoint, enemySize, 20);
                 }
                 //Buat Green Witch ==> 2
                 else
                 {
-                    enemy = new Witch(200, "Green Witch", 1, 100, Properties.Resources.Green_Witch, startingPoint, enemySize, 50);
+                    enemySize = new Size(136, 103);
+                    enemy = new Witch(5, "Green Witch", 1, 100, Properties.Resources.Green_Witch, startingPoint, enemySize, 50);
                 }
             }
 
@@ -137,24 +232,30 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             enemy.DisplayPicture(this);
             //Display Enemy Info
             DisplayEnemyInfo();
-            //Set Interval Enemy Speed
-            timerEnemy.Interval = enemy.Speed;
 
             //Set Enemy Move Up == True In Beginning
             enemyMoveUp = true;
             //Start TimerEnemy
             timerEnemy.Start();
         }
+        #endregion
         private void FormGame_Load(object sender, EventArgs e)
         {
+            //Initiate Starting Position and Size Player
+            Point startingPoint = new Point(87, 497);
+            Size playerSize = new Size(70, 107);
+            if (FormMenu.PlayerChoosen == "Man")
+            {
+                player = new Player("INCREDIBLE BOY", 10, 100, Properties.Resources.Man_Idle, startingPoint, playerSize, "I'm the superhero with incredible strength amd honor", 0, 20, false);
+            }
+            else
+            {
+                player = new Player("PERFECTA GIRL", 10, 100, Properties.Resources.Woman_Idle, startingPoint, playerSize, "I'm the superhero with calm and perfect play", 0, 20, false);
+            }
             panelOptions.Visible = false;
             timerPlayerMove.Start();
-
-            Point startingPoint = new Point(87, 497);
-            Size playerSize = new Size(108, 120);
-
-            Image playerImage = Properties.Resources.Active_Background_Man;
-            player = new Player("name", 10, 100, playerImage, startingPoint, playerSize, "desc", 0, 20, false);
+            //Call method StartGame in FormGame
+            StartGame();
         }
 
         #region OptionButton
@@ -201,54 +302,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             buttonOptions.BackgroundImage = Properties.Resources.Button_Options_Over;
         }
-        #endregion
-
-        #region SetWeapon
-        public void SelectRock()
-        {
-            panelRock.Hide();
-            panelKnife.Show();
-            panelFire.Show();
-            player.SetWeapon("Rock", "It's a heavy giant rock", Properties.Resources.Rock);
-        }
-        public void SelectKnife()
-        {
-            panelRock.Show();
-            panelKnife.Hide();
-            panelFire.Show();
-            player.SetWeapon("Rock", "It's a heavy giant rock", Properties.Resources.Rock);
-        }
-        public void SelectFire()
-        {
-            panelRock.Show();
-            panelKnife.Show();
-            panelFire.Hide();
-        }
-        private void pictureBoxButtonRock_Click_1(object sender, EventArgs e)
-        {
-            SelectRock();
-        }
-        private void pictureBoxRock_Click(object sender, EventArgs e)
-        {
-            SelectRock();
-        }
-        private void pictureBoxKnife_Click(object sender, EventArgs e)
-        {
-            SelectKnife();
-        }
-        private void pictureBoxButtonKnife_Click(object sender, EventArgs e)
-        {
-            SelectKnife();
-        }
-        private void pictureBoxButtonFire_Click(object sender, EventArgs e)
-        {
-            SelectFire();
-        }
-        private void pictureBoxFire_Click(object sender, EventArgs e)
-        {
-            SelectFire();
-        }
-        #endregion
         private void buttonResume_Click(object sender, EventArgs e)
         {
             panelOptions.Visible = false;
@@ -257,32 +310,20 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             this.Close();
         }
-
-        #region UseUltimate
-        private void pictureBoxButtonUltimate_Click(object sender, EventArgs e)
-        {
-            panelUltimate.BackgroundImage = Properties.Resources.Inactive_Ultimate;
-            pictureBoxUltimateIcon.Hide();
-            pictureBoxButtonUltimate.Hide();
-        }
-        private void pictureBoxUltimateIcon_Click(object sender, EventArgs e)
-        {
-            panelUltimate.BackgroundImage = Properties.Resources.Inactive_Ultimate;
-            pictureBoxUltimateIcon.Hide();
-            pictureBoxButtonUltimate.Hide();
-        }
         #endregion
 
+        #region PlayerMove
         private void timerPlayerMove_Tick(object sender, EventArgs e)
         {
-            //pictureBoxEnemy.Top -= 20;
-            if (moveUp)
+            if (moveUp && player.Picture.Top >= 280)
             {
-                pictureBoxPlayer.Top -= player.Speed;
+                player.MoveUp();
+                player.DisplayPicture(this);
             }
-            if (moveDown)
+            if (moveDown && player.Picture.Top <= 710)
             {
-                pictureBoxPlayer.Top += player.Speed;
+                player.MoveDown();
+                player.DisplayPicture(this);
             }
         }
         private void FormGame_KeyDown(object sender, KeyEventArgs e)
@@ -296,16 +337,27 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 moveDown = true;
             }
         }
-
+        private void FormGame_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Up)
+            {
+                moveUp = false;
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                moveDown = false;
+            }
+        }
+        #endregion
         private void timerEnemy_Tick(object sender, EventArgs e)
         {
             //Pada saat pictureBox Enemy ada di di bawah (labelHintHealthDamage + 50), pictureBox akan turun
-            if (enemy.Picture.Location.Y <= labelHintHealthDamage.Height + 50)
+            if (enemy.Picture.Top <= 280)
             {
                 enemyMoveUp = false;
             }
             //Pada saat pictureBox Enemy ada di atas bagian bawah FormGame, pictureBox akan naik
-            else if (enemy.Picture.Location.Y >= this.Height - enemy.Picture.Size.Height)
+            else if (enemy.Picture.Top >= 710)
             {
                 enemyMoveUp = true;
             }
@@ -335,18 +387,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             else
             {
                 time.AddSecond(-1);
-            }
-        }
-
-        private void FormGame_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Up)
-            {
-                moveUp = false;
-            }
-            if (e.KeyCode == Keys.Down)
-            {
-                moveDown = false;
             }
         }
     }

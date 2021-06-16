@@ -12,6 +12,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
     public partial class FormSelectCharacter : Form
     {
+        bool man = true;
         public FormSelectCharacter()
         {
             InitializeComponent();
@@ -32,31 +33,20 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             try
             {
+                // Define Choosen Player
+                if (man)
+                {
+                    FormMenu.PlayerChoosen = "Man";
+                }
+                else
+                {
+                    FormMenu.PlayerChoosen = "Woman";
+                }
                 Hide();
                 FormGame formGame = new FormGame();
                 formGame.Owner = this;
                 formGame.ShowDialog();
-                Close();
-
-                //Initiate Starting Position and Size Player
-                Point startingPoint = new Point(87, 497);
-                Size playerSize = new Size(108, 120);
-
-                if (formGame.player != null)
-                {
-                    formGame.player.Remove();
-                }
-
-                if (radioButtonMan.Checked)
-                {
-                    formGame.player = new Player("INCREDIBLE BOY", 10, 100, Properties.Resources.Man_Idle, startingPoint, playerSize, "I'm the superhero with incredible strength amd honor", 0, 20, false);
-                }
-                else
-                {
-                    formGame.player = new Player("PERFECTA GIRL", 10, 100, Properties.Resources.Woman_Idle, startingPoint, playerSize, "I'm the superhero with calm and perfect play", 0, 20, false);
-                }
-                //Call method StartGame in FormGame
-                formGame.StartGame();
+                //Close();
             }
             catch (Exception ex)
             {
@@ -83,21 +73,25 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private void pictureBoxManPlayer_Click(object sender, EventArgs e)
         {
             radioButtonMan.PerformClick();
+            man = true;
         }
         private void pictureBoxWomanPlayer_Click(object sender, EventArgs e)
         {
             radioButtonWoman.PerformClick();
+            man = false;
         }
 
         //PictureBox and Panel Woman Clicked
         private void panelMan_Click(object sender, EventArgs e)
         {
             radioButtonMan.PerformClick();
+            man = true;
         }
 
         private void panelWoman_Click(object sender, EventArgs e)
         {
             radioButtonWoman.PerformClick();
+            man = false;
         }
 
         //Radio Button Man Checked ==> True

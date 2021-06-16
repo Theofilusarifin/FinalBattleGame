@@ -13,7 +13,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private string name;
         private int life;
         private int health;
-        private PictureBox picture;
+        private PictureBox picture = new PictureBox();
         #endregion
 
         #region CONSTRUCTORS
@@ -22,9 +22,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Name = name;
             this.Life = life;
             this.Health = health;
-            //this.Picture.Image = image;
-            //this.Picture.Location = position;
-            //this.Picture.Size = size;
+            this.Picture.Image = image;
+            this.Picture.Location = position;
+            this.Picture.Size = size;
         }
         #endregion
 

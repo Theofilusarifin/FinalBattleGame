@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
@@ -10,16 +11,15 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
     {
         #region FIELDS
         private string hint;
-        private bool evolution;
         private WeaponMonster weapon;
         #endregion
 
         #region CONSTRUCTRORS
-        public Monster(int speed, string name, int life, int health, Image image, Point position, Size size, string hint, bool evolution) : 
+        public Monster(int speed, string name, int life, int health, Image image, Point position, Size size, string hint) : 
         base (speed, name, life, health, image, position, size)
         {
             this.Hint = hint;
-            this.Evolution = evolution;
+            this.Weapon = null;
         }
         #endregion
 
@@ -29,19 +29,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             get => hint; 
             set => hint = value;
         }
-
-        public bool Evolution
+        public WeaponMonster Weapon
         {
-            get => evolution;
-            set => evolution = value;
-        }
-
-        public WeaponMonster WeaponMonster
-        {
-            get => default;
-            set
-            {
-            }
+            get => weapon;
+            private set => weapon = value;
         }
         #endregion
 
@@ -49,6 +40,23 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         public string DisplayHint()
         {
             return Hint;
+        }
+        public void SetWeapon(string name, Image image)
+        {
+            Point position = new Point(Picture.Location.X + 80, Picture.Location.Y + 80);
+            Size size = new Size(30, 30);
+            Weapon = new WeaponMonster(name, image, position, size);
+        }
+        public void DisplayWeapon(Control displayContainer)
+        {
+            Weapon.Picture.Parent = displayContainer;
+            Weapon.Picture.SizeMode = PictureBoxSizeMode.StretchImage;
+            Weapon.Picture.BackColor = Color.Transparent;
+            Weapon.Picture.BringToFront();
+        }
+        public void ReleaseWeapon()
+        {
+            Weapon.Picture.Left += 30;
         }
         #endregion
     }

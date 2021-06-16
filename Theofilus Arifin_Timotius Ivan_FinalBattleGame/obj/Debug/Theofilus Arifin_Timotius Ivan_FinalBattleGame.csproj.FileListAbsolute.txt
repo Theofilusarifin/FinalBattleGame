@@ -30,7 +30,6 @@ C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_Fi
 C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\bin\Debug\Theofilus Arifin_Timotius Ivan_FinalBattleGame.exe
 C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\bin\Debug\Theofilus Arifin_Timotius Ivan_FinalBattleGame.pdb
 C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.FormGame.resources
-C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.MessageBox.resources
 C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.resources
 C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Theofilus Arifin_Timotius Ivan_FinalBattleGame.csproj.GenerateResource.cache
 C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Theofilus Arifin_Timotius Ivan_FinalBattleGame.csproj.CoreCompileInputs.cache
@@ -51,5 +50,5 @@ C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_Fi
 C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.FormSelectDifficulty.resources
 C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.FormAlmanacWitch.resources
 C:\Users\Timotius\Dropbox\My PC (LAPTOP-3M0G38V0)\Documents\Github Desktop\OOP UAS\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Theofilus Arifin_Timotius Ivan_FinalBattleGame.csproj.AssemblyReference.cache
-C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Theofilus Arifin_Timotius Ivan_FinalBattleGame.csproj.AssemblyReference.cache
 C:\Users\Timotius\Dropbox\My PC (LAPTOP-3M0G38V0)\Documents\Github Desktop\OOP UAS\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.FormMessageBox.resources
+C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.FormMessageBox.resources

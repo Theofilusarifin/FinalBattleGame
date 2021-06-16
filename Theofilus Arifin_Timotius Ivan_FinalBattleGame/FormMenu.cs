@@ -12,6 +12,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
     public partial class FormMenu : Form
     {
+        public static string LevelDifficulty;
+        public static string PlayerChoosen;
         public FormMenu()
         {
             InitializeComponent();

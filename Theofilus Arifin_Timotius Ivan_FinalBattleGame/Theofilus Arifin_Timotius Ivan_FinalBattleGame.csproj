@@ -49,6 +49,7 @@
     <Compile Include="Difficulty.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemyWeapon.cs" />
+    <Compile Include="Evolution.cs" />
     <Compile Include="FormAlmanac.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +106,7 @@
       <DependentUpon>FormMessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Monster.cs" />
+    <Compile Include="MonsterEvolution.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PowerUps.cs" />
     <Compile Include="Program.cs" />
@@ -117,6 +119,7 @@
     <Compile Include="Round.cs" />
     <Compile Include="Time.cs" />
     <Compile Include="Ultimate.cs" />
+    <Compile Include="WeaponMonsterEvolution.cs" />
     <Compile Include="WeaponPlayer.cs" />
     <Compile Include="WeaponMonster.cs" />
     <Compile Include="WeaponWitch.cs" />

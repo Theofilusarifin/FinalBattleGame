@@ -39,6 +39,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
         private void buttonEasy_Click(object sender, EventArgs e)
         {
+            FormMenu.LevelDifficulty = "Easy";
             Hide();
             FormSelectCharacter formSelectCharacter = new FormSelectCharacter();
             formSelectCharacter.ShowDialog();
@@ -47,6 +48,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
         private void buttonHard_Click(object sender, EventArgs e)
         {
+            FormMenu.LevelDifficulty = "Hard";
             Hide();
             FormSelectCharacter formSelectCharacter = new FormSelectCharacter();
             formSelectCharacter.ShowDialog();

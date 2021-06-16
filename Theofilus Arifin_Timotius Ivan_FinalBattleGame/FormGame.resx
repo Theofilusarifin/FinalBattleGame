@@ -3546,9 +3546,6 @@
         MMgrCN+MM0M6Z8EzwS/fW4Ig6q7rycc+h7wCFoM40vQJPBDNRQIAOw==
 </value>
   </data>
-  <metadata name="timerPlayerMove.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>31, 16</value>
-  </metadata>
   <metadata name="timerTime.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>175, 16</value>
   </metadata>
@@ -3557,6 +3554,9 @@
   </metadata>
   <metadata name="timerWeapon.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>398, 16</value>
+  </metadata>
+  <metadata name="timerPlayerMove.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>31, 16</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>50</value>

@@ -84,7 +84,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
         public override void MoveDown()
         {
-            Picture.Top -= Speed;
+            Picture.Top += Speed;
         }
         public void SetWeapon(string name, string description, Image image)
         {
