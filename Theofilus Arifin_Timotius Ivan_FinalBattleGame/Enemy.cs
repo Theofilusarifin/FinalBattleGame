@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
-    public class Enemy : GameEntity
+    public abstract class Enemy : GameEntity
     {
         #region FIELDS
         private int speed;
@@ -36,6 +36,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
         #endregion
         #region METHODS
+        public override string DisplayData()
+        {
+            return DisplayDataActor() + "\nSpeed: " + Speed;
+        }
+        public abstract string DisplayDataEnemy();
         public override void MoveUp()
         {
             Picture.Top -= Speed;

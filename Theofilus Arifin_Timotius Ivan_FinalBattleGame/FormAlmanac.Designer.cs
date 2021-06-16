@@ -34,6 +34,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonMonster = new System.Windows.Forms.Button();
             this.pictureBoxWitch = new System.Windows.Forms.PictureBox();
             this.pictureBoxMonster = new System.Windows.Forms.PictureBox();
+            this.buttonBackToMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxWitch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMonster)).BeginInit();
             this.SuspendLayout();
@@ -96,6 +97,25 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBoxMonster.TabStop = false;
             this.pictureBoxMonster.Click += new System.EventHandler(this.pictureBoxMonster_Click);
             // 
+            // buttonBackToMenu
+            // 
+            this.buttonBackToMenu.BackColor = System.Drawing.Color.Transparent;
+            this.buttonBackToMenu.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Button_Back_To_Menu_Over;
+            this.buttonBackToMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonBackToMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonBackToMenu.FlatAppearance.BorderSize = 0;
+            this.buttonBackToMenu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonBackToMenu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonBackToMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBackToMenu.Location = new System.Drawing.Point(47, 30);
+            this.buttonBackToMenu.Name = "buttonBackToMenu";
+            this.buttonBackToMenu.Size = new System.Drawing.Size(216, 55);
+            this.buttonBackToMenu.TabIndex = 4;
+            this.buttonBackToMenu.UseVisualStyleBackColor = false;
+            this.buttonBackToMenu.Click += new System.EventHandler(this.buttonBackToMenu_Click);
+            this.buttonBackToMenu.MouseEnter += new System.EventHandler(this.buttonBackToMenu_MouseEnter);
+            this.buttonBackToMenu.MouseLeave += new System.EventHandler(this.buttonBackToMenu_MouseLeave);
+            // 
             // FormAlmanac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,6 +123,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1084, 799);
+            this.Controls.Add(this.buttonBackToMenu);
             this.Controls.Add(this.pictureBoxMonster);
             this.Controls.Add(this.pictureBoxWitch);
             this.Controls.Add(this.buttonWitch);
@@ -125,5 +146,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.Button buttonWitch;
         private System.Windows.Forms.PictureBox pictureBoxWitch;
         private System.Windows.Forms.PictureBox pictureBoxMonster;
+        private System.Windows.Forms.Button buttonBackToMenu;
     }
 }

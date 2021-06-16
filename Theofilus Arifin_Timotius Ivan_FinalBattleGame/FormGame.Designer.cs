@@ -33,7 +33,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGame));
             this.panelOptions = new System.Windows.Forms.Panel();
             this.buttonExit = new System.Windows.Forms.Button();
-            this.buttonSave = new System.Windows.Forms.Button();
             this.buttonResume = new System.Windows.Forms.Button();
             this.buttonOptions = new System.Windows.Forms.Button();
             this.pictureBoxRock = new System.Windows.Forms.PictureBox();
@@ -49,23 +48,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.labelTime = new System.Windows.Forms.Label();
-            this.labelPlayerName = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.labelEnemyName = new System.Windows.Forms.Label();
-            this.labelHealthPlayer = new System.Windows.Forms.Label();
-            this.labelLifePlayer = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.labelScore = new System.Windows.Forms.Label();
-            this.labelWeapon = new System.Windows.Forms.Label();
-            this.labelLifeEnemy = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labelHealthEnemy = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.labelSpeed = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.labelHintHealthDamage = new System.Windows.Forms.Label();
+            this.labelPlayerInfo = new System.Windows.Forms.Label();
+            this.labelEnemyInfo = new System.Windows.Forms.Label();
             this.panelUltimate = new System.Windows.Forms.Panel();
             this.pictureBoxUltimateIcon = new System.Windows.Forms.PictureBox();
             this.pictureBoxButtonUltimate = new System.Windows.Forms.PictureBox();
@@ -97,7 +81,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.panelOptions.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelOptions.BackgroundImage")));
             this.panelOptions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelOptions.Controls.Add(this.buttonExit);
-            this.panelOptions.Controls.Add(this.buttonSave);
             this.panelOptions.Controls.Add(this.buttonResume);
             this.panelOptions.Location = new System.Drawing.Point(311, 335);
             this.panelOptions.Name = "panelOptions";
@@ -115,7 +98,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.ForeColor = System.Drawing.Color.White;
-            this.buttonExit.Location = new System.Drawing.Point(109, 280);
+            this.buttonExit.Location = new System.Drawing.Point(109, 262);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(180, 69);
             this.buttonExit.TabIndex = 2;
@@ -123,24 +106,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             this.buttonExit.MouseEnter += new System.EventHandler(this.buttonExit_MouseEnter);
             this.buttonExit.MouseLeave += new System.EventHandler(this.buttonExit_MouseLeave);
-            // 
-            // buttonSave
-            // 
-            this.buttonSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSave.BackgroundImage")));
-            this.buttonSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSave.FlatAppearance.BorderSize = 0;
-            this.buttonSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSave.ForeColor = System.Drawing.Color.White;
-            this.buttonSave.Location = new System.Drawing.Point(109, 191);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(180, 69);
-            this.buttonSave.TabIndex = 1;
-            this.buttonSave.UseVisualStyleBackColor = true;
-            this.buttonSave.MouseEnter += new System.EventHandler(this.buttonSave_MouseEnter);
-            this.buttonSave.MouseLeave += new System.EventHandler(this.buttonSave_MouseLeave);
             // 
             // buttonResume
             // 
@@ -152,7 +117,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonResume.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonResume.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonResume.ForeColor = System.Drawing.Color.White;
-            this.buttonResume.Location = new System.Drawing.Point(109, 103);
+            this.buttonResume.Location = new System.Drawing.Point(109, 137);
             this.buttonResume.Name = "buttonResume";
             this.buttonResume.Size = new System.Drawing.Size(180, 69);
             this.buttonResume.TabIndex = 0;
@@ -335,213 +300,30 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.labelTime.ForeColor = System.Drawing.Color.White;
             this.labelTime.Location = new System.Drawing.Point(426, 96);
             this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(128, 31);
+            this.labelTime.Size = new System.Drawing.Size(0, 31);
             this.labelTime.TabIndex = 12;
-            this.labelTime.Text = "00:00:00";
             // 
-            // labelPlayerName
+            // labelPlayerInfo
             // 
-            this.labelPlayerName.AutoSize = true;
-            this.labelPlayerName.BackColor = System.Drawing.Color.Transparent;
-            this.labelPlayerName.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.labelPlayerName.ForeColor = System.Drawing.Color.White;
-            this.labelPlayerName.Location = new System.Drawing.Point(70, 119);
-            this.labelPlayerName.Name = "labelPlayerName";
-            this.labelPlayerName.Size = new System.Drawing.Size(166, 22);
-            this.labelPlayerName.TabIndex = 13;
-            this.labelPlayerName.Text = "INCREDIBLE BOY";
+            this.labelPlayerInfo.AutoSize = true;
+            this.labelPlayerInfo.BackColor = System.Drawing.Color.Transparent;
+            this.labelPlayerInfo.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
+            this.labelPlayerInfo.ForeColor = System.Drawing.Color.White;
+            this.labelPlayerInfo.Location = new System.Drawing.Point(62, 124);
+            this.labelPlayerInfo.Name = "labelPlayerInfo";
+            this.labelPlayerInfo.Size = new System.Drawing.Size(0, 20);
+            this.labelPlayerInfo.TabIndex = 13;
             // 
-            // label3
+            // labelEnemyInfo
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(70, 150);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 20);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Health:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(70, 175);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 20);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Score:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(70, 201);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 20);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "Weapon:";
-            // 
-            // labelEnemyName
-            // 
-            this.labelEnemyName.AutoSize = true;
-            this.labelEnemyName.BackColor = System.Drawing.Color.Transparent;
-            this.labelEnemyName.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
-            this.labelEnemyName.ForeColor = System.Drawing.Color.White;
-            this.labelEnemyName.Location = new System.Drawing.Point(732, 119);
-            this.labelEnemyName.Name = "labelEnemyName";
-            this.labelEnemyName.Size = new System.Drawing.Size(90, 22);
-            this.labelEnemyName.TabIndex = 17;
-            this.labelEnemyName.Text = "DRAGON";
-            // 
-            // labelHealthPlayer
-            // 
-            this.labelHealthPlayer.AutoSize = true;
-            this.labelHealthPlayer.BackColor = System.Drawing.Color.Transparent;
-            this.labelHealthPlayer.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.labelHealthPlayer.ForeColor = System.Drawing.Color.White;
-            this.labelHealthPlayer.Location = new System.Drawing.Point(139, 150);
-            this.labelHealthPlayer.Name = "labelHealthPlayer";
-            this.labelHealthPlayer.Size = new System.Drawing.Size(48, 20);
-            this.labelHealthPlayer.TabIndex = 21;
-            this.labelHealthPlayer.Text = "100%";
-            // 
-            // labelLifePlayer
-            // 
-            this.labelLifePlayer.AutoSize = true;
-            this.labelLifePlayer.BackColor = System.Drawing.Color.Transparent;
-            this.labelLifePlayer.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.labelLifePlayer.ForeColor = System.Drawing.Color.White;
-            this.labelLifePlayer.Location = new System.Drawing.Point(269, 150);
-            this.labelLifePlayer.Name = "labelLifePlayer";
-            this.labelLifePlayer.Size = new System.Drawing.Size(25, 20);
-            this.labelLifePlayer.TabIndex = 23;
-            this.labelLifePlayer.Text = "10";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(224, 150);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(42, 20);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Life:";
-            // 
-            // labelScore
-            // 
-            this.labelScore.AutoSize = true;
-            this.labelScore.BackColor = System.Drawing.Color.Transparent;
-            this.labelScore.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.labelScore.ForeColor = System.Drawing.Color.White;
-            this.labelScore.Location = new System.Drawing.Point(126, 175);
-            this.labelScore.Name = "labelScore";
-            this.labelScore.Size = new System.Drawing.Size(19, 20);
-            this.labelScore.TabIndex = 24;
-            this.labelScore.Text = "0";
-            // 
-            // labelWeapon
-            // 
-            this.labelWeapon.AutoSize = true;
-            this.labelWeapon.BackColor = System.Drawing.Color.Transparent;
-            this.labelWeapon.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.labelWeapon.ForeColor = System.Drawing.Color.White;
-            this.labelWeapon.Location = new System.Drawing.Point(147, 201);
-            this.labelWeapon.Name = "labelWeapon";
-            this.labelWeapon.Size = new System.Drawing.Size(48, 20);
-            this.labelWeapon.TabIndex = 25;
-            this.labelWeapon.Text = "Rock";
-            // 
-            // labelLifeEnemy
-            // 
-            this.labelLifeEnemy.AutoSize = true;
-            this.labelLifeEnemy.BackColor = System.Drawing.Color.Transparent;
-            this.labelLifeEnemy.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.labelLifeEnemy.ForeColor = System.Drawing.Color.White;
-            this.labelLifeEnemy.Location = new System.Drawing.Point(931, 150);
-            this.labelLifeEnemy.Name = "labelLifeEnemy";
-            this.labelLifeEnemy.Size = new System.Drawing.Size(25, 20);
-            this.labelLifeEnemy.TabIndex = 29;
-            this.labelLifeEnemy.Text = "10";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(886, 150);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 20);
-            this.label8.TabIndex = 28;
-            this.label8.Text = "Life:";
-            // 
-            // labelHealthEnemy
-            // 
-            this.labelHealthEnemy.AutoSize = true;
-            this.labelHealthEnemy.BackColor = System.Drawing.Color.Transparent;
-            this.labelHealthEnemy.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.labelHealthEnemy.ForeColor = System.Drawing.Color.White;
-            this.labelHealthEnemy.Location = new System.Drawing.Point(801, 150);
-            this.labelHealthEnemy.Name = "labelHealthEnemy";
-            this.labelHealthEnemy.Size = new System.Drawing.Size(48, 20);
-            this.labelHealthEnemy.TabIndex = 27;
-            this.labelHealthEnemy.Text = "100%";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(732, 150);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(65, 20);
-            this.label15.TabIndex = 26;
-            this.label15.Text = "Health:";
-            // 
-            // labelSpeed
-            // 
-            this.labelSpeed.AutoSize = true;
-            this.labelSpeed.BackColor = System.Drawing.Color.Transparent;
-            this.labelSpeed.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.labelSpeed.ForeColor = System.Drawing.Color.White;
-            this.labelSpeed.Location = new System.Drawing.Point(798, 175);
-            this.labelSpeed.Name = "labelSpeed";
-            this.labelSpeed.Size = new System.Drawing.Size(35, 20);
-            this.labelSpeed.TabIndex = 31;
-            this.labelSpeed.Text = "100";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(732, 175);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 20);
-            this.label17.TabIndex = 30;
-            this.label17.Text = "Speed:";
-            // 
-            // labelHintHealthDamage
-            // 
-            this.labelHintHealthDamage.AutoSize = true;
-            this.labelHintHealthDamage.BackColor = System.Drawing.Color.Transparent;
-            this.labelHintHealthDamage.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
-            this.labelHintHealthDamage.ForeColor = System.Drawing.Color.White;
-            this.labelHintHealthDamage.Location = new System.Drawing.Point(732, 201);
-            this.labelHintHealthDamage.Name = "labelHintHealthDamage";
-            this.labelHintHealthDamage.Size = new System.Drawing.Size(47, 20);
-            this.labelHintHealthDamage.TabIndex = 25;
-            this.labelHintHealthDamage.Text = "Hint:";
+            this.labelEnemyInfo.AutoSize = true;
+            this.labelEnemyInfo.BackColor = System.Drawing.Color.Transparent;
+            this.labelEnemyInfo.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
+            this.labelEnemyInfo.ForeColor = System.Drawing.Color.White;
+            this.labelEnemyInfo.Location = new System.Drawing.Point(724, 124);
+            this.labelEnemyInfo.Name = "labelEnemyInfo";
+            this.labelEnemyInfo.Size = new System.Drawing.Size(0, 20);
+            this.labelEnemyInfo.TabIndex = 17;
             // 
             // panelUltimate
             // 
@@ -604,23 +386,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.panelOptions);
             this.Controls.Add(this.panelUltimate);
-            this.Controls.Add(this.labelSpeed);
-            this.Controls.Add(this.labelHintHealthDamage);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.labelLifeEnemy);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.labelHealthEnemy);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.labelWeapon);
-            this.Controls.Add(this.labelScore);
-            this.Controls.Add(this.labelLifePlayer);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.labelHealthPlayer);
-            this.Controls.Add(this.labelEnemyName);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.labelPlayerName);
+            this.Controls.Add(this.labelEnemyInfo);
+            this.Controls.Add(this.labelPlayerInfo);
             this.Controls.Add(this.panelFire);
             this.Controls.Add(this.panelKnife);
             this.Controls.Add(this.panelRock);
@@ -664,7 +431,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.Panel panelOptions;
         private System.Windows.Forms.Button buttonResume;
         private System.Windows.Forms.Button buttonExit;
-        private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonOptions;
         private System.Windows.Forms.PictureBox pictureBoxRock;
         private System.Windows.Forms.Panel panelRock;
@@ -679,23 +445,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.PictureBox pictureBoxButtonFire;
         private System.Windows.Forms.PictureBox pictureBoxButtonRock;
         private System.Windows.Forms.Label labelTime;
-        private System.Windows.Forms.Label labelPlayerName;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelEnemyName;
-        private System.Windows.Forms.Label labelHealthPlayer;
-        private System.Windows.Forms.Label labelLifePlayer;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label labelScore;
-        private System.Windows.Forms.Label labelWeapon;
-        private System.Windows.Forms.Label labelLifeEnemy;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label labelHealthEnemy;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label labelSpeed;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label labelHintHealthDamage;
+        private System.Windows.Forms.Label labelPlayerInfo;
+        private System.Windows.Forms.Label labelEnemyInfo;
         private System.Windows.Forms.Panel panelUltimate;
         private System.Windows.Forms.PictureBox pictureBoxUltimateIcon;
         private System.Windows.Forms.PictureBox pictureBoxButtonUltimate;

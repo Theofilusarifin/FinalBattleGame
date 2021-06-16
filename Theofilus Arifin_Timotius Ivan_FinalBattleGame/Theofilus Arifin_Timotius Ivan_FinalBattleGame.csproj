@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Difficulty.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemyWeapon.cs" />
     <Compile Include="Evolution.cs" />
@@ -61,12 +60,6 @@
     </Compile>
     <Compile Include="FormAlmanacMonster.Designer.cs">
       <DependentUpon>FormAlmanacMonster.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormLoad.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLoad.Designer.cs">
-      <DependentUpon>FormLoad.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
@@ -106,7 +99,6 @@
       <DependentUpon>FormMessageBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Monster.cs" />
-    <Compile Include="MonsterEvolution.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PowerUps.cs" />
     <Compile Include="Program.cs" />
@@ -119,7 +111,6 @@
     <Compile Include="Round.cs" />
     <Compile Include="Time.cs" />
     <Compile Include="Ultimate.cs" />
-    <Compile Include="WeaponMonsterEvolution.cs" />
     <Compile Include="WeaponPlayer.cs" />
     <Compile Include="WeaponMonster.cs" />
     <Compile Include="WeaponWitch.cs" />
@@ -129,9 +120,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAlmanacMonster.resx">
       <DependentUpon>FormAlmanacMonster.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLoad.resx">
-      <DependentUpon>FormLoad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
@@ -553,6 +541,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Woman Idle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Back To Menu Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Back To Menu Over.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

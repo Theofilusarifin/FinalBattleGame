@@ -41,17 +41,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
         //End Design Button New Game
 
-        //Design Button Continue
-        private void buttonContinue_MouseLeave(object sender, EventArgs e)
-        {
-            buttonContinue.BackgroundImage = Properties.Resources.Button_Continue_Over;
-        }
-        private void buttonContinue_MouseEnter(object sender, EventArgs e)
-        {
-            buttonContinue.BackgroundImage = Properties.Resources.Button_Continue_Hover;
-        }
-        //End Design Button Continue
-
         //Design Button Almanac
         private void buttonAlmanac_MouseLeave(object sender, EventArgs e)
         {
@@ -79,15 +68,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             FormSelectDifficulty formSelectDifficulty = new FormSelectDifficulty();
             formSelectDifficulty.ShowDialog();
             formSelectDifficulty = null;
-            Show();
-        }
-
-        private void buttonContinue_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FormLoad formLoad = new FormLoad();
-            formLoad.ShowDialog();
-            formLoad = null;
             Show();
         }
 

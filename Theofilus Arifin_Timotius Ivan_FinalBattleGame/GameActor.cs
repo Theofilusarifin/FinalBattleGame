@@ -80,6 +80,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #endregion
 
         #region METHODS
+        public abstract string DisplayData();
+        protected string DisplayDataActor()
+        {
+            return "(" + Name + ")" + "\n\nHealth: " + Health + "      Life: " + Life;
+        }
         public void DisplayPicture(Control displayContainer)
         {
             Picture.Parent = displayContainer;

@@ -37,9 +37,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #endregion
 
         #region METHODS
-        public string DisplayHint()
+        public override string DisplayDataEnemy()
         {
-            return Hint;
+            return "MONSTER " + DisplayData() + "\nHint: " + Hint;
         }
         public void SetWeapon(string name, Image image)
         {

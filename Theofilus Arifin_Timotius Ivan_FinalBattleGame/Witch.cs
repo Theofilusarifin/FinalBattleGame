@@ -45,7 +45,12 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             private set => weapon = value;
         }
         #endregion
+
         #region METHODS
+        public override string DisplayDataEnemy()
+        {
+            return "WITCH " + DisplayData() + "\nHealth Damage: " + HealthDamage;
+        }
         public void SetWeapon(string name, Image image)
         {
             Point position = new Point(Picture.Location.X + 80, Picture.Location.Y + 80);

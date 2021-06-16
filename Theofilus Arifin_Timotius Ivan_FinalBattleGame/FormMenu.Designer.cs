@@ -30,7 +30,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private void InitializeComponent()
         {
             this.buttonNewGame = new System.Windows.Forms.Button();
-            this.buttonContinue = new System.Windows.Forms.Button();
             this.buttonAlmanac = new System.Windows.Forms.Button();
             this.buttonQuit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,7 +47,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonNewGame.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonNewGame.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonNewGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.buttonNewGame.Location = new System.Drawing.Point(247, 504);
+            this.buttonNewGame.Location = new System.Drawing.Point(373, 504);
             this.buttonNewGame.Name = "buttonNewGame";
             this.buttonNewGame.Size = new System.Drawing.Size(206, 74);
             this.buttonNewGame.TabIndex = 0;
@@ -56,26 +55,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonNewGame.Click += new System.EventHandler(this.buttonNewGame_Click);
             this.buttonNewGame.MouseEnter += new System.EventHandler(this.buttonNewGame_MouseEnter);
             this.buttonNewGame.MouseLeave += new System.EventHandler(this.buttonNewGame_MouseLeave);
-            // 
-            // buttonContinue
-            // 
-            this.buttonContinue.BackColor = System.Drawing.Color.Transparent;
-            this.buttonContinue.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Button_Continue_Over;
-            this.buttonContinue.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buttonContinue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonContinue.FlatAppearance.BorderSize = 0;
-            this.buttonContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.buttonContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonContinue.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.buttonContinue.Location = new System.Drawing.Point(539, 504);
-            this.buttonContinue.Name = "buttonContinue";
-            this.buttonContinue.Size = new System.Drawing.Size(206, 74);
-            this.buttonContinue.TabIndex = 1;
-            this.buttonContinue.UseVisualStyleBackColor = false;
-            this.buttonContinue.Click += new System.EventHandler(this.buttonContinue_Click);
-            this.buttonContinue.MouseEnter += new System.EventHandler(this.buttonContinue_MouseEnter);
-            this.buttonContinue.MouseLeave += new System.EventHandler(this.buttonContinue_MouseLeave);
             // 
             // buttonAlmanac
             // 
@@ -88,7 +67,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonAlmanac.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonAlmanac.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAlmanac.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
-            this.buttonAlmanac.Location = new System.Drawing.Point(836, 504);
+            this.buttonAlmanac.Location = new System.Drawing.Point(702, 504);
             this.buttonAlmanac.Name = "buttonAlmanac";
             this.buttonAlmanac.Size = new System.Drawing.Size(206, 74);
             this.buttonAlmanac.TabIndex = 2;
@@ -140,7 +119,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.buttonQuit);
             this.Controls.Add(this.buttonAlmanac);
-            this.Controls.Add(this.buttonContinue);
             this.Controls.Add(this.buttonNewGame);
             this.DoubleBuffered = true;
             this.Name = "FormMenu";
@@ -154,7 +132,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #endregion
 
         private System.Windows.Forms.Button buttonNewGame;
-        private System.Windows.Forms.Button buttonContinue;
         private System.Windows.Forms.Button buttonAlmanac;
         private System.Windows.Forms.Button buttonQuit;
         private System.Windows.Forms.PictureBox pictureBox1;

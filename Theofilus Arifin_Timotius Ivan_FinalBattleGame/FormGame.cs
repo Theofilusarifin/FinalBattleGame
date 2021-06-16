@@ -31,6 +31,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 return cp;
             }
         }
+
         #region SetWeapon
         public void SelectRock()
         {
@@ -93,6 +94,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             pictureBoxButtonUltimate.Hide();
         }
         #endregion
+
         public void StartGame()
         {
             //Set Rock as default weapon
@@ -107,37 +109,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
             //Create Enemy
             CreateEnemy();
-        }
-        #region Display
-        public void DisplayPlayerInfo()
-        {
-            labelPlayerName.Text = player.Name;
-            labelHealthPlayer.Text = player.Health.ToString() + "%";
-            labelLifePlayer.Text = player.Life.ToString();
-            labelScore.Text = player.Score.ToString();
-            labelWeapon.Text = player.Weapon.Name.ToString();
-        }
-        public void DisplayEnemyInfo()
-        {
-            labelEnemyName.Text = enemy.Name;
-            labelHealthEnemy.Text = enemy.Health.ToString() + "%";
-            labelLifeEnemy.Text = enemy.Life.ToString();
-            labelSpeed.Text = enemy.Speed.ToString();
 
-            //BELUM FIX//////////////////////////////////////////////////////////////////////////////////
-
-            if (enemy is Monster)
-            {
-                //Display hint
-                labelHintHealthDamage.Text = "Hint: ";
-            }
-            else if (enemy is Witch)
-            {
-                //Display healthDamage
-                labelHintHealthDamage.Text = "Health Damage: ";
-            }
+            labelPlayerInfo.Text = player.DisplayData();
         }
-        #endregion
+
         #region CreateEnemy
         public void CreateEnemy()
         {
@@ -171,7 +146,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     else if (monsterType == 1)
                     {
                         enemySize = new Size(157, 149);
-                        enemy = new Monster(5, "Godzilla", 5, 100, Properties.Resources.Godzilla, startingPoint, enemySize, "Really can't help the hard stuff upon me");
+                        enemy = new Monster(5, "Godzilla", 5, 100, Properties.Resources.Godzilla, startingPoint, enemySize, "I can't help the hard stuff");
                     }
                     //Buat Dino ==> 2
                     else
@@ -186,19 +161,19 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     if (monsterType == 0)
                     {
                         enemySize = new Size(163, 120);
-                        enemy = new Monster(5, "Dragon", 3, 100, Properties.Resources.Mega_Dragon, startingPoint, enemySize, "Only the heat can defeat me");
+                        enemy = new Monster(5, "Mega Dragon", 3, 100, Properties.Resources.Mega_Dragon, startingPoint, enemySize, "Only the heat can defeat me");
                     }
                     //Buat MegaGodzilla ==> 1
                     else if (monsterType == 1)
                     {
                         enemySize = new Size(167, 149);
-                        enemy = new Monster(5, "Godzilla", 5, 100, Properties.Resources.Mega_Godzilla, startingPoint, enemySize, "Really can't help the hard stuff upon me");
+                        enemy = new Monster(5, "Mega Godzilla", 5, 100, Properties.Resources.Mega_Godzilla, startingPoint, enemySize, "I can't help the hard stuff");
                     }
                     //Buat MegaDino ==> 2
                     else
                     {
                         enemySize = new Size(186, 149);
-                        enemy = new Monster(5, "Dino", 7, 100, Properties.Resources.Mega_Dino, startingPoint, enemySize, "Ouch.. no sharp item please..");
+                        enemy = new Monster(5, "Mega Dino", 7, 100, Properties.Resources.Mega_Dino, startingPoint, enemySize, "Ouch.. no sharp item please..");
                     }
                 }
             }
@@ -231,7 +206,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             //Display Enemy
             enemy.DisplayPicture(this);
             //Display Enemy Info
-            DisplayEnemyInfo();
+            labelEnemyInfo.Text = enemy.DisplayDataEnemy();
 
             //Set Enemy Move Up == True In Beginning
             enemyMoveUp = true;
@@ -239,6 +214,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             timerEnemy.Start();
         }
         #endregion
+
         private void FormGame_Load(object sender, EventArgs e)
         {
             //Initiate Starting Position and Size Player
@@ -254,6 +230,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             }
             panelOptions.Visible = false;
             timerPlayerMove.Start();
+
             //Call method StartGame in FormGame
             StartGame();
         }
@@ -267,16 +244,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private void buttonResume_MouseLeave(object sender, EventArgs e)
         {
             buttonResume.BackgroundImage = Properties.Resources.Button_Resume_Over;
-        }
-
-        //Design Button Save (Options)
-        private void buttonSave_MouseEnter(object sender, EventArgs e)
-        {
-            buttonSave.BackgroundImage = Properties.Resources.Button_Save_Hover;
-        }
-        private void buttonSave_MouseLeave(object sender, EventArgs e)
-        {
-            buttonSave.BackgroundImage = Properties.Resources.Button_Save_Over;
         }
 
         //Design Button Exit (Options)
@@ -351,6 +318,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             }
         }
         #endregion
+
         private void timerEnemy_Tick(object sender, EventArgs e)
         {
             //Pada saat pictureBox Enemy ada di di bawah koordinat 280 pictureBox akan turun

@@ -77,7 +77,12 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             set => ultimateActive = value;
         }
         #endregion
+
         #region METHODS
+        public override string DisplayData()
+        {
+            return "PLAYER " + DisplayDataActor() + "\nScore: " + Score + "\nWeapon: " + Weapon.Name;
+        }
         public override void MoveUp()
         {
             Picture.Top -= Speed;

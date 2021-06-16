@@ -59,5 +59,19 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             formAlmanacWitch = null;
             Show();
         }
+
+        //Design Button Back To Menu
+        private void buttonBackToMenu_MouseEnter(object sender, EventArgs e)
+        {
+            buttonBackToMenu.BackgroundImage = Properties.Resources.Button_Back_To_Menu_Hover;
+        }
+        private void buttonBackToMenu_MouseLeave(object sender, EventArgs e)
+        {
+            buttonBackToMenu.BackgroundImage = Properties.Resources.Button_Back_To_Menu_Over;
+        }
+        private void buttonBackToMenu_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
