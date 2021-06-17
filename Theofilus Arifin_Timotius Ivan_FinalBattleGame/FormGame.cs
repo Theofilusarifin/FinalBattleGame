@@ -103,10 +103,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             //Display player picture
             player.DisplayPicture(this);
 
-            //Start Time Disini
-            time = new Time(0, 10, 0); //Set time 10 menit
-            timerTime.Start(); //Jalankan timerTime
-
             //Create Enemy
             CreateEnemy();
 
@@ -228,13 +224,58 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             {
                 player = new Player("PERFECTA GIRL", 10, 100, Properties.Resources.Woman_Idle, startingPoint, playerSize, "I'm the superhero with calm and perfect play", 0, 20, false);
             }
-            panelOptions.Visible = false;
+
             timerPlayerMove.Start();
 
             //Call method StartGame in FormGame
             StartGame();
-        }
 
+            panelOptions.Visible = true;
+            panelNotification.Visible = true;
+            panelOptions.Visible = false;
+            panelNotification.Visible = false;
+            panelOptions.Visible = true;
+            panelNotification.Visible = true;
+
+        }
+        #region NotificationButton
+        //Design Button Next
+        private void buttonNext_MouseEnter(object sender, EventArgs e)
+        {
+            buttonNext.BackgroundImage = Properties.Resources.Next_Button_Hover;
+        }
+        private void buttonNext_MouseLeave(object sender, EventArgs e)
+        {
+            buttonNext.BackgroundImage = Properties.Resources.Next_Button;
+        }
+        private void buttonNext_Click(object sender, EventArgs e)
+        {
+            panelNotification.BackgroundImage = Properties.Resources.Controls_Opening_Notification;
+            buttonNext.Visible = false;
+            buttonStart.Visible = true;
+        }
+        //Design Button Start
+        private void buttonStart_MouseEnter(object sender, EventArgs e)
+        {
+            buttonStart.BackgroundImage = Properties.Resources.Start_Button_Hover;
+        }
+        private void buttonStart_MouseLeave(object sender, EventArgs e)
+        {
+            buttonStart.BackgroundImage = Properties.Resources.Start_Button;
+        }
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            buttonStart.Visible = false;
+            panelNotification.Visible = false;
+            panelOptions.Visible = false;
+            panelOptions.BackgroundImage = Properties.Resources.Options;
+
+
+            //Start Time Disini
+            time = new Time(0, 10, 0); //Set time 10 menit
+            timerTime.Start(); //Jalankan timerTime
+        }
+        #endregion
         #region OptionButton
         //Design Button Resume (Options)
         private void buttonResume_MouseEnter(object sender, EventArgs e)
@@ -405,7 +446,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                         timerEnemy.Stop();
                         timerTime.Stop();
                         timerPlayerMove.Stop();
-
                         //Display custom message Win
 
                     }
@@ -424,6 +464,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 player.DisplayWeapon(this);
             }
         }
+
 
         private void timerEnemy_Tick(object sender, EventArgs e)
         {

@@ -546,5 +546,26 @@
   <ItemGroup>
     <None Include="Resources\Button Back To Menu Over.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome Opening Notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start Button Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start Button Hover1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next Button Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Controls Opening Notification.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

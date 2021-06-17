@@ -563,6 +563,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Controls_Opening_Notification {
+            get {
+                object obj = ResourceManager.GetObject("Controls Opening Notification", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Dino {
             get {
                 object obj = ResourceManager.GetObject("Dino", resourceCulture);
@@ -803,6 +813,26 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Next_Button {
+            get {
+                object obj = ResourceManager.GetObject("Next Button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Next_Button_Hover {
+            get {
+                object obj = ResourceManager.GetObject("Next Button Hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Non_Active_Background_Man {
             get {
                 object obj = ResourceManager.GetObject("Non_Active_Background_Man", resourceCulture);
@@ -903,6 +933,26 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Start_Button {
+            get {
+                object obj = ResourceManager.GetObject("Start Button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Start_Button_Hover {
+            get {
+                object obj = ResourceManager.GetObject("Start Button Hover", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Sword {
             get {
                 object obj = ResourceManager.GetObject("Sword", resourceCulture);
@@ -956,6 +1006,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         internal static System.Drawing.Bitmap Unselected_Woman {
             get {
                 object obj = ResourceManager.GetObject("Unselected_Woman", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Welcome_Opening_Notification {
+            get {
+                object obj = ResourceManager.GetObject("Welcome Opening Notification", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
