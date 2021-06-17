@@ -379,16 +379,31 @@
     <None Include="Resources\Main Menu Background.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Button Exit Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Exit Over.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Button Options Hover.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Button Options Over.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Button Resume Hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button Resume Over.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Button Save Hover.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Button Save Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Options.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Weapon Click.png" />
@@ -551,57 +566,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Controls Opening Notification.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Exit Over.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Next Hover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Next Over.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Play Again Hover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Play Again Over.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Quit Game Hover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Quit Game Over.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Resume Hover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Resume Over.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Start Hover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Start Over.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Options.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Button Exit Hover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Notif Controls.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Notif Lose.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Notif Welcome.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Notif Win.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
