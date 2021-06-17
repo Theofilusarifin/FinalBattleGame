@@ -47,8 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enemy.cs" />
-    <Compile Include="EnemyWeapon.cs" />
-    <Compile Include="Evolution.cs" />
     <Compile Include="FormAlmanac.cs">
       <SubType>Form</SubType>
     </Compile>

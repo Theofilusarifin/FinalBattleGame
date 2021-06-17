@@ -91,7 +91,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             Picture.Top += Speed;
         }
-        public void SetWeapon(string name, string description, Image image)
+        public void SetWeapon(string name, Image image)
         {
             Point position = new Point(Picture.Location.X + 80, Picture.Location.Y + 80);
             Size size = new Size(30, 30);

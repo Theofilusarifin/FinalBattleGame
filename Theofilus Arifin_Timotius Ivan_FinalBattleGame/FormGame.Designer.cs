@@ -85,7 +85,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.panelOptions.Location = new System.Drawing.Point(311, 335);
             this.panelOptions.Name = "panelOptions";
             this.panelOptions.Size = new System.Drawing.Size(399, 403);
-            this.panelOptions.TabIndex = 0;
+            this.panelOptions.TabIndex = 8;
             this.panelOptions.Visible = false;
             // 
             // buttonExit
@@ -101,7 +101,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonExit.Location = new System.Drawing.Point(109, 262);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(180, 69);
-            this.buttonExit.TabIndex = 2;
+            this.buttonExit.TabIndex = 1;
             this.buttonExit.UseVisualStyleBackColor = true;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             this.buttonExit.MouseEnter += new System.EventHandler(this.buttonExit_MouseEnter);
@@ -139,7 +139,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonOptions.Location = new System.Drawing.Point(595, 54);
             this.buttonOptions.Name = "buttonOptions";
             this.buttonOptions.Size = new System.Drawing.Size(79, 109);
-            this.buttonOptions.TabIndex = 1;
+            this.buttonOptions.TabIndex = 7;
             this.buttonOptions.UseVisualStyleBackColor = false;
             this.buttonOptions.Click += new System.EventHandler(this.buttonOptions_Click);
             this.buttonOptions.MouseEnter += new System.EventHandler(this.buttonOptions_MouseEnter);
@@ -191,7 +191,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.panelKnife.Location = new System.Drawing.Point(485, 175);
             this.panelKnife.Name = "panelKnife";
             this.panelKnife.Size = new System.Drawing.Size(86, 86);
-            this.panelKnife.TabIndex = 6;
+            this.panelKnife.TabIndex = 4;
             // 
             // pictureBoxKnife
             // 
@@ -227,7 +227,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.panelFire.Location = new System.Drawing.Point(588, 175);
             this.panelFire.Name = "panelFire";
             this.panelFire.Size = new System.Drawing.Size(86, 86);
-            this.panelFire.TabIndex = 7;
+            this.panelFire.TabIndex = 5;
             // 
             // pictureBoxFire
             // 
@@ -301,7 +301,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.labelTime.Location = new System.Drawing.Point(426, 96);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(0, 31);
-            this.labelTime.TabIndex = 12;
+            this.labelTime.TabIndex = 6;
             // 
             // labelPlayerInfo
             // 
@@ -312,7 +312,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.labelPlayerInfo.Location = new System.Drawing.Point(62, 124);
             this.labelPlayerInfo.Name = "labelPlayerInfo";
             this.labelPlayerInfo.Size = new System.Drawing.Size(0, 20);
-            this.labelPlayerInfo.TabIndex = 13;
+            this.labelPlayerInfo.TabIndex = 0;
             // 
             // labelEnemyInfo
             // 
@@ -323,7 +323,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.labelEnemyInfo.Location = new System.Drawing.Point(724, 124);
             this.labelEnemyInfo.Name = "labelEnemyInfo";
             this.labelEnemyInfo.Size = new System.Drawing.Size(0, 20);
-            this.labelEnemyInfo.TabIndex = 17;
+            this.labelEnemyInfo.TabIndex = 2;
             // 
             // panelUltimate
             // 
@@ -370,6 +370,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // 
             this.timerEnemy.Interval = 10;
             this.timerEnemy.Tick += new System.EventHandler(this.timerEnemy_Tick);
+            // 
+            // timerWeapon
+            // 
+            this.timerWeapon.Tick += new System.EventHandler(this.timerWeapon_Tick);
             // 
             // timerPlayerMove
             // 
