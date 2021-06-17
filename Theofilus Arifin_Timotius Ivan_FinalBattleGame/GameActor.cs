@@ -69,14 +69,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             get => picture; 
             set => picture = value; 
         }
-
-        public Difficulty Difficulty
-        {
-            get => default;
-            set
-            {
-            }
-        }
         #endregion
 
         #region METHODS
