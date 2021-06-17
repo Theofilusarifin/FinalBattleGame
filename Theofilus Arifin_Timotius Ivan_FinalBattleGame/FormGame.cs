@@ -106,6 +106,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             //Create Enemy
             CreateEnemy();
 
+            //Start Time Disini
+            time = new Time(0, 10, 0); //Set time 10 menit
+            timerTime.Start(); //Jalankan timerTime
+
             labelPlayerInfo.Text = player.DisplayData();
         }
 
@@ -230,77 +234,27 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             //Call method StartGame in FormGame
             StartGame();
 
-            panelOptions.Visible = true;
-            panelNotification.Visible = true;
-            panelOptions.Visible = false;
-            panelNotification.Visible = false;
-            panelOptions.Visible = true;
-            panelNotification.Visible = true;
-
         }
+
         #region NotificationButton
         //Design Button Next
-        private void buttonNext_MouseEnter(object sender, EventArgs e)
-        {
-            buttonNext.BackgroundImage = Properties.Resources.Next_Button_Hover;
-        }
-        private void buttonNext_MouseLeave(object sender, EventArgs e)
-        {
-            buttonNext.BackgroundImage = Properties.Resources.Next_Button;
-        }
-        private void buttonNext_Click(object sender, EventArgs e)
-        {
-            panelNotification.BackgroundImage = Properties.Resources.Controls_Opening_Notification;
-            buttonNext.Visible = false;
-            buttonStart.Visible = true;
-        }
+
+
         //Design Button Start
-        private void buttonStart_MouseEnter(object sender, EventArgs e)
-        {
-            buttonStart.BackgroundImage = Properties.Resources.Start_Button_Hover;
-        }
-        private void buttonStart_MouseLeave(object sender, EventArgs e)
-        {
-            buttonStart.BackgroundImage = Properties.Resources.Start_Button;
-        }
-        private void buttonStart_Click(object sender, EventArgs e)
-        {
-            buttonStart.Visible = false;
-            panelNotification.Visible = false;
-            panelOptions.Visible = false;
-            panelOptions.BackgroundImage = Properties.Resources.Options;
 
-
-            //Start Time Disini
-            time = new Time(0, 10, 0); //Set time 10 menit
-            timerTime.Start(); //Jalankan timerTime
-        }
         #endregion
+
         #region OptionButton
         //Design Button Resume (Options)
-        private void buttonResume_MouseEnter(object sender, EventArgs e)
-        {
-            buttonResume.BackgroundImage = Properties.Resources.Button_Resume_Hover;
-        }
-        private void buttonResume_MouseLeave(object sender, EventArgs e)
-        {
-            buttonResume.BackgroundImage = Properties.Resources.Button_Resume_Over;
-        }
+
 
         //Design Button Exit (Options)
-        private void buttonExit_MouseEnter(object sender, EventArgs e)
-        {
-            buttonExit.BackgroundImage = Properties.Resources.Button_Exit_Hover;
-        }
-        private void buttonExit_MouseLeave(object sender, EventArgs e)
-        {
-            buttonExit.BackgroundImage = Properties.Resources.Button_Exit_Over;
-        }
+
 
         //Design Button Options
         private void buttonOptions_Click(object sender, EventArgs e)
         {
-            panelOptions.Visible = true;
+            
         }
         private void buttonOptions_MouseEnter(object sender, EventArgs e)
         {
@@ -309,14 +263,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private void buttonOptions_MouseLeave(object sender, EventArgs e)
         {
             buttonOptions.BackgroundImage = Properties.Resources.Button_Options_Over;
-        }
-        private void buttonResume_Click(object sender, EventArgs e)
-        {
-            panelOptions.Visible = false;
-        }
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
         #endregion
 
@@ -415,6 +361,53 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
         #endregion
 
+        #region Timer
+        #region TimerEnemy
+        private void timerEnemy_Tick(object sender, EventArgs e)
+        {
+            //Pada saat pictureBox Enemy ada di di bawah koordinat 280 pictureBox akan turun
+            if (enemy.Picture.Top <= 280)
+            {
+                enemyMoveUp = false;
+            }
+            //Pada saat pictureBox Enemy ada di atas  koordinat 710, pictureBox akan naik
+            else if (enemy.Picture.Top >= 710)
+            {
+                enemyMoveUp = true;
+            }
+
+            //Pengecekan untuk menjalankan moveUp dan moveDown
+            if (enemyMoveUp)
+            {
+                enemy.MoveUp();
+            }
+            else
+            {
+                enemy.MoveDown();
+            }
+        }
+        #endregion
+
+        #region TimerTime
+        private void timerTime_Tick(object sender, EventArgs e)
+        {
+            //Display Time in labelTime
+            labelTime.Text = time.DisplayTime();
+
+            //Cek Waktu Habis
+            if (time.Hour == 0 && time.Minute == 0 && time.Second == 0)
+            {
+                timerTime.Stop();
+            }
+            //Timer Countdown
+            else
+            {
+                time.AddSecond(-1);
+            }
+        }
+        #endregion
+
+        #region TimerWeapon
         private void timerWeapon_Tick(object sender, EventArgs e)
         {
             //Kalau Weapon mengenai Enemy
@@ -464,47 +457,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 player.DisplayWeapon(this);
             }
         }
+        #endregion
 
-
-        private void timerEnemy_Tick(object sender, EventArgs e)
-        {
-            //Pada saat pictureBox Enemy ada di di bawah koordinat 280 pictureBox akan turun
-            if (enemy.Picture.Top <= 280)
-            {
-                enemyMoveUp = false;
-            }
-            //Pada saat pictureBox Enemy ada di atas  koordinat 710, pictureBox akan naik
-            else if (enemy.Picture.Top >= 710)
-            {
-                enemyMoveUp = true;
-            }
-
-            //Pengecekan untuk menjalankan moveUp dan moveDown
-            if (enemyMoveUp)
-            {
-                enemy.MoveUp();
-            }
-            else
-            {
-                enemy.MoveDown();
-            }
-        }
-
-        private void timerTime_Tick(object sender, EventArgs e)
-        {
-            //Display Time in labelTime
-            labelTime.Text = time.DisplayTime();
-
-            //Cek Waktu Habis
-            if (time.Hour == 0 && time.Minute == 0 && time.Second == 0)
-            {
-                timerTime.Stop();
-            }
-            //Timer Countdown
-            else
-            {
-                time.AddSecond(-1);
-            }
-        }
+        #endregion
     }
 }
