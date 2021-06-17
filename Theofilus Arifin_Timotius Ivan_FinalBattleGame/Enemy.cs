@@ -11,6 +11,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region FIELDS
         private int speed;
         #endregion
+
         #region CONSTRUCTORS
         public Enemy(int speed, string name, int life, int health, Image image, Point position, Size size) :
         base (name, life, health, image, position, size)
@@ -18,6 +19,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Speed = speed;
         }
         #endregion
+
         #region PROPERTIES
         public int Speed 
         { 
@@ -35,6 +37,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             }
         }
         #endregion
+
         #region METHODS
         public override string DisplayData()
         {

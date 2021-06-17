@@ -38,21 +38,21 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             panelRock.Hide();
             panelKnife.Show();
             panelFire.Show();
-            player.SetWeapon("Rock", "It's a heavy giant rock", Properties.Resources.Rock);
+            player.SetWeapon("Rock", Properties.Resources.Rock);
         }
         public void SelectKnife()
         {
             panelRock.Show();
             panelKnife.Hide();
             panelFire.Show();
-            player.SetWeapon("Knife", "It's a sharp rusty knives", Properties.Resources.Knife);
+            player.SetWeapon("Knife", Properties.Resources.Knife);
         }
         public void SelectFireBall()
         {
             panelRock.Show();
             panelKnife.Show();
             panelFire.Hide();
-            player.SetWeapon("Knife", "It's a hot bluish flame", Properties.Resources.Fireball);
+            player.SetWeapon("FireBall", Properties.Resources.Fireball);
         }
         private void pictureBoxButtonRock_Click_1(object sender, EventArgs e)
         {
@@ -305,6 +305,19 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             {
                 moveDown = true;
             }
+            if (e.KeyCode == Keys.Space)
+            {
+                //Play Music
+                //System.Media.SoundPlayer weaponSound = new System.Media.SoundPlayer(Properties.Resources.namaFile);
+                //weaponSound.Play();
+
+                //Set Weapon
+                player.SetWeapon(player.Weapon.Name, player.Weapon.Picture.Image);
+
+                //Tampilkan Weapon saat pengguna menekan spasi
+                player.DisplayWeapon(this);
+                timerWeapon.Start();
+            }
         }
         private void FormGame_KeyUp(object sender, KeyEventArgs e)
         {
@@ -318,6 +331,99 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             }
         }
         #endregion
+
+        #region CheckWeapon
+        private bool CheckWeapon()
+        {
+            //Pengecekan Weapon untuk Monster
+            if (enemy is Monster)
+            {
+                //Fireball Hit Dragon or Mega Dragon
+                if ((enemy.Name == "Dragon" || enemy.Name == "Mega Dragon") && player.Weapon.Name == "FireBall")
+                {
+                    return true;
+                }
+                //Rock Hit Godzilla or Mega Godzilla
+                else if ((enemy.Name == "Godzilla" || enemy.Name == "Mega Godzilla") && player.Weapon.Name == "Rock")
+                {
+                    return true;
+                }
+                //Knife Hit Dino or Mega Dino
+                else if ((enemy.Name == "Dino" || enemy.Name == "Mega Dino") && player.Weapon.Name == "Knife")
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            //Pengecekan Weapon untuk Witch
+            else
+            {
+                //Knife Hit Witch (All Type)
+                if (player.Weapon.Name == "Knife")
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        #endregion
+
+        private void timerWeapon_Tick(object sender, EventArgs e)
+        {
+            //Kalau Weapon mengenai Enemy
+            if (player.Weapon.Picture.Bounds.IntersectsWith(enemy.Picture.Bounds))
+            {
+                timerWeapon.Stop();
+                player.RemoveWeapon();
+                //Check Weapon (sesuai dengan kelemahan musuh atau tidak waktu terkena)
+                if (CheckWeapon())
+                {
+                    //Play Music
+                    //System.Media.SoundPlayer hitSound = new System.Media.SoundPlayer(Properties.Resources.namaFile);
+                    //hitSound.Play();
+
+                    //Panggil method DefeatEnemy di class Player
+                    player.DefeatEnemy(enemy);
+                    //Display new info (update) - Player and Enemy
+                    labelPlayerInfo.Text = player.DisplayData();
+                    labelEnemyInfo.Text = enemy.DisplayDataEnemy();
+
+                    //Kalau Enemy sudah kalah (Life == 0)
+                    if (enemy.Life == 0)
+                    {
+                        //Hapus Enemy
+                        enemy.Picture.Dispose();
+
+                        //Berhentikan semua timer
+                        timerWeapon.Stop();
+                        timerEnemy.Stop();
+                        timerTime.Stop();
+                        timerPlayerMove.Stop();
+
+                        //Display custom message Win
+
+                    }
+                }
+            }
+            //Kalau Weapon sudah melewati Enemy
+            else if (player.Weapon.Picture.Location.X == 558)
+            {
+                timerWeapon.Stop();
+                player.RemoveWeapon();
+            }
+            //Kalau Weapon tidak mengenai Enemy
+            else
+            {
+                player.ReleaseWeapon();
+                player.DisplayWeapon(this);
+            }
+        }
 
         private void timerEnemy_Tick(object sender, EventArgs e)
         {

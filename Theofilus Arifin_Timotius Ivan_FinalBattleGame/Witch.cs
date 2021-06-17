@@ -66,7 +66,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
         public void ReleaseWeapon()
         {
-            Weapon.Picture.Left += 30;
+            Weapon.Picture.Left -= 30;
+        }
+        public void RemoveWeapon()
+        {
+            Weapon.Picture.Dispose();
         }
         #endregion
     }
