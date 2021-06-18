@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
@@ -10,6 +11,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
     {
         #region FIELDS
         private int speed;
+        private WeaponEnemy weapon;
         #endregion
 
         #region CONSTRUCTORS
@@ -32,8 +34,17 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 }
                 else
                 {
-                    throw new Exception("Speed must be greater that 10");
+                    throw new Exception("Speed must be greater than 0");
                 }
+            }
+        }
+
+        public WeaponEnemy WeaponEnemy
+        {
+            get => weapon;
+            private set
+            {
+                weapon = value;
             }
         }
         #endregion
@@ -52,6 +63,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             Picture.Top += Speed;
         }
+        public abstract void SetWeapon(string name, Image image);
+        public abstract void DisplayWeapon(Control displayContainer);
+        public abstract void ReleaseWeapon();
+        public abstract void RemoveWeapon();
+        public abstract void DefeatPlayer(Player player, int damage);
         #endregion
     }
 }

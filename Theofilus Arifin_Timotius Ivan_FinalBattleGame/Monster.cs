@@ -41,26 +41,35 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             return "MONSTER " + DisplayData() + "\nHint: " + Hint;
         }
-        public void SetWeapon(string name, Image image)
+        public override void SetWeapon(string name, Image image)
         {
             Point position = new Point(Picture.Location.X + 80, Picture.Location.Y + 80);
             Size size = new Size(30, 30);
             Weapon = new WeaponMonster(name, image, position, size);
         }
-        public void DisplayWeapon(Control displayContainer)
+        public override void DisplayWeapon(Control displayContainer)
         {
             Weapon.Picture.Parent = displayContainer;
             Weapon.Picture.SizeMode = PictureBoxSizeMode.StretchImage;
             Weapon.Picture.BackColor = Color.Transparent;
             Weapon.Picture.BringToFront();
         }
-        public void ReleaseWeapon()
+        public override void ReleaseWeapon()
         {
             Weapon.Picture.Left -= 30;
         }
-        public void RemoveWeapon()
+        public override void RemoveWeapon()
         {
             Weapon.Picture.Dispose();
+        }
+        public override void DefeatPlayer(Player player, int damage)
+        {
+            player.Health -= damage;
+            if (player.Health <= 0 && player.Life > 0)
+            {
+                player.Life--;
+                player.Health = 100;
+            }
         }
         #endregion
     }

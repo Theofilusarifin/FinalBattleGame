@@ -11,7 +11,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
     {
         #region FIELDS
         private string name;
-        private PictureBox picture;
+        private PictureBox picture = new PictureBox();
         #endregion
         #region CONSTRUCTORS
         public WeaponWitch(string name, Image image, Point position, Size size)

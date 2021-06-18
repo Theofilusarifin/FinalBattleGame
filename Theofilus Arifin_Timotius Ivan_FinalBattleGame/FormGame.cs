@@ -133,6 +133,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
             //Create Enemy
             CreateEnemy();
+            enemy.SetWeapon("Fireball", Properties.Resources.Fireball);
 
             //Start Time Disini
             time = new Time(1, 0, 1); //Set time 10 menit
@@ -172,7 +173,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     {
                         enemySize = new Size(167, 156);
                         enemy = new Monster(5, "Dragon", 3, 100, Properties.Resources.Dragon, startingPoint, enemySize, "Only the heat can defeat me");
-                        //Set weapon enemy disini
+
                     }
                     //Buat Godzilla ==> 1
                     else if (monsterType == 1)
@@ -244,6 +245,13 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             enemyMoveUp = true;
             //Start TimerEnemy
             timerEnemy.Start();
+
+            //Set Weapon Enemy
+            enemy.SetWeapon(enemy.WeaponEnemy.Name, enemy.WeaponEnemy.Picture.Image);
+
+            //Tampilkan Weapon Enemy
+            enemy.DisplayWeapon(this);
+            timerWeaponEnemy.Start();
         }
         #endregion
 
@@ -600,6 +608,66 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 player.DisplayWeapon(this);
             }
         }
+        #endregion
+
+        #region TimerWeaponEnemy
+
+        private void timerWeaponEnemy_Tick(object sender, EventArgs e)
+        {
+            if (enemy.WeaponEnemy.Picture.Bounds.IntersectsWith(player.Picture.Bounds))
+            {
+                timerWeaponEnemy.Stop();
+                enemy.RemoveWeapon();
+
+                if (FormMenu.LevelDifficulty == "Easy")
+                {
+                    enemy.DefeatPlayer(player, 25);
+                }
+                else
+                {
+                    enemy.DefeatPlayer(player, 50);
+                }
+
+                //Display new info (update) - Player and Enemy
+                labelPlayerInfo.Text = player.DisplayData();
+                labelEnemyInfo.Text = enemy.DisplayDataEnemy();
+
+                if (player.Life == 0)
+                {
+                    //Hapus Enemy
+                    player.Picture.Dispose();
+
+                    //Berhentikan semua timer
+                    timerWeaponPlayer.Stop();
+                    timerEnemy.Stop();
+                    timerTime.Stop();
+                    timerPlayerMove.Stop();
+                    timerWeaponEnemy.Stop();
+
+                    //Display Win Notification
+                    panelMiddle.Visible = true;
+                    //Set true to notification
+                    buttonPlayAgain.Visible = true;
+                    buttonQuitGame.Visible = true;
+                    pictureBoxNotifications.Visible = true;
+                    pictureBoxNotifications.BackgroundImage = Properties.Resources.Notif_Lose;
+                    //Set false to other
+                    pictureBoxOptions.Visible = false;
+                    buttonResume.Visible = false;
+                    buttonExit.Visible = false;
+                }
+            }
+            //Kalau Weapon Berjalan Menuju Player
+            else
+            {
+                enemy.ReleaseWeapon();
+                enemy.DisplayWeapon(this);
+            }
+        }
+        #endregion
+
+        #region TimerPowerUp
+
         #endregion
 
         #endregion
