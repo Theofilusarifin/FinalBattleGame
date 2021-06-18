@@ -82,6 +82,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Controls.Add(this.buttonEasy);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormSelectDifficulty";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Difficulty";

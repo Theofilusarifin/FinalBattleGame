@@ -69,7 +69,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         public int Speed 
         { 
             get => speed; 
-            set => speed = 10; 
+            set => speed = value; 
         }
         public bool UltimateActive
         {

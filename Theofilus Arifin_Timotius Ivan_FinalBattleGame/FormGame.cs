@@ -16,6 +16,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         Enemy enemy;
         Time time;
         bool moveUp, moveDown, enemyMoveUp;
+        bool allowThrowWeapon = true;
         public FormGame()
         {
             InitializeComponent();
@@ -31,28 +32,54 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 return cp;
             }
         }
+        #region SetThrowWeapon
+        private void AllowThrowWeapon(ref bool allowThrowWeapon)
+        {
+            allowThrowWeapon = true;
+        }
+        private void DisallowThrowWeapon(ref bool allowThrowWeapon)
+        {
+            allowThrowWeapon = false;
+        }
+        #endregion
 
         #region SetWeapon
+        // Method supaya weapon tidak langsung muncul saat di select
+        private void SetWeapon()
+        {
+            if (allowThrowWeapon)
+            {
+                if (panelRock.Visible == false)
+                {
+                    player.SetWeapon("Rock", Properties.Resources.Rock);
+                }
+                if (panelKnife.Visible == false)
+                {
+                    player.SetWeapon("Knife", Properties.Resources.Knife);
+                }
+                if (panelFire.Visible == false)
+                {
+                    player.SetWeapon("FireBall", Properties.Resources.Fireball);
+                }
+            }
+        }
         public void SelectRock()
         {
-            panelRock.Hide();
-            panelKnife.Show();
-            panelFire.Show();
-            player.SetWeapon("Rock", Properties.Resources.Rock);
+            panelRock.Visible = false;
+            panelKnife.Visible = true;
+            panelFire.Visible = true;
         }
         public void SelectKnife()
         {
-            panelRock.Show();
-            panelKnife.Hide();
-            panelFire.Show();
-            player.SetWeapon("Knife", Properties.Resources.Knife);
+            panelRock.Visible = true;
+            panelKnife.Visible = false;
+            panelFire.Visible = true;
         }
         public void SelectFireBall()
         {
-            panelRock.Show();
-            panelKnife.Show();
-            panelFire.Hide();
-            player.SetWeapon("FireBall", Properties.Resources.Fireball);
+            panelRock.Visible = true;
+            panelKnife.Visible = true;
+            panelFire.Visible = false;
         }
         private void pictureBoxButtonRock_Click_1(object sender, EventArgs e)
         {
@@ -99,6 +126,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             //Set Rock as default weapon
             SelectRock();
+            player.SetWeapon("Rock", Properties.Resources.Rock);
 
             //Display player picture
             player.DisplayPicture(this);
@@ -107,8 +135,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             CreateEnemy();
 
             //Start Time Disini
-            time = new Time(0, 0, 5); //Set time 10 menit
+            time = new Time(1, 0, 1); //Set time 10 menit
             timerTime.Start(); //Jalankan timerTime
+
+            //Set Allow Weapon Di awal permainan
+            allowThrowWeapon = true;
 
             labelPlayerInfo.Text = player.DisplayData();
         }
@@ -141,6 +172,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     {
                         enemySize = new Size(167, 156);
                         enemy = new Monster(5, "Dragon", 3, 100, Properties.Resources.Dragon, startingPoint, enemySize, "Only the heat can defeat me");
+                        //Set weapon enemy disini
                     }
                     //Buat Godzilla ==> 1
                     else if (monsterType == 1)
@@ -222,13 +254,13 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             Size playerSize = new Size(70, 107);
             if (FormMenu.PlayerChoosen == "Man")
             {
-                player = new Player("INCREDIBLE BOY", 10, 100, Properties.Resources.Man_Idle, startingPoint, playerSize, "I'm the superhero with incredible strength amd honor", 0, 20, false);
+                player = new Player("INCREDIBLE BOY", 10, 100, Properties.Resources.Man_Idle, startingPoint, playerSize, "I'm the superhero with incredible strength amd honor", 0, 15, false);
             }
             else
             {
-                player = new Player("PERFECTA GIRL", 10, 100, Properties.Resources.Woman_Idle, startingPoint, playerSize, "I'm the superhero with calm and perfect play", 0, 20, false);
+                player = new Player("PERFECTA GIRL", 10, 100, Properties.Resources.Woman_Idle, startingPoint, playerSize, "I'm the superhero with calm and perfect play", 0, 15, false);
             }
-
+            
             timerPlayerMove.Start();
         }
 
@@ -348,6 +380,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region PlayerMove
         private void timerPlayerMove_Tick(object sender, EventArgs e)
         {
+            //Melakukan Pengecekan Weapon
+            SetWeapon();
+
             //Pada saat pictureBox Enemy ada di di bawah koordinat 280 pictureBox akan turun
             if (moveUp && player.Picture.Top >= 280)
             {
@@ -371,7 +406,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             {
                 moveDown = true;
             }
-            if (e.KeyCode == Keys.Space)
+            if (e.KeyCode == Keys.Space && allowThrowWeapon)
             {
                 //Play Music
                 //System.Media.SoundPlayer weaponSound = new System.Media.SoundPlayer(Properties.Resources.namaFile);
@@ -382,7 +417,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
                 //Tampilkan Weapon saat pengguna menekan spasi
                 player.DisplayWeapon(this);
-                timerWeapon.Start();
+                timerWeaponPlayer.Start();
+
+                //Set Allow Weapon ke false karena sudah melempar weapon
+                DisallowThrowWeapon(ref allowThrowWeapon);
             }
         }
         private void FormGame_KeyUp(object sender, KeyEventArgs e)
@@ -499,13 +537,15 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #endregion
 
         #region TimerWeapon
-        private void timerWeapon_Tick(object sender, EventArgs e)
+        private void timerWeapon_Tick(object sender, EventArgs e) //Timer Weapon Player
         {
             //Kalau Weapon mengenai Enemy
             if (player.Weapon.Picture.Bounds.IntersectsWith(enemy.Picture.Bounds))
             {
-                timerWeapon.Stop();
+                timerWeaponPlayer.Stop();
                 player.RemoveWeapon();
+                AllowThrowWeapon(ref allowThrowWeapon);//Set Allow Weapon jadi true karena udah mengenai enemy
+
                 //Check Weapon (sesuai dengan kelemahan musuh atau tidak waktu terkena)
                 if (CheckWeapon())
                 {
@@ -526,7 +566,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                         enemy.Picture.Dispose();
 
                         //Berhentikan semua timer
-                        timerWeapon.Stop();
+                        timerWeaponPlayer.Stop();
                         timerEnemy.Stop();
                         timerTime.Stop();
                         timerPlayerMove.Stop();
@@ -547,12 +587,13 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 }
             }
             //Kalau Weapon sudah melewati Enemy
-            else if (player.Weapon.Picture.Location.X == 558)
+            else if (player.Weapon.Picture.Location.X >= 1030) //Koordinat 1030 merupakan batas form game
             {
-                timerWeapon.Stop();
+                timerWeaponPlayer.Stop();
                 player.RemoveWeapon();
+                AllowThrowWeapon(ref allowThrowWeapon); //Set Allow Weapon jadi true karena udah melewati enemy
             }
-            //Kalau Weapon tidak mengenai Enemy
+            //Kalau Weapon Berjalan Menuju Enemy
             else
             {
                 player.ReleaseWeapon();
