@@ -107,7 +107,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             CreateEnemy();
 
             //Start Time Disini
-            time = new Time(0, 10, 0); //Set time 10 menit
+            time = new Time(0, 0, 5); //Set time 10 menit
             timerTime.Start(); //Jalankan timerTime
 
             labelPlayerInfo.Text = player.DisplayData();
@@ -230,31 +230,110 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             }
 
             timerPlayerMove.Start();
-
-            //Call method StartGame in FormGame
-            StartGame();
-
         }
 
         #region NotificationButton
         //Design Button Next
-
+        private void buttonNext_Click(object sender, EventArgs e)
+        {
+            pictureBoxNotifications.BackgroundImage = Properties.Resources.Notif_Controls;
+            buttonNext.Visible = false;
+            buttonStart.Visible = true;
+        }
+        private void buttonNext_MouseEnter(object sender, EventArgs e)
+        {
+            buttonNext.BackgroundImage = Properties.Resources.Button_Next_Hover;
+        }
+        private void buttonNext_MouseLeave(object sender, EventArgs e)
+        {
+            buttonNext.BackgroundImage = Properties.Resources.Button_Next_Over;
+        }
 
         //Design Button Start
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            panelMiddle.Visible = false;
+            //Changing picture visibility in panelMiddle
+            buttonStart.Visible = false;
+            pictureBoxNotifications.Visible = false;
+            pictureBoxOptions.Visible = true;
+            buttonResume.Visible = true;
+            buttonExit.Visible = true;
 
+            //Call method StartGame in FormGame
+            StartGame();
+        }
+        private void buttonStart_MouseEnter(object sender, EventArgs e)
+        {
+            buttonStart.BackgroundImage = Properties.Resources.Button_Start_Hover;
+        }
+        private void buttonStart_MouseLeave(object sender, EventArgs e)
+        {
+            buttonStart.BackgroundImage = Properties.Resources.Button_Start_Over;
+        }
+
+        //Design ButtonPlayAgain
+        private void buttonPlayAgain_Click(object sender, EventArgs e)
+        {
+            //Code Here
+        }
+        private void buttonPlayAgain_MouseEnter(object sender, EventArgs e)
+        {
+            buttonPlayAgain.BackgroundImage = Properties.Resources.Button_Play_Again_Hover;
+        }
+        private void buttonPlayAgain_MouseLeave(object sender, EventArgs e)
+        {
+            buttonPlayAgain.BackgroundImage = Properties.Resources.Button_Play_Again_Over;
+        }
+
+        //Design ButtonQuitGame
+        private void buttonQuitGame_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void buttonQuitGame_MouseEnter(object sender, EventArgs e)
+        {
+            buttonQuitGame.BackgroundImage = Properties.Resources.Button_Quit_Game_Hover;
+        }
+        private void buttonQuitGame_MouseLeave(object sender, EventArgs e)
+        {
+            buttonQuitGame.BackgroundImage = Properties.Resources.Button_Quit_Game_Over;
+        }
         #endregion
 
         #region OptionButton
         //Design Button Resume (Options)
-
+        private void buttonResume_Click(object sender, EventArgs e)
+        {
+            panelMiddle.Visible = false;
+        }
+        private void buttonResume_MouseEnter(object sender, EventArgs e)
+        {
+            buttonResume.BackgroundImage = Properties.Resources.Button_Resume_Hover;
+        }
+        private void buttonResume_MouseLeave(object sender, EventArgs e)
+        {
+            buttonResume.BackgroundImage = Properties.Resources.Button_Resume_Over;
+        }
 
         //Design Button Exit (Options)
-
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void buttonExit_MouseEnter(object sender, EventArgs e)
+        {
+            buttonExit.BackgroundImage = Properties.Resources.Button_Exit_Hover;
+        }
+        private void buttonExit_MouseLeave(object sender, EventArgs e)
+        {
+            buttonExit.BackgroundImage = Properties.Resources.Button_Exit_Over;
+        }
 
         //Design Button Options
         private void buttonOptions_Click(object sender, EventArgs e)
         {
-            
+            panelMiddle.Visible = true;
         }
         private void buttonOptions_MouseEnter(object sender, EventArgs e)
         {
@@ -398,6 +477,18 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             if (time.Hour == 0 && time.Minute == 0 && time.Second == 0)
             {
                 timerTime.Stop();
+
+                //Display Lose Notification
+                panelMiddle.Visible = true;
+                //Set true to notification
+                buttonPlayAgain.Visible = true;
+                buttonQuitGame.Visible = true;
+                pictureBoxNotifications.Visible = true;
+                pictureBoxNotifications.BackgroundImage = Properties.Resources.Notif_Lose;
+                //Set false to other
+                pictureBoxOptions.Visible = false;
+                buttonResume.Visible = false;
+                buttonExit.Visible = false;
             }
             //Timer Countdown
             else
@@ -439,7 +530,18 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                         timerEnemy.Stop();
                         timerTime.Stop();
                         timerPlayerMove.Stop();
-                        //Display custom message Win
+
+                        //Display Win Notification
+                        panelMiddle.Visible = true;
+                        //Set true to notification
+                        buttonPlayAgain.Visible = true;
+                        buttonQuitGame.Visible = true;
+                        pictureBoxNotifications.Visible = true;
+                        pictureBoxNotifications.BackgroundImage = Properties.Resources.Notif_Win;
+                        //Set false to other
+                        pictureBoxOptions.Visible = false;
+                        buttonResume.Visible = false;
+                        buttonExit.Visible = false;
 
                     }
                 }
