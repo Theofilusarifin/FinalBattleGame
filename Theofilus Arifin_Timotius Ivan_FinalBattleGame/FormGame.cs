@@ -17,6 +17,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         Time time;
         bool moveUp, moveDown, enemyMoveUp;
         bool allowThrowWeapon = true;
+        int WeaponTime = 0;
         public FormGame()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 return cp;
             }
         }
+
         #region SetThrowWeapon
         private void AllowThrowWeapon(ref bool allowThrowWeapon)
         {
@@ -105,6 +107,15 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             SelectFireBall();
         }
+
+        // To reset weapon time, biar bilangan ga terlalu gede dan lag
+        private void ResetWeaponTime(ref int weaponTime)
+        {
+            if (weaponTime > 100)
+            {
+                weaponTime = 0;
+            }
+        }
         #endregion
 
         #region UseUltimate
@@ -122,6 +133,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
         #endregion
 
+        #region StartGame
         public void StartGame()
         {
             //Set Rock as default weapon
@@ -133,7 +145,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
             //Create Enemy
             CreateEnemy();
-            enemy.SetWeapon("Fireball", Properties.Resources.Fireball);
 
             //Start Time Disini
             time = new Time(1, 0, 1); //Set time 10 menit
@@ -144,6 +155,24 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
             labelPlayerInfo.Text = player.DisplayData();
         }
+        #endregion
+
+        #region CreatePlayer
+        private void CreatePlayer()
+        {
+            //Initiate Starting Position and Size Player
+            Point startingPoint = new Point(87, 497);
+            Size playerSize = new Size(70, 107);
+            if (FormMenu.PlayerChoosen == "Man")
+            {
+                player = new Player("INCREDIBLE BOY", 10, 100, Properties.Resources.Man_Idle, startingPoint, playerSize, "I'm the superhero with incredible strength amd honor", 0, 15, false);
+            }
+            else
+            {
+                player = new Player("PERFECTA GIRL", 10, 100, Properties.Resources.Woman_Idle, startingPoint, playerSize, "I'm the superhero with calm and perfect play", 0, 15, false);
+            }
+        }
+        #endregion
 
         #region CreateEnemy
         public void CreateEnemy()
@@ -173,6 +202,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     {
                         enemySize = new Size(167, 156);
                         enemy = new Monster(5, "Dragon", 3, 100, Properties.Resources.Dragon, startingPoint, enemySize, "Only the heat can defeat me");
+                        enemy.SetWeapon("Fire", Properties.Resources.Dragon_Weapon);
 
                     }
                     //Buat Godzilla ==> 1
@@ -180,12 +210,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     {
                         enemySize = new Size(157, 149);
                         enemy = new Monster(5, "Godzilla", 5, 100, Properties.Resources.Godzilla, startingPoint, enemySize, "I can't help the hard stuff");
+                        enemy.SetWeapon("Fist", Properties.Resources.Godzilla_Weapon);
                     }
                     //Buat Dino ==> 2
                     else
                     {
                         enemySize = new Size(182, 104);
                         enemy = new Monster(5, "Dino", 7, 100, Properties.Resources.Dino, startingPoint, enemySize, "Ouch.. no sharp item please..");
+                        enemy.SetWeapon("Claw", Properties.Resources.Dino_Weapon);
                     }
                 }
                 else
@@ -194,19 +226,22 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     if (monsterType == 0)
                     {
                         enemySize = new Size(163, 120);
-                        enemy = new Monster(5, "Mega Dragon", 3, 100, Properties.Resources.Mega_Dragon, startingPoint, enemySize, "Only the heat can defeat me");
+                        enemy = new MegaMonster(5, "Mega Dragon", 3, 100, Properties.Resources.Mega_Dragon, startingPoint, enemySize, "Only the heat can defeat me", 30);
+                        enemy.SetWeapon("Fire", Properties.Resources.Mega_Dragon_Weapon);
                     }
                     //Buat MegaGodzilla ==> 1
                     else if (monsterType == 1)
                     {
                         enemySize = new Size(167, 149);
-                        enemy = new Monster(5, "Mega Godzilla", 5, 100, Properties.Resources.Mega_Godzilla, startingPoint, enemySize, "I can't help the hard stuff");
+                        enemy = new MegaMonster(5, "Mega Godzilla", 5, 100, Properties.Resources.Mega_Godzilla, startingPoint, enemySize, "I can't help the hard stuff", 30);
+                        enemy.SetWeapon("Fist", Properties.Resources.Mega_Godzilla_Weapon);
                     }
                     //Buat MegaDino ==> 2
                     else
                     {
                         enemySize = new Size(186, 149);
-                        enemy = new Monster(5, "Mega Dino", 7, 100, Properties.Resources.Mega_Dino, startingPoint, enemySize, "Ouch.. no sharp item please..");
+                        enemy = new MegaMonster(5, "Mega Dino", 7, 100, Properties.Resources.Mega_Dino, startingPoint, enemySize, "Ouch.. no sharp item please..", 30);
+                        enemy.SetWeapon("Claw", Properties.Resources.Mega_Dino_Weapon);
                     }
                 }
             }
@@ -221,18 +256,21 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 {
                     enemySize = new Size(117, 103);
                     enemy = new Witch(5, "Broom Witch", 1, 100, Properties.Resources.Broom_Witch, startingPoint, enemySize, 10);
+                    enemy.SetWeapon("Sphere Energy", Properties.Resources.Broom_Witch_Weapon);
                 }
                 //Buat Ancient Witch ==> 1
                 else if (witchType == 1)
                 {
                     enemySize = new Size(94, 114);
                     enemy = new Witch(5, "Ancient Witch", 2, 100, Properties.Resources.Ancient_Witch, startingPoint, enemySize, 20);
+                    enemy.SetWeapon("Cursed Spell", Properties.Resources.Ancient_Witch_Weapon);
                 }
                 //Buat Green Witch ==> 2
                 else
                 {
                     enemySize = new Size(136, 103);
                     enemy = new Witch(5, "Green Witch", 1, 100, Properties.Resources.Green_Witch, startingPoint, enemySize, 50);
+                    enemy.SetWeapon("Green Spirit", Properties.Resources.Green_Witch_Weapon);
                 }
             }
 
@@ -245,30 +283,12 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             enemyMoveUp = true;
             //Start TimerEnemy
             timerEnemy.Start();
-
-            //Set Weapon Enemy
-            enemy.SetWeapon(enemy.WeaponEnemy.Name, enemy.WeaponEnemy.Picture.Image);
-
-            //Tampilkan Weapon Enemy
-            enemy.DisplayWeapon(this);
-            timerWeaponEnemy.Start();
         }
         #endregion
 
         private void FormGame_Load(object sender, EventArgs e)
         {
-            //Initiate Starting Position and Size Player
-            Point startingPoint = new Point(87, 497);
-            Size playerSize = new Size(70, 107);
-            if (FormMenu.PlayerChoosen == "Man")
-            {
-                player = new Player("INCREDIBLE BOY", 10, 100, Properties.Resources.Man_Idle, startingPoint, playerSize, "I'm the superhero with incredible strength amd honor", 0, 15, false);
-            }
-            else
-            {
-                player = new Player("PERFECTA GIRL", 10, 100, Properties.Resources.Woman_Idle, startingPoint, playerSize, "I'm the superhero with calm and perfect play", 0, 15, false);
-            }
-            
+            CreatePlayer();
             timerPlayerMove.Start();
         }
 
@@ -300,7 +320,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             buttonResume.Visible = true;
             buttonExit.Visible = true;
 
-            //Call method StartGame in FormGame
+            //Call method StartGame
             StartGame();
         }
         private void buttonStart_MouseEnter(object sender, EventArgs e)
@@ -315,7 +335,22 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         //Design ButtonPlayAgain
         private void buttonPlayAgain_Click(object sender, EventArgs e)
         {
-            //Code Here
+            panelMiddle.Visible = false;
+            //Changing picture visibility in panelMiddle
+            buttonPlayAgain.Visible = false;
+            buttonExit.Visible = false;
+            pictureBoxNotifications.Visible = false;
+
+            //Remove old player and old enemy
+            player.Remove();
+            enemy.Remove();
+
+            //Create A new player (Same gender as selected)
+            CreatePlayer();
+            timerPlayerMove.Start();
+
+            //Call method StartGame
+            StartGame();
         }
         private void buttonPlayAgain_MouseEnter(object sender, EventArgs e)
         {
@@ -510,6 +545,18 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             {
                 enemy.MoveDown();
             }
+
+            ResetWeaponTime(ref WeaponTime); //Reset WeaponTime apabila sudah lebih dari 1000
+            WeaponTime++; //Weapon Time ditambah
+            if (WeaponTime % 100 == 0) //Tiap kelipatan 100, Enemy menembakkan weapon
+            {
+                //Set Weapon Enemy
+                enemy.SetWeapon(enemy.Weapon.Name, enemy.Weapon.Picture.Image);
+
+                //Tampilkan Weapon Enemy
+                enemy.DisplayWeapon(this);
+                timerWeaponEnemy.Start();
+            }
         }
         #endregion
 
@@ -544,7 +591,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
         #endregion
 
-        #region TimerWeapon
+        #region TimerWeaponPlayer
         private void timerWeapon_Tick(object sender, EventArgs e) //Timer Weapon Player
         {
             //Kalau Weapon mengenai Enemy
@@ -611,24 +658,17 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #endregion
 
         #region TimerWeaponEnemy
-
         private void timerWeaponEnemy_Tick(object sender, EventArgs e)
         {
-            if (enemy.WeaponEnemy.Picture.Bounds.IntersectsWith(player.Picture.Bounds))
+            if (enemy.Weapon.Picture.Bounds.IntersectsWith(player.Picture.Bounds))
             {
                 timerWeaponEnemy.Stop();
                 enemy.RemoveWeapon();
 
-                if (FormMenu.LevelDifficulty == "Easy")
-                {
-                    enemy.DefeatPlayer(player, 25);
-                }
-                else
-                {
-                    enemy.DefeatPlayer(player, 50);
-                }
+                //Panggil method DefeatEnemy di class Player
+                enemy.DefeatPlayer(player, FormMenu.LevelDifficulty);
 
-                //Display new info (update) - Player and Enemy
+                ////Display new info (update) - Player and Enemy
                 labelPlayerInfo.Text = player.DisplayData();
                 labelEnemyInfo.Text = enemy.DisplayDataEnemy();
 
@@ -644,7 +684,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     timerPlayerMove.Stop();
                     timerWeaponEnemy.Stop();
 
-                    //Display Win Notification
+                    //Display Lose Notification
                     panelMiddle.Visible = true;
                     //Set true to notification
                     buttonPlayAgain.Visible = true;
@@ -656,6 +696,12 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     buttonResume.Visible = false;
                     buttonExit.Visible = false;
                 }
+            }
+            //Kalau Weapon sudah melewati Player
+            else if (enemy.Weapon.Picture.Location.X <= -50) //Koordinat -50 merupakan batas form game
+            {
+                timerWeaponEnemy.Stop();
+                enemy.RemoveWeapon();
             }
             //Kalau Weapon Berjalan Menuju Player
             else

@@ -19,6 +19,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         base (name, life, health, image, position, size)
         {
             this.Speed = speed;
+            this.Weapon = null;
         }
         #endregion
 
@@ -38,14 +39,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 }
             }
         }
-
-        public WeaponEnemy WeaponEnemy
+        public WeaponEnemy Weapon
         {
             get => weapon;
-            private set
-            {
-                weapon = value;
-            }
+            private set => weapon = value;
         }
         #endregion
 
@@ -63,11 +60,43 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             Picture.Top += Speed;
         }
-        public abstract void SetWeapon(string name, Image image);
-        public abstract void DisplayWeapon(Control displayContainer);
-        public abstract void ReleaseWeapon();
-        public abstract void RemoveWeapon();
-        public abstract void DefeatPlayer(Player player, int damage);
+        public void SetWeapon(string name, Image image)
+        {
+            Point position = new Point(Picture.Location.X - 30, Picture.Location.Y + 40);
+            Size size = new Size(50, 50);
+            Weapon = new WeaponEnemy(name, image, position, size);
+        }
+        public void DisplayWeapon(Control displayContainer)
+        {
+            Weapon.Picture.Parent = displayContainer;
+            Weapon.Picture.SizeMode = PictureBoxSizeMode.StretchImage;
+            Weapon.Picture.BackColor = Color.Transparent;
+            Weapon.Picture.BringToFront();
+        }
+        public void ReleaseWeapon()
+        {
+            Weapon.Picture.Left -= 30;
+        }
+        public void RemoveWeapon()
+        {
+            Weapon.Picture.Dispose();
+        }
+        public void DefeatPlayer(Player player, string LevelDifficulty)
+        {
+            if (LevelDifficulty == "Easy")
+            {
+                player.Health -= 20;
+            }
+            else
+            {
+                player.Health -= 50;
+            }
+            if (player.Health <= 0 && player.Life > 0)
+            {
+                player.Life--;
+                player.Health = 100;
+            }
+        }
         #endregion
     }
 }

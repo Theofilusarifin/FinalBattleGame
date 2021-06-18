@@ -93,8 +93,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
         public void SetWeapon(string name, Image image)
         {
-            Point position = new Point(Picture.Location.X + 80, Picture.Location.Y + 80);
-            Size size = new Size(30, 30);
+            Point position = new Point(Picture.Location.X + 80, Picture.Location.Y + 20);
+            Size size = new Size(40, 40);
             Weapon = new WeaponPlayer(name, image, position, size);
         }
         public void DisplayWeapon(Control displayContainer)
@@ -118,6 +118,12 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             {
                 enemy.Health -= 50;
                 score += 100;
+            }
+            else if (enemy is MegaMonster)
+            {
+                int damageReduce = ((MegaMonster)enemy).DamageReduce;
+                enemy.Health -= (50-damageReduce);
+                score += 200;
             }
             else if (enemy is Witch)
             {

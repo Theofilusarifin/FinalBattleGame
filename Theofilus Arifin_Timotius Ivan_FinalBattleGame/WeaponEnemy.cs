@@ -20,16 +20,15 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             Picture.Size = size;
         }
 
-        public string Name
-        {
+        public string Name 
+        { 
             get => name;
-            set => name = value;
+            set => name = value; 
         }
-
-        public PictureBox Picture
-        {
-            get => picture;
-            private set => picture = value;
+        public PictureBox Picture 
+        { 
+            get => picture; 
+            set => picture = value; 
         }
     }
 }

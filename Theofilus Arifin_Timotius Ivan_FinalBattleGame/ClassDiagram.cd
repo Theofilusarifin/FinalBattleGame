@@ -22,11 +22,11 @@
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Enemy">
     <Position X="8.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEgAAAAAAAAAAAAAAAAAAABCAAAAUAAQAhAQAAAICA=</HashCode>
+      <HashCode>AAEgAAAAAAAAAAAAAAAAAAABCAAAAUgAQAhAAAAAICA=</HashCode>
       <FileName>Enemy.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="WeaponEnemy" />
+      <Property Name="Weapon" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.WeaponPlayer">
@@ -39,22 +39,16 @@
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Monster">
     <Position X="7.25" Y="11" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAAAAAAgAAAAKAAAAEgAAAhAAAAAICA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Monster.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Weapon" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Witch">
     <Position X="9.75" Y="11" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgQAAAAAAAAAAAAAAAAAAACAAAAEgAAAhAAAAAIGA=</HashCode>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEA=</HashCode>
       <FileName>Witch.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Weapon" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Time">
     <Position X="9.25" Y="0.5" Width="1.5" />
@@ -77,25 +71,18 @@
       <FileName>PowerUps.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.WeaponMonster">
-    <Position X="7.25" Y="15.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAgAAAAIAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>WeaponMonster.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.WeaponWitch">
-    <Position X="9.75" Y="15.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAgAAAAIAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>WeaponWitch.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.WeaponEnemy">
-    <Position X="11" Y="5.75" Width="1.5" />
+    <Position X="11" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAIAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>WeaponEnemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.MegaMonster">
+    <Position X="12" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MegaMonster.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
