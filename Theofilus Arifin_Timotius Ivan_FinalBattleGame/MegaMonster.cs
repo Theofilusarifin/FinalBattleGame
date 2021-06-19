@@ -10,14 +10,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
     {
         #region FIELDS
         private string hint;
-        private int damageReduce;
+        private int damageReduction;
         #endregion
         #region CONSTRUCTORS
-        public MegaMonster(int speed, string name, int life, int health, Image image, Point position, Size size, string hint, int damageReduce) :
+        public MegaMonster(int speed, string name, int life, int health, Image image, Point position, Size size, string hint, int damageReduction) :
         base(speed, name, life, health, image, position, size)
         {
             this.Hint = hint;
-            this.DamageReduce = damageReduce;
+            this.DamageReduction = damageReduction;
         }
         #endregion
         #region PROPERTIES
@@ -26,10 +26,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             get => hint;
             set => hint = value;
         }
-        public int DamageReduce
+        public int DamageReduction
         {
-            get => damageReduce;
-            set => damageReduce = value;
+            get => damageReduction;
+            set => damageReduction = value;
         }
         #endregion
         #region METHODS

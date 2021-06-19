@@ -91,6 +91,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             {
                 player.Health -= 50;
             }
+
             if (player.Health <= 0 && player.Life > 0)
             {
                 player.Life--;

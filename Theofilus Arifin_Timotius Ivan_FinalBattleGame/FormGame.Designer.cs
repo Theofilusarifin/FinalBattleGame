@@ -65,6 +65,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBoxOptions = new System.Windows.Forms.PictureBox();
             this.timerWeaponEnemy = new System.Windows.Forms.Timer(this.components);
             this.timerPowerUp = new System.Windows.Forms.Timer(this.components);
+            this.timerPowerUpActive = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRock)).BeginInit();
             this.panelRock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonRock)).BeginInit();
@@ -507,6 +508,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // timerPowerUp
             // 
             this.timerPowerUp.Interval = 10;
+            this.timerPowerUp.Tick += new System.EventHandler(this.timerPowerUp_Tick);
+            // 
+            // timerPowerUpActive
+            // 
+            this.timerPowerUpActive.Tick += new System.EventHandler(this.timerPowerUpActive_Tick);
             // 
             // FormGame
             // 
@@ -596,5 +602,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.Button buttonPlayAgain;
         private System.Windows.Forms.Timer timerWeaponEnemy;
         private System.Windows.Forms.Timer timerPowerUp;
+        private System.Windows.Forms.Timer timerPowerUpActive;
     }
 }
