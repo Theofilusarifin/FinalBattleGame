@@ -47,6 +47,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonEasy.Name = "buttonEasy";
             this.buttonEasy.Size = new System.Drawing.Size(232, 110);
             this.buttonEasy.TabIndex = 0;
+            this.buttonEasy.TabStop = false;
             this.buttonEasy.UseVisualStyleBackColor = false;
             this.buttonEasy.Click += new System.EventHandler(this.buttonEasy_Click);
             this.buttonEasy.MouseEnter += new System.EventHandler(this.buttonEasy_MouseEnter);
@@ -66,6 +67,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonHard.Name = "buttonHard";
             this.buttonHard.Size = new System.Drawing.Size(232, 110);
             this.buttonHard.TabIndex = 1;
+            this.buttonHard.TabStop = false;
             this.buttonHard.UseVisualStyleBackColor = false;
             this.buttonHard.Click += new System.EventHandler(this.buttonHard_Click);
             this.buttonHard.MouseEnter += new System.EventHandler(this.buttonHard_MouseEnter);

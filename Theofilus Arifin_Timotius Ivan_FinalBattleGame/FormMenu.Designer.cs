@@ -51,6 +51,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonNewGame.Name = "buttonNewGame";
             this.buttonNewGame.Size = new System.Drawing.Size(206, 74);
             this.buttonNewGame.TabIndex = 0;
+            this.buttonNewGame.TabStop = false;
             this.buttonNewGame.UseVisualStyleBackColor = false;
             this.buttonNewGame.Click += new System.EventHandler(this.buttonNewGame_Click);
             this.buttonNewGame.MouseEnter += new System.EventHandler(this.buttonNewGame_MouseEnter);
@@ -71,6 +72,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonAlmanac.Name = "buttonAlmanac";
             this.buttonAlmanac.Size = new System.Drawing.Size(206, 74);
             this.buttonAlmanac.TabIndex = 2;
+            this.buttonAlmanac.TabStop = false;
             this.buttonAlmanac.UseVisualStyleBackColor = false;
             this.buttonAlmanac.Click += new System.EventHandler(this.buttonAlmanac_Click);
             this.buttonAlmanac.MouseEnter += new System.EventHandler(this.buttonAlmanac_MouseEnter);
@@ -91,6 +93,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonQuit.Name = "buttonQuit";
             this.buttonQuit.Size = new System.Drawing.Size(153, 53);
             this.buttonQuit.TabIndex = 3;
+            this.buttonQuit.TabStop = false;
             this.buttonQuit.UseVisualStyleBackColor = false;
             this.buttonQuit.Click += new System.EventHandler(this.buttonQuit_Click);
             this.buttonQuit.MouseEnter += new System.EventHandler(this.buttonQuit_MouseEnter);

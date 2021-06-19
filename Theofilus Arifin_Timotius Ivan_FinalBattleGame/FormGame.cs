@@ -12,16 +12,21 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
     public partial class FormGame : Form
     {
+        #region DefineVariable
         Player player;
         Enemy enemy;
         Time time;
         bool moveUp, moveDown, enemyMoveUp;
         bool allowThrowWeapon = true;
         int weaponTime, powerUpTime, powerUpActiveTime = 0;
+        #endregion
+
         public FormGame()
         {
             InitializeComponent();
         }
+
+        #region No Lag Method
         //Optimized Form (Loading Screen)
         protected override CreateParams CreateParams
         {
@@ -33,6 +38,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 return cp;
             }
         }
+        #endregion
+
         #region SetPowerUp
         //Add power up time
         private void AddPowerUpTime(ref int powerUpTime)
@@ -202,6 +209,33 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
         #endregion
 
+        #region ResetGame
+        public void ResetGame()
+        {
+            timerEnemy.Stop();
+            timerPlayerMove.Stop();
+            timerPowerUp.Stop();
+            timerPowerUpActive.Stop();
+            timerTime.Stop();
+            timerWeaponPlayer.Stop();
+            timerWeaponEnemy.Stop();
+            allowThrowWeapon = false;
+            ResetPowerUpActiveTime(ref powerUpActiveTime);
+            ResetPowerUpTime(ref powerUpTime);
+            ResetWeaponTime(ref weaponTime);
+            player.ResetAttackGained();
+            player.ResetShield();
+            player.Remove();
+            enemy.Remove();
+
+            CreatePlayer();
+            timerPlayerMove.Start();
+
+            //Call method StartGame
+            StartGame();
+        }
+        #endregion
+
         #region CreatePlayer
         private void CreatePlayer()
         {
@@ -251,7 +285,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     if (monsterType == 0)
                     {
                         enemySize = new Size(162, 151);
-                        enemy = new Monster(5, "Dragon", 3, 100, Properties.Resources.Dragon, startingPoint, enemySize, "Only the heat can defeat me");
+                        enemy = new Monster(5, "Dragon", 5, 100, Properties.Resources.Dragon, startingPoint, enemySize, "Only the heat can defeat me");
                         enemy.SetWeapon("Fire", Properties.Resources.Dragon_Weapon);
 
                     }
@@ -266,7 +300,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     else
                     {
                         enemySize = new Size(167, 89);
-                        enemy = new Monster(5, "Dino", 7, 100, Properties.Resources.Dino, startingPoint, enemySize, "Ouch.. no sharp item please..");
+                        enemy = new Monster(5, "Dino", 5, 100, Properties.Resources.Dino, startingPoint, enemySize, "Ouch.. no sharp item please..");
                         enemy.SetWeapon("Claw", Properties.Resources.Dino_Weapon);
                     }
                 }
@@ -276,14 +310,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     if (monsterType == 0)
                     {
                         enemySize = new Size(163, 120);
-                        enemy = new MegaMonster(5, "Mega Dragon", 3, 100, Properties.Resources.Mega_Dragon, startingPoint, enemySize, "Only the heat can defeat me", 30);
+                        enemy = new MegaMonster(5, "Mega Dragon", 7, 100, Properties.Resources.Mega_Dragon, startingPoint, enemySize, "Only the heat can defeat me", 30);
                         enemy.SetWeapon("Fire", Properties.Resources.Mega_Dragon_Weapon);
                     }
                     //Buat MegaGodzilla ==> 1
                     else if (monsterType == 1)
                     {
                         enemySize = new Size(157, 130);
-                        enemy = new MegaMonster(5, "Mega Godzilla", 5, 100, Properties.Resources.Mega_Godzilla, startingPoint, enemySize, "I can't help the hard stuff", 30);
+                        enemy = new MegaMonster(5, "Mega Godzilla", 7, 100, Properties.Resources.Mega_Godzilla, startingPoint, enemySize, "I can't help the hard stuff", 30);
                         enemy.SetWeapon("Fist", Properties.Resources.Mega_Godzilla_Weapon);
                     }
                     //Buat MegaDino ==> 2
@@ -312,14 +346,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 else if (witchType == 1)
                 {
                     enemySize = new Size(84, 104);
-                    enemy = new Witch(5, "Ancient Witch", 2, 100, Properties.Resources.Ancient_Witch, startingPoint, enemySize, 20);
+                    enemy = new Witch(5, "Ancient Witch", 3, 100, Properties.Resources.Ancient_Witch, startingPoint, enemySize, 20);
                     enemy.SetWeapon("Cursed Spell", Properties.Resources.Ancient_Witch_Weapon);
                 }
                 //Buat Green Witch ==> 2
                 else
                 {
                     enemySize = new Size(131, 98);
-                    enemy = new Witch(5, "Green Witch", 1, 100, Properties.Resources.Green_Witch, startingPoint, enemySize, 50);
+                    enemy = new Witch(5, "Green Witch", 5, 100, Properties.Resources.Green_Witch, startingPoint, enemySize, 50);
                     enemy.SetWeapon("Green Spirit", Properties.Resources.Green_Witch_Weapon);
                 }
             }
@@ -364,19 +398,28 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
         #endregion
 
+        #region FormLoad
         private void FormGame_Load(object sender, EventArgs e)
         {
             CreatePlayer();
             timerPlayerMove.Start();
         }
+        #endregion
 
         #region NotificationButton
         //Design Button Next
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            pictureBoxNotifications.BackgroundImage = Properties.Resources.Notif_Controls;
-            buttonNext.Visible = false;
-            buttonStart.Visible = true;
+            try
+            {
+                pictureBoxNotifications.BackgroundImage = Properties.Resources.Notif_Controls;
+                buttonNext.Visible = false;
+                buttonStart.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void buttonNext_MouseEnter(object sender, EventArgs e)
         {
@@ -390,16 +433,26 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         //Design Button Start
         private void buttonStart_Click(object sender, EventArgs e)
         {
-            panelMiddle.Visible = false;
-            //Changing picture visibility in panelMiddle
-            buttonStart.Visible = false;
-            pictureBoxNotifications.Visible = false;
-            pictureBoxOptions.Visible = true;
-            buttonResume.Visible = true;
-            buttonExit.Visible = true;
+            try
+            {
+                panelMiddle.Visible = false;
+                //Changing picture visibility in panelMiddle
+                buttonStart.Visible = false;
+                pictureBoxNotifications.Visible = false;
+                pictureBoxOptions.Visible = true;
+                buttonResume.Visible = true;
+                buttonExit.Visible = true;
 
-            //Call method StartGame
-            StartGame();
+                //Change The focus, supaya ga nge bug waktu tekan space
+                this.Focus();
+
+                //Call method StartGame
+                StartGame();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void buttonStart_MouseEnter(object sender, EventArgs e)
         {
@@ -413,22 +466,23 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         //Design ButtonPlayAgain
         private void buttonPlayAgain_Click(object sender, EventArgs e)
         {
-            panelMiddle.Visible = false;
-            //Changing picture visibility in panelMiddle
-            buttonPlayAgain.Visible = false;
-            buttonExit.Visible = false;
-            pictureBoxNotifications.Visible = false;
+            try
+            {
+                panelMiddle.Visible = false;
+                //Changing picture visibility in panelMiddle
+                buttonPlayAgain.Visible = false;
+                buttonExit.Visible = false;
+                pictureBoxNotifications.Visible = false;
 
-            //Remove old player and old enemy
-            player.Remove();
-            enemy.Remove();
+                //Change The focus, supaya ga nge bug waktu tekan space
+                this.Focus();
 
-            //Create A new player (Same gender as selected)
-            CreatePlayer();
-            timerPlayerMove.Start();
-
-            //Call method StartGame
-            StartGame();
+                ResetGame();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void buttonPlayAgain_MouseEnter(object sender, EventArgs e)
         {
@@ -487,6 +541,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private void buttonOptions_Click(object sender, EventArgs e)
         {
             panelMiddle.Visible = true;
+            pictureBoxOptions.Visible = true;
+            buttonExit.Visible = true;
+            buttonResume.Visible = true;
         }
         private void buttonOptions_MouseEnter(object sender, EventArgs e)
         {
@@ -501,68 +558,89 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region PlayerMove
         private void timerPlayerMove_Tick(object sender, EventArgs e)
         {
-            //Melakukan Pengecekan Weapon
-            SetWeapon();
+            try
+            {
+                //Melakukan Pengecekan Weapon
+                SetWeapon();
 
-            //Pada saat pictureBox Enemy ada di di bawah koordinat 280 pictureBox akan turun
-            if (moveUp && player.Picture.Top >= 280)
-            {
-                player.MoveUp();
-                if (player.ShieldActive) // Check Apakah Ada Shield
+                //Pada saat pictureBox Enemy ada di di bawah koordinat 280 pictureBox akan turun
+                if (moveUp && player.Picture.Top >= 280)
                 {
-                    // Gerakan Shield agar mengikuti gerakan player
-                    player.Shield.MoveUp();
+                    player.MoveUp();
+                    if (player.ShieldActive) // Check Apakah Ada Shield
+                    {
+                        // Gerakan Shield agar mengikuti gerakan player
+                        player.Shield.MoveUp();
+                    }
+                    player.DisplayPicture(this);
                 }
-                player.DisplayPicture(this);
+                //Pada saat pictureBox Enemy ada di atas  koordinat 710, pictureBox akan naik
+                if (moveDown && player.Picture.Top <= 710)
+                {
+                    player.MoveDown();
+                    if (player.ShieldActive) // Check Apakah Ada Shield
+                    {
+                        // Gerakan Shield agar mengikuti gerakan player
+                        player.Shield.MoveDown();
+                    }
+                    player.DisplayPicture(this);
+                }
             }
-            //Pada saat pictureBox Enemy ada di atas  koordinat 710, pictureBox akan naik
-            if (moveDown && player.Picture.Top <= 710)
+            catch (Exception ex)
             {
-                player.MoveDown();
-                if (player.ShieldActive) // Check Apakah Ada Shield
-                {
-                    // Gerakan Shield agar mengikuti gerakan player
-                    player.Shield.MoveDown();
-                }
-                player.DisplayPicture(this);
+                MessageBox.Show(ex.Message);
             }
         }
         private void FormGame_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Up)
+            try
             {
-                moveUp = true;
+                if (e.KeyCode == Keys.Up)
+                {
+                    moveUp = true;
+                }
+                if (e.KeyCode == Keys.Down)
+                {
+                    moveDown = true;
+                }
+                if (e.KeyCode == Keys.Space && allowThrowWeapon)
+                {
+                    //Play Music
+                    //System.Media.SoundPlayer weaponSound = new System.Media.SoundPlayer(Properties.Resources.namaFile);
+                    //weaponSound.Play();
+
+                    //Set Weapon
+                    player.SetWeapon(player.Weapon.Name, player.Weapon.Picture.Image);
+
+                    //Tampilkan Weapon saat pengguna menekan spasi
+                    player.DisplayWeapon(this);
+                    timerWeaponPlayer.Start();
+
+                    //Set Allow Weapon ke false karena sudah melempar weapon
+                    DisallowThrowWeapon(ref allowThrowWeapon);
+                }
             }
-            if (e.KeyCode == Keys.Down)
+            catch (Exception ex)
             {
-                moveDown = true;
-            }
-            if (e.KeyCode == Keys.Space && allowThrowWeapon)
-            {
-                //Play Music
-                //System.Media.SoundPlayer weaponSound = new System.Media.SoundPlayer(Properties.Resources.namaFile);
-                //weaponSound.Play();
-
-                //Set Weapon
-                player.SetWeapon(player.Weapon.Name, player.Weapon.Picture.Image);
-
-                //Tampilkan Weapon saat pengguna menekan spasi
-                player.DisplayWeapon(this);
-                timerWeaponPlayer.Start();
-
-                //Set Allow Weapon ke false karena sudah melempar weapon
-                DisallowThrowWeapon(ref allowThrowWeapon);
+                MessageBox.Show(ex.Message);
             }
         }
         private void FormGame_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Up)
+            try
             {
-                moveUp = false;
+                if (e.KeyCode == Keys.Up)
+                {
+                    moveUp = false;
+                }
+                if (e.KeyCode == Keys.Down)
+                {
+                    moveDown = false;
+                }
             }
-            if (e.KeyCode == Keys.Down)
+            catch (Exception ex)
             {
-                moveDown = false;
+                MessageBox.Show(ex.Message);
             }
         }
         #endregion
@@ -614,37 +692,44 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region TimerEnemy
         private void timerEnemy_Tick(object sender, EventArgs e)
         {
-            //Pada saat pictureBox Enemy ada di di bawah koordinat 280 pictureBox akan turun
-            if (enemy.Picture.Top <= 280)
+            try
             {
-                enemyMoveUp = false;
-            }
-            //Pada saat pictureBox Enemy ada di atas  koordinat 710, pictureBox akan naik
-            else if (enemy.Picture.Top >= 710)
-            {
-                enemyMoveUp = true;
-            }
+                //Pada saat pictureBox Enemy ada di di bawah koordinat 280 pictureBox akan turun
+                if (enemy.Picture.Top <= 280)
+                {
+                    enemyMoveUp = false;
+                }
+                //Pada saat pictureBox Enemy ada di atas  koordinat 710, pictureBox akan naik
+                else if (enemy.Picture.Top >= 710)
+                {
+                    enemyMoveUp = true;
+                }
 
-            //Pengecekan untuk menjalankan moveUp dan moveDown
-            if (enemyMoveUp)
-            {
-                enemy.MoveUp();
-            }
-            else
-            {
-                enemy.MoveDown();
-            }
+                //Pengecekan untuk menjalankan moveUp dan moveDown
+                if (enemyMoveUp)
+                {
+                    enemy.MoveUp();
+                }
+                else
+                {
+                    enemy.MoveDown();
+                }
 
-            ResetWeaponTime(ref weaponTime); //Reset WeaponTime apabila sudah lebih dari 100
-            AddWeaponTime(ref weaponTime); //Weapon Time ditambah
-            if (weaponTime % 100 == 0) //Tiap kelipatan 100, Enemy menembakkan weapon
-            {
-                //Set Weapon Enemy
-                enemy.SetWeapon(enemy.Weapon.Name, enemy.Weapon.Picture.Image);
+                ResetWeaponTime(ref weaponTime); //Reset WeaponTime apabila sudah lebih dari 100
+                AddWeaponTime(ref weaponTime); //Weapon Time ditambah
+                if (weaponTime % 100 == 0) //Tiap kelipatan 100, Enemy menembakkan weapon
+                {
+                    //Set Weapon Enemy
+                    enemy.SetWeapon(enemy.Weapon.Name, enemy.Weapon.Picture.Image);
 
-                //Tampilkan Weapon Enemy
-                enemy.DisplayWeapon(this);
-                timerWeaponEnemy.Start();
+                    //Tampilkan Weapon Enemy
+                    enemy.DisplayWeapon(this);
+                    timerWeaponEnemy.Start();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         #endregion
@@ -652,41 +737,48 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region TimerTime
         private void timerTime_Tick(object sender, EventArgs e)
         {
-            //Display Time in labelTime
-            labelTime.Text = time.DisplayTime();
-
-            //Cek Waktu Habis
-            if (time.Hour == 0 && time.Minute == 0 && time.Second == 0)
+            try
             {
-                timerTime.Stop();
+                //Display Time in labelTime
+                labelTime.Text = time.DisplayTime();
 
-                //Display Lose Notification
-                panelMiddle.Visible = true;
-                //Set true to notification
-                buttonPlayAgain.Visible = true;
-                buttonQuitGame.Visible = true;
-                pictureBoxNotifications.Visible = true;
-                pictureBoxNotifications.BackgroundImage = Properties.Resources.Notif_Lose;
-                //Set false to other
-                pictureBoxOptions.Visible = false;
-                buttonResume.Visible = false;
-                buttonExit.Visible = false;
+                //Cek Waktu Habis
+                if (time.Hour == 0 && time.Minute == 0 && time.Second == 0)
+                {
+                    timerTime.Stop();
+
+                    //Display Lose Notification
+                    panelMiddle.Visible = true;
+                    //Set true to notification
+                    buttonPlayAgain.Visible = true;
+                    buttonQuitGame.Visible = true;
+                    pictureBoxNotifications.Visible = true;
+                    pictureBoxNotifications.BackgroundImage = Properties.Resources.Notif_Lose;
+                    //Set false to other
+                    pictureBoxOptions.Visible = false;
+                    buttonResume.Visible = false;
+                    buttonExit.Visible = false;
+                }
+                //Timer Countdown
+                else
+                {
+                    time.AddSecond(-1);
+                }
+
+                ResetPowerUpTime(ref powerUpTime); //Reset PowerUpTime apabila sudah 120 (2 menit)
+                AddPowerUpTime(ref powerUpTime); //Power Up Time ditambah
+                if (powerUpTime % 120 == 0) //Tiap kelipatan 120 (2 menit), Power Up akan muncul
+                {
+                    //Set Power Up
+                    player.SetPowerUp(player.PowerUp.Name, player.PowerUp.Picture.Image);
+                    //Tampilkan PoweUp
+                    player.DisplayPowerUp(this);
+                    timerPowerUp.Start();
+                }
             }
-            //Timer Countdown
-            else
+            catch (Exception ex)
             {
-                time.AddSecond(-1);
-            }
-
-            ResetPowerUpTime(ref powerUpTime); //Reset PowerUpTime apabila
-            AddPowerUpTime(ref powerUpTime); //Power Up Time ditambah
-            if (powerUpTime % 120 == 0) //Tiap kelipatan 120 (2 menit), Power Up akan muncul
-            {
-                //Set Power Up
-                player.SetPowerUp(player.PowerUp.Name, player.PowerUp.Picture.Image);
-                //Tampilkan PoweUp
-                player.DisplayPowerUp(this);
-                timerPowerUp.Start();
+                MessageBox.Show(ex.Message);
             }
         }
         #endregion
@@ -694,38 +786,45 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region TimerPowerUp
         private void timerPowerUp_Tick(object sender, EventArgs e)
         {
-            //Kalau PowerUp mengenai Player
-            if (player.PowerUp.Picture.Bounds.IntersectsWith(player.Picture.Bounds))
+            try
             {
-                //timerPowerUp diberhentikan
-                timerPowerUp.Stop();
+                //Kalau PowerUp mengenai Player
+                if (player.PowerUp.Picture.Bounds.IntersectsWith(player.Picture.Bounds))
+                {
+                    //timerPowerUp diberhentikan
+                    timerPowerUp.Stop();
 
-                //Player mendapatkan powerUp
-                player.GetPowerUp(player.PowerUp);
+                    //Player mendapatkan powerUp
+                    player.GetPowerUp(player.PowerUp);
 
-                //Apabila dapat life powerUp
-                player.EffectPowerUp();
+                    //Apabila dapat life powerUp
+                    player.EffectPowerUp();
 
-                //timerPowerUpActive dijalankan
-                timerPowerUpActive.Start();
+                    //timerPowerUpActive dijalankan
+                    timerPowerUpActive.Start();
 
-                //Hapus power up dari formGame
-                player.RemovePowerUp();
+                    //Hapus power up dari formGame
+                    player.RemovePowerUp();
 
-                //Display new info (update) - Player
-                labelPlayerInfo.Text = player.DisplayData();
+                    //Display new info (update) - Player
+                    labelPlayerInfo.Text = player.DisplayData();
+                }
+                else if (player.PowerUp.Picture.Location.X <= -50) //Koordinat -50 merupakan batas form game bagian kiri
+                {
+                    //timerPowerUp diberhentikan
+                    timerPowerUp.Stop();
+                    //Hapus power up dari formGame
+                    player.RemovePowerUp();
+                }
+                else
+                {
+                    player.ReleasePowerUp();
+                    player.DisplayPowerUp(this);
+                }
             }
-            else if (player.PowerUp.Picture.Location.X <= -50) //Koordinat -50 merupakan batas form game bagian kiri
+            catch (Exception ex)
             {
-                //timerPowerUp diberhentikan
-                timerPowerUp.Stop();
-                //Hapus power up dari formGame
-                player.RemovePowerUp();
-            }
-            else
-            {
-                player.ReleasePowerUp();
-                player.DisplayPowerUp(this);
+                MessageBox.Show(ex.Message);
             }
         }
         #endregion
@@ -733,33 +832,40 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region TimerPowerUpActive
         private void timerPowerUpActive_Tick(object sender, EventArgs e)
         {
-            label1.Text = powerUpActiveTime.ToString();
-            AddPowerUpActiveTime(ref powerUpActiveTime); // Power Up Second + 1
-            if (ResetPowerUpActiveTime(ref powerUpActiveTime)) //Check apakah waktu power up sudah habis
+            try
             {
-                //Menghilangkan semua power up
-                timerPowerUpActive.Stop();
-                //Attack
-                player.ResetAttackGained();
-                //Shield
-                if (player.ShieldActive)
+                label1.Text = powerUpActiveTime.ToString();
+                AddPowerUpActiveTime(ref powerUpActiveTime); // Power Up Second + 1
+                if (ResetPowerUpActiveTime(ref powerUpActiveTime)) //Check apakah waktu power up sudah habis
                 {
-                    player.RemoveShield();
-                }
-                player.ResetShield();
-            }
-            else
-            {
-                player.ActivePowerUp(); //Mengaktifkan Power Up Attack / Shield
-                if (player.ShieldActive) //Shield Active
-                {
-                    if (powerUpActiveTime == 1)//Munculkan Shield 1 kali saja agar tidak bug
+                    //Menghilangkan semua power up
+                    timerPowerUpActive.Stop();
+                    //Attack
+                    player.ResetAttackGained();
+                    //Shield
+                    if (player.ShieldActive)
                     {
-                        player.SetShield(Properties.Resources.Shield); //Set Shield
+                        player.RemoveShield();
                     }
-                    player.DisplayShield(this);
-                    player.Picture.BringToFront(); //Picture player di depan picture shield
+                    player.ResetShield();
                 }
+                else
+                {
+                    player.ActivePowerUp(); //Mengaktifkan Power Up Attack / Shield
+                    if (player.ShieldActive) //Shield Active
+                    {
+                        if (powerUpActiveTime == 1)//Munculkan Shield 1 kali saja agar tidak bug
+                        {
+                            player.SetShield(Properties.Resources.Shield); //Set Shield
+                        }
+                        player.DisplayShield(this);
+                        player.Picture.BringToFront(); //Picture player di depan picture shield
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
         #endregion
@@ -767,65 +873,72 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region TimerWeaponPlayer
         private void timerWeapon_Tick(object sender, EventArgs e) //Timer Weapon Player
         {
-            //Kalau Weapon mengenai Enemy
-            if (player.Weapon.Picture.Bounds.IntersectsWith(enemy.Picture.Bounds))
+            try
             {
-                timerWeaponPlayer.Stop();
-                player.RemoveWeapon();
-                AllowThrowWeapon(ref allowThrowWeapon);//Set Allow Weapon jadi true karena udah mengenai enemy
-
-                //Check Weapon (sesuai dengan kelemahan musuh atau tidak waktu terkena)
-                if (CheckWeapon())
+                //Kalau Weapon mengenai Enemy
+                if (player.Weapon.Picture.Bounds.IntersectsWith(enemy.Picture.Bounds))
                 {
-                    //Play Music
-                    //System.Media.SoundPlayer hitSound = new System.Media.SoundPlayer(Properties.Resources.namaFile);
-                    //hitSound.Play();
+                    timerWeaponPlayer.Stop();
+                    player.RemoveWeapon();
+                    AllowThrowWeapon(ref allowThrowWeapon);//Set Allow Weapon jadi true karena udah mengenai enemy
 
-                    //Panggil method DefeatEnemy di class Player
-                    player.DefeatEnemy(enemy);
-                    //Display new info (update) - Player and Enemy
-                    labelPlayerInfo.Text = player.DisplayData();
-                    labelEnemyInfo.Text = enemy.DisplayDataEnemy();
-
-                    //Kalau Enemy sudah kalah (Life == 0)
-                    if (enemy.Life == 0)
+                    //Check Weapon (sesuai dengan kelemahan musuh atau tidak waktu terkena)
+                    if (CheckWeapon())
                     {
-                        //Hapus Enemy
-                        enemy.Picture.Dispose();
+                        //Play Music
+                        //System.Media.SoundPlayer hitSound = new System.Media.SoundPlayer(Properties.Resources.namaFile);
+                        //hitSound.Play();
 
-                        //Berhentikan semua timer
-                        timerWeaponPlayer.Stop();
-                        timerEnemy.Stop();
-                        timerTime.Stop();
-                        timerPlayerMove.Stop();
+                        //Panggil method DefeatEnemy di class Player
+                        player.DefeatEnemy(enemy);
+                        //Display new info (update) - Player and Enemy
+                        labelPlayerInfo.Text = player.DisplayData();
+                        labelEnemyInfo.Text = enemy.DisplayDataEnemy();
 
-                        //Display Win Notification
-                        panelMiddle.Visible = true;
-                        //Set true to notification
-                        buttonPlayAgain.Visible = true;
-                        buttonQuitGame.Visible = true;
-                        pictureBoxNotifications.Visible = true;
-                        pictureBoxNotifications.BackgroundImage = Properties.Resources.Notif_Win;
-                        //Set false to other
-                        pictureBoxOptions.Visible = false;
-                        buttonResume.Visible = false;
-                        buttonExit.Visible = false;
+                        //Kalau Enemy sudah kalah (Life == 0)
+                        if (enemy.Life == 0)
+                        {
+                            //Hapus Enemy
+                            enemy.Picture.Dispose();
 
+                            //Berhentikan semua timer
+                            timerWeaponPlayer.Stop();
+                            timerEnemy.Stop();
+                            timerTime.Stop();
+                            timerPlayerMove.Stop();
+
+                            //Display Win Notification
+                            panelMiddle.Visible = true;
+                            //Set true to notification
+                            buttonPlayAgain.Visible = true;
+                            buttonQuitGame.Visible = true;
+                            pictureBoxNotifications.Visible = true;
+                            pictureBoxNotifications.BackgroundImage = Properties.Resources.Notif_Win;
+                            //Set false to other
+                            pictureBoxOptions.Visible = false;
+                            buttonResume.Visible = false;
+                            buttonExit.Visible = false;
+
+                        }
                     }
                 }
+                //Kalau Weapon sudah melewati Enemy
+                else if (player.Weapon.Picture.Location.X >= 1030) //Koordinat 1030 merupakan batas form game
+                {
+                    timerWeaponPlayer.Stop();
+                    player.RemoveWeapon();
+                    AllowThrowWeapon(ref allowThrowWeapon); //Set Allow Weapon jadi true karena udah melewati enemy
+                }
+                //Kalau Weapon Berjalan Menuju Enemy
+                else
+                {
+                    player.ReleaseWeapon();
+                    player.DisplayWeapon(this);
+                }
             }
-            //Kalau Weapon sudah melewati Enemy
-            else if (player.Weapon.Picture.Location.X >= 1030) //Koordinat 1030 merupakan batas form game
+            catch (Exception ex)
             {
-                timerWeaponPlayer.Stop();
-                player.RemoveWeapon();
-                AllowThrowWeapon(ref allowThrowWeapon); //Set Allow Weapon jadi true karena udah melewati enemy
-            }
-            //Kalau Weapon Berjalan Menuju Enemy
-            else
-            {
-                player.ReleaseWeapon();
-                player.DisplayWeapon(this);
+                MessageBox.Show(ex.Message);
             }
         }
         #endregion
@@ -833,75 +946,82 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region TimerWeaponEnemy
         private void timerWeaponEnemy_Tick(object sender, EventArgs e)
         {
-            if (player.ShieldActive)
+            try
             {
-                if (enemy.Weapon.Picture.Bounds.IntersectsWith(player.Shield.Picture.Bounds))
+                if (player.ShieldActive)
                 {
-                    RemoveWeaponEnemy();
+                    if (enemy.Weapon.Picture.Bounds.IntersectsWith(player.Shield.Picture.Bounds))
+                    {
+                        RemoveWeaponEnemy();
+                    }
+                    //Kalau Weapon sudah melewati Player
+                    else if (enemy.Weapon.Picture.Location.X <= -50) //Koordinat -50 merupakan batas form game
+                    {
+                        RemoveWeaponEnemy();
+                    }
+                    //Kalau Weapon Berjalan Menuju Player
+                    else
+                    {
+                        enemy.ReleaseWeapon();
+                        enemy.DisplayWeapon(this);
+                    }
                 }
-                //Kalau Weapon sudah melewati Player
-                else if (enemy.Weapon.Picture.Location.X <= -50) //Koordinat -50 merupakan batas form game
-                {
-                    RemoveWeaponEnemy();
-                }
-                //Kalau Weapon Berjalan Menuju Player
                 else
                 {
-                    enemy.ReleaseWeapon();
-                    enemy.DisplayWeapon(this);
+                    //Kalau enemy weapon mengenai player
+                    if (enemy.Weapon.Picture.Bounds.IntersectsWith(player.Picture.Bounds))
+                    {
+                        RemoveWeaponEnemy();
+
+                        //Panggil method DefeatEnemy di class Player
+                        enemy.DefeatPlayer(player, FormMenu.LevelDifficulty);
+
+                        ////Display new info (update) - Player and Enemy
+                        labelPlayerInfo.Text = player.DisplayData();
+                        labelEnemyInfo.Text = enemy.DisplayDataEnemy();
+
+                        if (player.Life == 0)
+                        {
+                            //Hapus Enemy
+                            player.Picture.Dispose();
+
+                            //Berhentikan semua timer
+                            timerWeaponPlayer.Stop();
+                            timerEnemy.Stop();
+                            timerTime.Stop();
+                            timerPlayerMove.Stop();
+                            timerWeaponEnemy.Stop();
+
+                            //Display Lose Notification
+                            panelMiddle.Visible = true;
+                            //Set true to notification
+                            buttonPlayAgain.Visible = true;
+                            buttonQuitGame.Visible = true;
+                            pictureBoxNotifications.Visible = true;
+                            pictureBoxNotifications.BackgroundImage = Properties.Resources.Notif_Lose;
+                            //Set false to other
+                            pictureBoxOptions.Visible = false;
+                            buttonResume.Visible = false;
+                            buttonExit.Visible = false;
+                        }
+
+                    }
+                    //Kalau Weapon sudah melewati Player
+                    else if (enemy.Weapon.Picture.Location.X <= -50) //Koordinat -50 merupakan batas form game
+                    {
+                        RemoveWeaponEnemy();
+                    }
+                    //Kalau Weapon Berjalan Menuju Player
+                    else
+                    {
+                        enemy.ReleaseWeapon();
+                        enemy.DisplayWeapon(this);
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                //Kalau enemy weapon mengenai player
-                if (enemy.Weapon.Picture.Bounds.IntersectsWith(player.Picture.Bounds))
-                {
-                    RemoveWeaponEnemy();
-
-                    //Panggil method DefeatEnemy di class Player
-                    enemy.DefeatPlayer(player, FormMenu.LevelDifficulty);
-
-                    ////Display new info (update) - Player and Enemy
-                    labelPlayerInfo.Text = player.DisplayData();
-                    labelEnemyInfo.Text = enemy.DisplayDataEnemy();
-
-                    if (player.Life == 0)
-                    {
-                        //Hapus Enemy
-                        player.Picture.Dispose();
-
-                        //Berhentikan semua timer
-                        timerWeaponPlayer.Stop();
-                        timerEnemy.Stop();
-                        timerTime.Stop();
-                        timerPlayerMove.Stop();
-                        timerWeaponEnemy.Stop();
-
-                        //Display Lose Notification
-                        panelMiddle.Visible = true;
-                        //Set true to notification
-                        buttonPlayAgain.Visible = true;
-                        buttonQuitGame.Visible = true;
-                        pictureBoxNotifications.Visible = true;
-                        pictureBoxNotifications.BackgroundImage = Properties.Resources.Notif_Lose;
-                        //Set false to other
-                        pictureBoxOptions.Visible = false;
-                        buttonResume.Visible = false;
-                        buttonExit.Visible = false;
-                    }
-                    
-                }
-                //Kalau Weapon sudah melewati Player
-                else if (enemy.Weapon.Picture.Location.X <= -50) //Koordinat -50 merupakan batas form game
-                {
-                    RemoveWeaponEnemy();
-                }
-                //Kalau Weapon Berjalan Menuju Player
-                else
-                {
-                    enemy.ReleaseWeapon();
-                    enemy.DisplayWeapon(this);
-                }
+                MessageBox.Show(ex.Message);
             }
         }
         #endregion

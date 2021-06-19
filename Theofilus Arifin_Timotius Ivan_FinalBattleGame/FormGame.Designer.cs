@@ -100,7 +100,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonOptions.Location = new System.Drawing.Point(595, 54);
             this.buttonOptions.Name = "buttonOptions";
             this.buttonOptions.Size = new System.Drawing.Size(79, 109);
-            this.buttonOptions.TabIndex = 7;
+            this.buttonOptions.TabIndex = 0;
             this.buttonOptions.UseVisualStyleBackColor = false;
             this.buttonOptions.Click += new System.EventHandler(this.buttonOptions_Click);
             this.buttonOptions.MouseEnter += new System.EventHandler(this.buttonOptions_MouseEnter);

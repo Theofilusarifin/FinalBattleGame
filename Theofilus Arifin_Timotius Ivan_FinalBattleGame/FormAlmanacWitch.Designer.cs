@@ -57,6 +57,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonBackToAlmanac.Name = "buttonBackToAlmanac";
             this.buttonBackToAlmanac.Size = new System.Drawing.Size(216, 55);
             this.buttonBackToAlmanac.TabIndex = 9;
+            this.buttonBackToAlmanac.TabStop = false;
             this.buttonBackToAlmanac.UseVisualStyleBackColor = false;
             this.buttonBackToAlmanac.Click += new System.EventHandler(this.buttonBackToAlmanac_Click);
             this.buttonBackToAlmanac.MouseEnter += new System.EventHandler(this.buttonBackToAlmanac_MouseEnter);

@@ -147,6 +147,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonBackToAlmanac.Name = "buttonBackToAlmanac";
             this.buttonBackToAlmanac.Size = new System.Drawing.Size(216, 55);
             this.buttonBackToAlmanac.TabIndex = 8;
+            this.buttonBackToAlmanac.TabStop = false;
             this.buttonBackToAlmanac.UseVisualStyleBackColor = false;
             this.buttonBackToAlmanac.Click += new System.EventHandler(this.buttonBackToAlmanac_Click);
             this.buttonBackToAlmanac.MouseEnter += new System.EventHandler(this.buttonBackToAlmanac_MouseEnter);
@@ -155,10 +156,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // pictureBoxMonster
             // 
             this.pictureBoxMonster.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxMonster.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Mega_Dino;
-            this.pictureBoxMonster.Location = new System.Drawing.Point(700, 199);
+            this.pictureBoxMonster.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Dragon;
+            this.pictureBoxMonster.Location = new System.Drawing.Point(704, 170);
             this.pictureBoxMonster.Name = "pictureBoxMonster";
-            this.pictureBoxMonster.Size = new System.Drawing.Size(281, 202);
+            this.pictureBoxMonster.Size = new System.Drawing.Size(237, 213);
             this.pictureBoxMonster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMonster.TabIndex = 16;
             this.pictureBoxMonster.TabStop = false;
@@ -249,9 +250,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBoxMegaDino.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxMegaDino.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxMegaDino.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Mega_Dino;
-            this.pictureBoxMegaDino.Location = new System.Drawing.Point(417, 459);
+            this.pictureBoxMegaDino.Location = new System.Drawing.Point(413, 471);
             this.pictureBoxMegaDino.Name = "pictureBoxMegaDino";
-            this.pictureBoxMegaDino.Size = new System.Drawing.Size(72, 63);
+            this.pictureBoxMegaDino.Size = new System.Drawing.Size(77, 45);
             this.pictureBoxMegaDino.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxMegaDino.TabIndex = 25;
             this.pictureBoxMegaDino.TabStop = false;

@@ -107,12 +107,12 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private void buttonMegaDino_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = Properties.Resources.Almanac_Mega_Dino;
-            SetImage(Properties.Resources.Mega_Dino, 700, 199, 281, 202);
+            SetImage(Properties.Resources.Mega_Dino, 657, 246, 325, 149);
         }
         private void pictureBoxMegaDino_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = Properties.Resources.Almanac_Mega_Dino;
-            SetImage(Properties.Resources.Mega_Dino, 700, 199, 281, 202);
+            SetImage(Properties.Resources.Mega_Dino, 657, 246, 325, 149);
         }
         #endregion
     }

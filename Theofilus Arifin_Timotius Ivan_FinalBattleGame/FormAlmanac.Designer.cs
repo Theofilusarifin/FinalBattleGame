@@ -52,6 +52,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonWitch.Name = "buttonWitch";
             this.buttonWitch.Size = new System.Drawing.Size(447, 488);
             this.buttonWitch.TabIndex = 1;
+            this.buttonWitch.TabStop = false;
             this.buttonWitch.UseVisualStyleBackColor = false;
             this.buttonWitch.Click += new System.EventHandler(this.buttonWitch_Click);
             // 
@@ -68,6 +69,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonMonster.Name = "buttonMonster";
             this.buttonMonster.Size = new System.Drawing.Size(447, 488);
             this.buttonMonster.TabIndex = 0;
+            this.buttonMonster.TabStop = false;
             this.buttonMonster.UseVisualStyleBackColor = false;
             this.buttonMonster.Click += new System.EventHandler(this.buttonMonster_Click);
             // 
@@ -111,6 +113,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.buttonBackToMenu.Name = "buttonBackToMenu";
             this.buttonBackToMenu.Size = new System.Drawing.Size(216, 55);
             this.buttonBackToMenu.TabIndex = 4;
+            this.buttonBackToMenu.TabStop = false;
             this.buttonBackToMenu.UseVisualStyleBackColor = false;
             this.buttonBackToMenu.Click += new System.EventHandler(this.buttonBackToMenu_Click);
             this.buttonBackToMenu.MouseEnter += new System.EventHandler(this.buttonBackToMenu_MouseEnter);
