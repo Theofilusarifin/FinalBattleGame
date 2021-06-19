@@ -10,13 +10,14 @@
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Player">
     <Position X="5.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEkAAABAAAgAQgAIAEIAAABCAAAAUgEQAhAAAAABCA=</HashCode>
+      <HashCode>AAEkAEIBEAEgAQoBICGIAAIBCAAAA0gEQAhAEAoAFCA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Ultimate" />
       <Property Name="Weapon" />
       <Property Name="PowerUp" />
+      <Property Name="Shield" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Enemy">
@@ -67,7 +68,7 @@
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.PowerUp">
     <Position X="2.75" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAEAAEAQAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAgAAAAIAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PowerUps.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -81,8 +82,15 @@
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.MegaMonster">
     <Position X="12" Y="11" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAEAIAAAAAAAAAAAAAEAIAA=</HashCode>
       <FileName>MegaMonster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Shield">
+    <Position X="2.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Shield.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

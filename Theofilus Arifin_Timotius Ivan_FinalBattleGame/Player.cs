@@ -15,8 +15,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private Ultimate ultimate;
         private WeaponPlayer weapon;
         private PowerUp powerUp;
+        private Shield shield;
         private int speed;
         private int attackGained;
+        private bool shieldActive;
         private bool ultimateActive;
         #endregion
 
@@ -27,8 +29,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Description = description;
             this.Score = score;
             this.Weapon = null;
+            this.PowerUp = null;
+            this.shield = null;
             this.Speed = speed;
             this.AttackGained = 0;
+            this.ShieldActive = false;
         }
         #endregion
 
@@ -68,6 +73,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             get => powerUp; 
             private set => powerUp = value; 
         }
+        public Shield Shield
+        {
+            get => shield;
+            private set => shield = value;
+        }
         public int Speed 
         { 
             get => speed; 
@@ -77,6 +87,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             get => attackGained;
             private set => attackGained = value;
+        }
+        public bool ShieldActive
+        {
+            get => shieldActive;
+            private set => shieldActive = value;
         }
         public bool UltimateActive
         {
@@ -187,12 +202,34 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             }
             else if (PowerUp.Name == "Shield")
             {
-
+                ShieldActive = true;
             }
         }
         public void ResetAttackGained()
         {
             AttackGained = 0;
+        }
+
+        public void SetShield(Image image)
+        {
+            Point position = new Point(Picture.Location.X - 60, Picture.Location.Y - 30);
+            Size size = new Size(187, 185);
+            Shield = new Shield(image, position, size);
+        }
+        public void DisplayShield(Control displayContainer)
+        {
+            Shield.Picture.Parent = displayContainer;
+            Shield.Picture.SizeMode = PictureBoxSizeMode.StretchImage;
+            Shield.Picture.BackColor = Color.Transparent;
+            Shield.Picture.BringToFront();
+        }
+        public void ResetShield()
+        {
+            shieldActive = false;
+        }
+        public void RemoveShield()
+        {
+            Shield.Picture.Dispose();
         }
         #endregion
     }
