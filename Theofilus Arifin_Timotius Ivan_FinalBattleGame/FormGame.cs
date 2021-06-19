@@ -49,22 +49,23 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         //Reset power up time
         private void ResetPowerUpTime(ref int powerUpTime)
         {
-            if (powerUpTime > 120)
-            {
-                powerUpTime = 0;
-            }
+            powerUpTime = 0;
         }
         //Add power up active time
         private void AddPowerUpActiveTime(ref int powerUpActiveTime)
         {
             powerUpActiveTime++;
         }
+        private void SetZeroPowerUpActiveTime(ref int powerUpActiveTime)
+        {
+            powerUpActiveTime = 0;
+        }
         //Reset power up active time
         private bool ResetPowerUpActiveTime(ref int powerUpActiveTime)
         {
             if (powerUpActiveTime > 15)
             {
-                powerUpActiveTime = 0;
+                SetZeroPowerUpActiveTime(ref powerUpActiveTime);
                 return true;
             }
             return false;
@@ -205,6 +206,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             //Set Allow Weapon Di awal permainan
             allowThrowWeapon = true;
 
+
+            //Display Player Info
             labelPlayerInfo.Text = player.DisplayData();
         }
         #endregion
@@ -220,19 +223,22 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             timerWeaponPlayer.Stop();
             timerWeaponEnemy.Stop();
             allowThrowWeapon = false;
-            ResetPowerUpActiveTime(ref powerUpActiveTime);
+            SetZeroPowerUpActiveTime(ref powerUpActiveTime);
             ResetPowerUpTime(ref powerUpTime);
             ResetWeaponTime(ref weaponTime);
             player.ResetAttackGained();
             player.ResetShield();
             player.Remove();
             enemy.Remove();
+        }
+        #endregion
 
-            CreatePlayer();
-            timerPlayerMove.Start();
-
-            //Call method StartGame
-            StartGame();
+        #region DisenabledControl
+        private void DisenabledControl()
+        {
+            //Set enable to false (buttonOptions)
+            buttonOptions.Enabled = false;
+            DisallowThrowWeapon(ref allowThrowWeapon);
         }
         #endregion
 
@@ -262,7 +268,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         public void CreateEnemy()
         {
             Random random = new Random();
-            int enemyType = random.Next(2); // 0 Monster || 1 Witch
+            int enemyType = random.Next(2); //0 Monster or Mega Monster || 1 Witch
 
             Point startingPoint = new Point(824, 475);
             Size enemySize;
@@ -401,8 +407,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region FormLoad
         private void FormGame_Load(object sender, EventArgs e)
         {
+            //Create Player
             CreatePlayer();
             timerPlayerMove.Start();
+        }
+        #endregion
+
+        #region FormClosed
+        private void FormGame_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ResetGame();
         }
         #endregion
 
@@ -435,6 +449,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             try
             {
+                //Set visible
                 panelMiddle.Visible = false;
                 //Changing picture visibility in panelMiddle
                 buttonStart.Visible = false;
@@ -471,13 +486,20 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 panelMiddle.Visible = false;
                 //Changing picture visibility in panelMiddle
                 buttonPlayAgain.Visible = false;
-                buttonExit.Visible = false;
+                buttonQuitGame.Visible = false;
                 pictureBoxNotifications.Visible = false;
 
                 //Change The focus, supaya ga nge bug waktu tekan space
                 this.Focus();
 
                 ResetGame();
+
+                //Create Player with same gender that already selected
+                CreatePlayer();
+                timerPlayerMove.Start();
+
+                //Call method StartGame
+                StartGame();
             }
             catch (Exception ex)
             {
@@ -496,7 +518,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         //Design ButtonQuitGame
         private void buttonQuitGame_Click(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                this.Close();
+
+                ResetGame();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void buttonQuitGame_MouseEnter(object sender, EventArgs e)
         {
@@ -526,7 +557,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         //Design Button Exit (Options)
         private void buttonExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            try
+            {
+                this.Close();
+
+                ResetGame();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void buttonExit_MouseEnter(object sender, EventArgs e)
         {
@@ -649,7 +689,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private bool CheckWeapon()
         {
             //Pengecekan Weapon untuk Monster
-            if (enemy is Monster)
+            if (enemy is Monster || enemy is MegaMonster)
             {
                 //Fireball Hit Dragon or Mega Dragon
                 if ((enemy.Name == "Dragon" || enemy.Name == "Mega Dragon") && player.Weapon.Name == "FireBall")
@@ -758,6 +798,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     pictureBoxOptions.Visible = false;
                     buttonResume.Visible = false;
                     buttonExit.Visible = false;
+                    //Call method DisenabledControl
+                    DisenabledControl();
                 }
                 //Timer Countdown
                 else
@@ -765,7 +807,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     time.AddSecond(-1);
                 }
 
-                ResetPowerUpTime(ref powerUpTime); //Reset PowerUpTime apabila sudah 120 (2 menit)
+                if (powerUpTime > 120)
+                {
+                    ResetPowerUpTime(ref powerUpTime); //Reset PowerUpTime apabila sudah 120 (2 menit)
+                }
                 AddPowerUpTime(ref powerUpTime); //Power Up Time ditambah
                 if (powerUpTime % 120 == 0) //Tiap kelipatan 120 (2 menit), Power Up akan muncul
                 {
@@ -919,6 +964,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                             buttonResume.Visible = false;
                             buttonExit.Visible = false;
 
+                            //Call method DisenabledControl
+                            DisenabledControl();
+
                         }
                     }
                 }
@@ -1003,6 +1051,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                             pictureBoxOptions.Visible = false;
                             buttonResume.Visible = false;
                             buttonExit.Visible = false;
+
+                            //Call method DisenabledControl
+                            DisenabledControl();
                         }
 
                     }

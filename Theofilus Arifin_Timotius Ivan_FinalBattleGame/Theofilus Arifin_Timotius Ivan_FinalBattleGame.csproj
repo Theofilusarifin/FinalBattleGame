@@ -522,9 +522,6 @@
     <None Include="Resources\Rock.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Shield.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Woman Idle.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -574,6 +571,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Mega Godzilla.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shield.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
