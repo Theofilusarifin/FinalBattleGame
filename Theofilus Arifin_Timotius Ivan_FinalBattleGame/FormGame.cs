@@ -12,13 +12,12 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 {
     public partial class FormGame : Form
     {
-        public Player player;
+        Player player;
         Enemy enemy;
         Time time;
         bool moveUp, moveDown, enemyMoveUp;
         bool allowThrowWeapon = true;
-        int weaponTime = 0;
-        int powerUpTime = 0;
+        int weaponTime, powerUpTime, powerUpActiveTime = 0;
         public FormGame()
         {
             InitializeComponent();
@@ -34,6 +33,36 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 return cp;
             }
         }
+        #region SetPowerUp
+        //Add power up time
+        private void AddPowerUpTime(ref int powerUpTime)
+        {
+            powerUpTime++;
+        }
+        //Reset power up time
+        private void ResetPowerUpTime(ref int powerUpTime)
+        {
+            if (powerUpTime > 120)
+            {
+                powerUpTime = 0;
+            }
+        }
+        //Add power up active time
+        private void AddPowerUpActiveTime(ref int powerUpActiveTime)
+        {
+            powerUpActiveTime++;
+        }
+        //Reset power up active time
+        private bool ResetPowerUpActiveTime(ref int powerUpActiveTime)
+        {
+            if (powerUpActiveTime > 10)
+            {
+                powerUpActiveTime = 0;
+                return true;
+            }
+            return false;
+        }
+        #endregion
 
         #region SetThrowWeapon
         private void AllowThrowWeapon(ref bool allowThrowWeapon)
@@ -108,22 +137,17 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             SelectFireBall();
         }
-
+        // To Add weapon time
+        private void AddWeaponTime (ref int weaponTime)
+        {
+            weaponTime++;
+        }
         // To reset weapon time, biar bilangan ga terlalu gede dan lag
         private void ResetWeaponTime(ref int weaponTime)
         {
             if (weaponTime > 100)
             {
                 weaponTime = 0;
-            }
-        }
-
-        //Reset power up time
-        private void ResetPowerUpTime(ref int powerUpTime)
-        {
-            if (powerUpTime > 120)
-            {
-                powerUpTime = 0;
             }
         }
         #endregion
@@ -173,6 +197,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region CreatePlayer
         private void CreatePlayer()
         {
+            if (player != null)
+            {
+                player.Remove();
+            }
+
             //Initiate Starting Position and Size Player
             Point startingPoint = new Point(87, 497);
             Size playerSize = new Size(70, 107);
@@ -308,15 +337,15 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
             if (powerUpType == 0) //Attack
             {
-                player.SetPowerUp("Attack", Properties.Resources.Power_Up_Attack, 5);
+                player.SetPowerUp("Attack", Properties.Resources.Power_Up_Attack);
             }
             else if (powerUpType == 1) //Life
             {
-                player.SetPowerUp("Life", Properties.Resources.Power_Up_Heal, 5);
+                player.SetPowerUp("Life", Properties.Resources.Power_Up_Heal);
             }
             else
             {
-                player.SetPowerUp("Shield", Properties.Resources.Power_Up_Shield, 5);
+                player.SetPowerUp("Shield", Properties.Resources.Power_Up_Shield);
             }
 
             player.DisplayPowerUp(this);
@@ -589,7 +618,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             }
 
             ResetWeaponTime(ref weaponTime); //Reset WeaponTime apabila sudah lebih dari 100
-            weaponTime++; //Weapon Time ditambah
+            AddWeaponTime(ref weaponTime); //Weapon Time ditambah
             if (weaponTime % 100 == 0) //Tiap kelipatan 100, Enemy menembakkan weapon
             {
                 //Set Weapon Enemy
@@ -632,11 +661,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             }
 
             ResetPowerUpTime(ref powerUpTime); //Reset PowerUpTime apabila
-            powerUpTime++; //Power Up Time ditambah
+            AddPowerUpTime(ref powerUpTime); //Power Up Time ditambah
             if (powerUpTime % 120 == 0) //Tiap kelipatan 120 (2 menit), Power Up akan muncul
             {
                 //Set Power Up
-                player.SetPowerUp(player.PowerUp.Name, player.PowerUp.Picture.Image, player.PowerUp.Duration);
+                player.SetPowerUp(player.PowerUp.Name, player.PowerUp.Picture.Image);
                 //Tampilkan PoweUp
                 player.DisplayPowerUp(this);
                 timerPowerUp.Start();
@@ -652,11 +681,18 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             {
                 //timerPowerUp diberhentikan
                 timerPowerUp.Stop();
+
+                //Player mendapatkan powerUp
+                player.GetPowerUp(player.PowerUp);
+
+                //Apabila dapat life powerUp
+                player.EffectPowerUp();
+
+                //timerPowerUpActive dijalankan
+                timerPowerUpActive.Start();
+
                 //Hapus power up dari formGame
                 player.RemovePowerUp();
-
-                //Panggil method untuk mengkalkulasikan benefit yang didapat dari power up
-                player.EffectPowerUp();
 
                 //Display new info (update) - Player
                 labelPlayerInfo.Text = player.DisplayData();
@@ -679,7 +715,17 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region TimerPowerUpActive
         private void timerPowerUpActive_Tick(object sender, EventArgs e)
         {
-
+            label1.Text = powerUpActiveTime.ToString();
+            AddPowerUpActiveTime(ref powerUpActiveTime);
+            if (ResetPowerUpActiveTime(ref powerUpActiveTime))
+            {
+                timerPowerUpActive.Stop();
+                player.ResetAttackGained();
+            }
+            else
+            {
+                player.ActivePowerUp();
+            }
         }
         #endregion
 
@@ -803,10 +849,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 enemy.DisplayWeapon(this);
             }
         }
-        #endregion
-
-        #region TimerPowerUp
-
         #endregion
 
         #endregion

@@ -58,6 +58,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 {
                     health = value;
                 }
+                else if (value < 0)
+                {
+                    health = 0;
+                }
                 else
                 {
                     throw new Exception("Health must be between 0 and 100");

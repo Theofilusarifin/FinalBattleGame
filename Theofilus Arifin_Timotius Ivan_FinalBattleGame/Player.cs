@@ -16,6 +16,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private WeaponPlayer weapon;
         private PowerUp powerUp;
         private int speed;
+        private int attackGained;
         private bool ultimateActive;
         #endregion
 
@@ -27,6 +28,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Score = score;
             this.Weapon = null;
             this.Speed = speed;
+            this.AttackGained = 0;
         }
         #endregion
 
@@ -70,6 +72,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         { 
             get => speed; 
             set => speed = value; 
+        }
+        public int AttackGained
+        {
+            get => attackGained;
+            private set => attackGained = value;
         }
         public bool UltimateActive
         {
@@ -116,19 +123,19 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             if (enemy is Monster)
             {
-                enemy.Health -= 50;
+                enemy.Health -= 50 + AttackGained;
                 Score += 100;
             }
             else if (enemy is MegaMonster)
             {
-                int damageReduce = ((MegaMonster)enemy).DamageReduction;
-                enemy.Health -= (50-damageReduce);
+                int damageReduction = ((MegaMonster)enemy).DamageReduction;
+                enemy.Health -= (50 + AttackGained - damageReduction);
                 Score += 200;
             }
             else if (enemy is Witch)
             {
                 int healthDamage = ((Witch)enemy).HealthDamage;
-                enemy.Health -= healthDamage;
+                enemy.Health -= (healthDamage + AttackGained);
                 Score += 50 * healthDamage;
             }
             if (enemy.Health <= 0 && enemy.Life > 0)
@@ -137,14 +144,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 enemy.Health = 100;
             }
         }
-        public void SetPowerUp(string name, Image image, int duration)
+        public void SetPowerUp(string name, Image image)
         {
             Random random = new Random();
             int positionY = random.Next(280, 710);
 
             Point position = new Point(1050, positionY);
             Size size = new Size(40, 40);
-            PowerUp = new PowerUp(name, duration, image, position, size);
+            PowerUp = new PowerUp(name, image, position, size);
         }
         public void DisplayPowerUp(Control displayContainer)
         {
@@ -161,24 +168,31 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             PowerUp.Picture.Dispose();
         }
+        public void GetPowerUp(PowerUp powerUp)
+        {
+            PowerUp = powerUp;
+        }
         public void EffectPowerUp()
         {
-            if (PowerUp.Name == "Attack")
-            {
-
-            }
-            else if (PowerUp.Name == "Life")
+            if (PowerUp.Name == "Life")
             {
                 Life++;
-            }
-            else //Shield
-            {
-                
             }
         }
         public void ActivePowerUp()
         {
+            if (PowerUp.Name == "Attack")
+            {
+                AttackGained = 50;
+            }
+            else if (PowerUp.Name == "Shield")
+            {
 
+            }
+        }
+        public void ResetAttackGained()
+        {
+            AttackGained = 0;
         }
         #endregion
     }

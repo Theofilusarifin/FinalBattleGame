@@ -66,6 +66,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.timerWeaponEnemy = new System.Windows.Forms.Timer(this.components);
             this.timerPowerUp = new System.Windows.Forms.Timer(this.components);
             this.timerPowerUpActive = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRock)).BeginInit();
             this.panelRock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonRock)).BeginInit();
@@ -512,7 +513,17 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             // 
             // timerPowerUpActive
             // 
+            this.timerPowerUpActive.Interval = 1000;
             this.timerPowerUpActive.Tick += new System.EventHandler(this.timerPowerUpActive_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(499, 276);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "label1";
             // 
             // FormGame
             // 
@@ -521,6 +532,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.In_Game_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1055, 961);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelMiddle);
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.panelUltimate);
@@ -603,5 +615,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.Timer timerWeaponEnemy;
         private System.Windows.Forms.Timer timerPowerUp;
         private System.Windows.Forms.Timer timerPowerUpActive;
+        private System.Windows.Forms.Label label1;
     }
 }

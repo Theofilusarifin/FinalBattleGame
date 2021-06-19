@@ -11,15 +11,13 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
     {
         #region FIELDS
         private string name;
-        private int duration;
         private PictureBox picture = new PictureBox();
         #endregion
 
         #region CONSTRUCTORS
-        public PowerUp(string name, int duration, Image image, Point position, Size size)
+        public PowerUp(string name, Image image, Point position, Size size)
         {
             this.Name = name;
-            this.Duration = duration;
             this.Picture.Image = image;
             this.Picture.Location = position;
             this.Picture.Size = size;
@@ -33,21 +31,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             set => name = value;
         }
 
-        public int Duration
-        {
-            get => duration;
-            set => duration = value;
-        }
-
         public PictureBox Picture
         {
             get => picture;
             set => picture = value;
         }
-
-        #endregion
-
-        #region METHODS
 
         #endregion
     }
