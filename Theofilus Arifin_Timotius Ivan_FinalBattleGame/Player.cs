@@ -213,7 +213,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         public void SetShield(Image image)
         {
             Point position = new Point(Picture.Location.X - 60, Picture.Location.Y - 30);
-            Size size = new Size(187, 185);
+            Size size = new Size(185, 185);
             Shield = new Shield(image, position, size);
         }
         public void DisplayShield(Control displayContainer)

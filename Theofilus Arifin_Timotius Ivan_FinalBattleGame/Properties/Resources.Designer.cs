@@ -743,6 +743,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Knife1 {
+            get {
+                object obj = ResourceManager.GetObject("Knife1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Main_Menu_Background {
             get {
                 object obj = ResourceManager.GetObject("Main_Menu_Background", resourceCulture);

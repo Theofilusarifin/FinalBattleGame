@@ -216,9 +216,6 @@
     <None Include="Resources\Button Save Hover1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Knife.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Almanac Monster.png" />
   </ItemGroup>
   <ItemGroup>
@@ -432,15 +429,6 @@
     <None Include="Resources\Fireball.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Godzilla Weapon.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Godzilla.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Green Witch Weapon.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Green Witch.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -456,24 +444,6 @@
     <None Include="Resources\Man Rock.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Mega Dino Weapon.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Mega Dino.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Mega Dragon Weapon.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Mega Godzilla Weapon.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Mega Godzilla.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Rock.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Woman Death.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -486,22 +456,10 @@
     <None Include="Resources\Woman Rock.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Ancient Witch Weapon.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Ancient Witch.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Broom Witch Weapon.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Broom Witch.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Dino Weapon.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Dragon.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\In Game Background.png" />
@@ -523,12 +481,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Active Ultimate Background.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Man Idle.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Woman Idle.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Button Back To Menu Hover.png" />
@@ -558,19 +510,70 @@
     <None Include="Resources\Controls Opening Notification.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Dragon Weapon.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Mega Dragon.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Shield.gif" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Selected Man.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rock.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Woman Idle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ancient Witch Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Broom Witch Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dino Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Dino.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Selected Man.gif" />
+    <None Include="Resources\Dragon Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Godzilla Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Godzilla.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green Witch Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knife.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Man Idle.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Dino Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Dino.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Dragon Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Godzilla Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Godzilla.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

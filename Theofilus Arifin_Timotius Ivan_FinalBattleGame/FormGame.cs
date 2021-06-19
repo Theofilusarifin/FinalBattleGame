@@ -250,7 +250,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     //Buat Dragon ==> 0
                     if (monsterType == 0)
                     {
-                        enemySize = new Size(167, 156);
+                        enemySize = new Size(162, 151);
                         enemy = new Monster(5, "Dragon", 3, 100, Properties.Resources.Dragon, startingPoint, enemySize, "Only the heat can defeat me");
                         enemy.SetWeapon("Fire", Properties.Resources.Dragon_Weapon);
 
@@ -258,14 +258,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     //Buat Godzilla ==> 1
                     else if (monsterType == 1)
                     {
-                        enemySize = new Size(157, 149);
+                        enemySize = new Size(147, 139);
                         enemy = new Monster(5, "Godzilla", 5, 100, Properties.Resources.Godzilla, startingPoint, enemySize, "I can't help the hard stuff");
                         enemy.SetWeapon("Fist", Properties.Resources.Godzilla_Weapon);
                     }
                     //Buat Dino ==> 2
                     else
                     {
-                        enemySize = new Size(182, 104);
+                        enemySize = new Size(167, 89);
                         enemy = new Monster(5, "Dino", 7, 100, Properties.Resources.Dino, startingPoint, enemySize, "Ouch.. no sharp item please..");
                         enemy.SetWeapon("Claw", Properties.Resources.Dino_Weapon);
                     }
@@ -282,14 +282,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     //Buat MegaGodzilla ==> 1
                     else if (monsterType == 1)
                     {
-                        enemySize = new Size(167, 149);
+                        enemySize = new Size(157, 130);
                         enemy = new MegaMonster(5, "Mega Godzilla", 5, 100, Properties.Resources.Mega_Godzilla, startingPoint, enemySize, "I can't help the hard stuff", 30);
                         enemy.SetWeapon("Fist", Properties.Resources.Mega_Godzilla_Weapon);
                     }
                     //Buat MegaDino ==> 2
                     else
                     {
-                        enemySize = new Size(186, 149);
+                        enemySize = new Size(176, 75);
                         enemy = new MegaMonster(5, "Mega Dino", 7, 100, Properties.Resources.Mega_Dino, startingPoint, enemySize, "Ouch.. no sharp item please..", 30);
                         enemy.SetWeapon("Claw", Properties.Resources.Mega_Dino_Weapon);
                     }
@@ -304,21 +304,21 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 //Buat Broom Witch ==> 0
                 if (witchType == 0)
                 {
-                    enemySize = new Size(117, 103);
+                    enemySize = new Size(112, 98);
                     enemy = new Witch(5, "Broom Witch", 1, 100, Properties.Resources.Broom_Witch, startingPoint, enemySize, 10);
                     enemy.SetWeapon("Sphere Energy", Properties.Resources.Broom_Witch_Weapon);
                 }
                 //Buat Ancient Witch ==> 1
                 else if (witchType == 1)
                 {
-                    enemySize = new Size(94, 114);
+                    enemySize = new Size(84, 104);
                     enemy = new Witch(5, "Ancient Witch", 2, 100, Properties.Resources.Ancient_Witch, startingPoint, enemySize, 20);
                     enemy.SetWeapon("Cursed Spell", Properties.Resources.Ancient_Witch_Weapon);
                 }
                 //Buat Green Witch ==> 2
                 else
                 {
-                    enemySize = new Size(136, 103);
+                    enemySize = new Size(131, 98);
                     enemy = new Witch(5, "Green Witch", 1, 100, Properties.Resources.Green_Witch, startingPoint, enemySize, 50);
                     enemy.SetWeapon("Green Spirit", Properties.Resources.Green_Witch_Weapon);
                 }
@@ -739,12 +739,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             {
                 //Menghilangkan semua power up
                 timerPowerUpActive.Stop();
+                //Attack
                 player.ResetAttackGained();
-                player.ResetShield();
+                //Shield
                 if (player.ShieldActive)
                 {
                     player.RemoveShield();
                 }
+                player.ResetShield();
             }
             else
             {
