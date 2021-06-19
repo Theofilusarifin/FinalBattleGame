@@ -191,9 +191,6 @@
     <None Include="Resources\Unselected Woman1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Selected Man.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Selected Woman.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -503,16 +500,7 @@
     <None Include="Resources\Dino Weapon.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Dino.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Dragon Weapon.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Dragon.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Mega Dragon.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\In Game Background.png" />
@@ -567,6 +555,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Controls Opening Notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dragon Weapon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mega Dragon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shield.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dino.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Selected Man.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
