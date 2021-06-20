@@ -750,8 +750,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             try
             {
-                label1.Text = player.Picture.Top.ToString();
-
                 //Melakukan Pengecekan Weapon
                 SetWeapon();
 
