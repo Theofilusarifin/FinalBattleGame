@@ -63,6 +63,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.timerWeaponEnemy = new System.Windows.Forms.Timer(this.components);
             this.timerPowerUp = new System.Windows.Forms.Timer(this.components);
             this.timerPowerUpActive = new System.Windows.Forms.Timer(this.components);
+            this.labelPowerUp = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRock)).BeginInit();
             this.panelRock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonRock)).BeginInit();
@@ -473,6 +474,18 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.timerPowerUpActive.Interval = 1000;
             this.timerPowerUpActive.Tick += new System.EventHandler(this.timerPowerUpActive_Tick);
             // 
+            // labelPowerUp
+            // 
+            this.labelPowerUp.AutoSize = true;
+            this.labelPowerUp.BackColor = System.Drawing.Color.Transparent;
+            this.labelPowerUp.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
+            this.labelPowerUp.ForeColor = System.Drawing.Color.White;
+            this.labelPowerUp.Location = new System.Drawing.Point(188, 204);
+            this.labelPowerUp.Name = "labelPowerUp";
+            this.labelPowerUp.Size = new System.Drawing.Size(0, 20);
+            this.labelPowerUp.TabIndex = 0;
+            this.labelPowerUp.Visible = false;
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,6 +493,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.In_Game_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1055, 961);
+            this.Controls.Add(this.labelPowerUp);
             this.Controls.Add(this.panelMiddle);
             this.Controls.Add(this.labelTime);
             this.Controls.Add(this.labelEnemyInfo);
@@ -556,5 +570,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.Timer timerWeaponEnemy;
         private System.Windows.Forms.Timer timerPowerUp;
         private System.Windows.Forms.Timer timerPowerUpActive;
+        private System.Windows.Forms.Label labelPowerUp;
     }
 }

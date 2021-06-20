@@ -79,7 +79,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         public abstract string DisplayData();
         protected string DisplayDataActor()
         {
-            return "(" + Name + ")" + "\n\nHealth: " + Health + "      Life: " + Life;
+            return "(" + Name + ")" + "\n\nHealth: " + Health + "         Life: " + Life;
         }
         public void DisplayPicture(Control displayContainer)
         {

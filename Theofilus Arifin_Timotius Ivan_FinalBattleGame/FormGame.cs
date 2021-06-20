@@ -118,8 +118,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 }
                 if (panelFire.Visible == false)
                 {
-                    player.SetWeapon("FireBall", Properties.Resources.Fireball);
+                    player.SetWeapon("Fire", Properties.Resources.Fireball);
                 }
+                labelPlayerInfo.Text = player.DisplayData();
             }
         }
         public void SelectRock()
@@ -213,6 +214,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
             //Display Player Info
             labelPlayerInfo.Text = player.DisplayData();
+            labelPowerUp.Text = "Power Up: None";
+            labelPowerUp.Visible = true;
         }
         #endregion
 
@@ -574,6 +577,53 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #endregion
 
         #region OptionButton
+        //Design Button Options
+        private void buttonOptions_Click(object sender, EventArgs e)
+        {
+            //Stop Timer
+            timerTime.Stop();
+            timerEnemy.Stop();
+            timerPowerUp.Stop();
+            if (powerUpActive) //Kalau lagi pake power up durasi power upnya di stop dulu
+            {
+                timerPowerUpActive.Stop();
+            }
+            if (!allowThrowWeapon) // Kalau player weapon ada, dihentikan dahulu
+            {
+                timerWeaponPlayer.Stop();
+            }
+            else
+            {
+                DisallowThrowWeapon(ref allowThrowWeapon); // Supya tidak bisa mengeluarkan weapon saat pause
+            }
+            if (enemyThrowingWeapon) // Kalau enemy weapon ada, dihentikan dahulu
+            {
+                timerWeaponEnemy.Stop();
+            }
+
+            //Changing Panel Visibility
+            panelMiddle.Visible = true;
+            panelMiddle.BringToFront();
+            pictureBoxOptions.Visible = true;
+            buttonExit.Visible = true;
+            buttonResume.Visible = true;
+
+            //Buton Weapon Set To Enable False
+            pictureBoxButtonRock.Enabled = false;
+            pictureBoxRock.Enabled = false;
+            pictureBoxButtonKnife.Enabled = false;
+            pictureBoxKnife.Enabled = false;
+            pictureBoxButtonFire.Enabled = false;
+            pictureBoxFire.Enabled = false;
+        }
+        private void buttonOptions_MouseEnter(object sender, EventArgs e)
+        {
+            buttonOptions.BackgroundImage = Properties.Resources.Button_Options_Hover;
+        }
+        private void buttonOptions_MouseLeave(object sender, EventArgs e)
+        {
+            buttonOptions.BackgroundImage = Properties.Resources.Button_Options_Over;
+        }
         //Design Button Resume (Options)
         private void buttonResume_Click(object sender, EventArgs e)
         {
@@ -597,6 +647,14 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             {
                 timerWeaponEnemy.Start();
             }
+
+            //Buton Weapon Set To Enable True
+            pictureBoxButtonRock.Enabled = true;
+            pictureBoxRock.Enabled = true;
+            pictureBoxButtonKnife.Enabled = true;
+            pictureBoxKnife.Enabled = true;
+            pictureBoxButtonFire.Enabled = true;
+            pictureBoxFire.Enabled = true;
         }
         private void buttonResume_MouseEnter(object sender, EventArgs e)
         {
@@ -628,46 +686,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private void buttonExit_MouseLeave(object sender, EventArgs e)
         {
             buttonExit.BackgroundImage = Properties.Resources.Button_Exit_Over;
-        }
-
-        //Design Button Options
-        private void buttonOptions_Click(object sender, EventArgs e)
-        {
-            //Stop Timer
-            timerTime.Stop();
-            timerEnemy.Stop();
-            timerPowerUp.Stop(); 
-            if (powerUpActive) //Kalau lagi pake power up durasi power upnya di stop dulu
-            {
-                timerPowerUpActive.Stop();
-            }
-            if (!allowThrowWeapon) // Kalau player weapon ada, dihentikan dahulu
-            {
-                timerWeaponPlayer.Stop();
-            }
-            else
-            {
-                DisallowThrowWeapon(ref allowThrowWeapon); // Supya tidak bisa mengeluarkan weapon saat pause
-            }
-            if (enemyThrowingWeapon) // Kalau enemy weapon ada, dihentikan dahulu
-            {
-                timerWeaponEnemy.Stop();
-            }
-
-            //Changing Panel Visibility
-            panelMiddle.Visible = true;
-            panelMiddle.BringToFront();
-            pictureBoxOptions.Visible = true;
-            buttonExit.Visible = true;
-            buttonResume.Visible = true;
-        }
-        private void buttonOptions_MouseEnter(object sender, EventArgs e)
-        {
-            buttonOptions.BackgroundImage = Properties.Resources.Button_Options_Hover;
-        }
-        private void buttonOptions_MouseLeave(object sender, EventArgs e)
-        {
-            buttonOptions.BackgroundImage = Properties.Resources.Button_Options_Over;
         }
         #endregion
 
@@ -957,6 +975,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             try
             {
+                if (player.PowerUp.Name != "Life")
+                {
+                    labelPowerUp.Text = "Power Up Time : " + (15 - powerUpActiveTime).ToString(); // Show Power Up Active Time
+                }
                 PowerUpActive(ref powerUpActive);// Set power up status to active
                 AddPowerUpActiveTime(ref powerUpActiveTime); // Power Up Second + 1
                 if (ResetPowerUpActiveTime(ref powerUpActiveTime)) //Check apakah waktu power up sudah habis
@@ -972,6 +994,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     }
                     player.ResetShield();
                     PowerUpInactive(ref powerUpActive);// Set power up status to inactive
+                    labelPowerUp.Text = "Power Up : None";  // Set Power Up Active Time To None
                 }
                 else
                 {
