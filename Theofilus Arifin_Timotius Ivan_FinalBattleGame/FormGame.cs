@@ -19,13 +19,30 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         bool moveUp, moveDown, enemyMoveUp;
         bool allowThrowWeapon, enemyThrowingWeapon = true;
         bool powerUpActive = false;
-        int weaponTime, powerUpTime, powerUpActiveTime = 0;
+        int weaponTime, powerUpTime, powerUpActiveTime, gameSoundTime = 0;
+        private WMPLib.WindowsMediaPlayer wGameSound;
         #endregion
 
         public FormGame()
         {
             InitializeComponent();
         }
+
+        #region SetGameSound
+        private void AddGameSoundTime(ref int gameSoundTime)
+        {
+            gameSoundTime++;
+        }
+        private bool ResetGameSoundTime(ref int gameSoundTime)
+        {
+            if (gameSoundTime >= 12)
+            {
+                gameSoundTime = 0;
+                return true;
+            }
+            return false;
+        }
+        #endregion
 
         #region No Tick Constrols
         //Optimized Controls (No Tick)
@@ -219,6 +236,27 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         }
         #endregion
 
+        #region StatusWeaponButton
+        private void DisabledWeaponButton()
+        {
+            pictureBoxButtonRock.Enabled = false;
+            pictureBoxRock.Enabled = false;
+            pictureBoxButtonKnife.Enabled = false;
+            pictureBoxKnife.Enabled = false;
+            pictureBoxButtonFire.Enabled = false;
+            pictureBoxFire.Enabled = false;
+        }
+        private void EnabledWeaponButton()
+        {
+            pictureBoxButtonRock.Enabled = true;
+            pictureBoxRock.Enabled = true;
+            pictureBoxButtonKnife.Enabled = true;
+            pictureBoxKnife.Enabled = true;
+            pictureBoxButtonFire.Enabled = true;
+            pictureBoxFire.Enabled = true;
+        }
+        #endregion
+
         #region ResetGame
         public void ResetGame()
         {
@@ -237,15 +275,26 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             player.ResetShield();
             player.Remove();
             enemy.Remove();
+            labelEnemyInfo.Visible = true;
+            labelPlayerInfo.Visible = true;
+            labelPowerUp.Visible = true;
+
+            EnabledWeaponButton();
         }
         #endregion
 
-        #region DisenabledControl
-        private void DisenabledControl()
+        #region DisabledControl
+        private void DisabledControl()
         {
             //Set enable to false (buttonOptions)
             buttonOptions.Enabled = false;
             DisallowThrowWeapon(ref allowThrowWeapon);
+
+            labelEnemyInfo.Visible = false;
+            labelPlayerInfo.Visible = false;
+            labelPowerUp.Visible = false;
+
+            DisabledWeaponButton();
         }
         #endregion
 
@@ -298,7 +347,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     if (monsterType == 0)
                     {
                         enemySize = new Size(162, 151);
-                        enemy = new Monster(5, "Dragon", 5, 100, Properties.Resources.Dragon, startingPoint, enemySize, "Only the heat can defeat me");
+                        enemy = new Monster(7, "Dragon", 5, 100, Properties.Resources.Dragon, startingPoint, enemySize, "Only the heat can defeat me");
                         enemy.SetWeapon("Fire", Properties.Resources.Dragon_Weapon);
 
                     }
@@ -313,7 +362,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     else
                     {
                         enemySize = new Size(167, 89);
-                        enemy = new Monster(5, "Dino", 5, 100, Properties.Resources.Dino, startingPoint, enemySize, "Ouch.. no sharp item please..");
+                        enemy = new Monster(6, "Dino", 5, 100, Properties.Resources.Dino, startingPoint, enemySize, "Ouch.. no sharp item please..");
                         enemy.SetWeapon("Claw", Properties.Resources.Dino_Weapon);
                     }
                 }
@@ -323,7 +372,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     if (monsterType == 0)
                     {
                         enemySize = new Size(163, 120);
-                        enemy = new MegaMonster(5, "Mega Dragon", 7, 100, Properties.Resources.Mega_Dragon, startingPoint, enemySize, "Only the heat can defeat me", 30);
+                        enemy = new MegaMonster(7, "Mega Dragon", 7, 100, Properties.Resources.Mega_Dragon, startingPoint, enemySize, "Only the heat can defeat me", 30);
                         enemy.SetWeapon("Fire", Properties.Resources.Mega_Dragon_Weapon);
                     }
                     //Buat MegaGodzilla ==> 1
@@ -337,7 +386,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     else
                     {
                         enemySize = new Size(176, 75);
-                        enemy = new MegaMonster(5, "Mega Dino", 7, 100, Properties.Resources.Mega_Dino, startingPoint, enemySize, "Ouch.. no sharp item please..", 30);
+                        enemy = new MegaMonster(6, "Mega Dino", 7, 100, Properties.Resources.Mega_Dino, startingPoint, enemySize, "Ouch.. no sharp item please..", 30);
                         enemy.SetWeapon("Claw", Properties.Resources.Mega_Dino_Weapon);
                     }
                 }
@@ -441,6 +490,15 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region FormLoad
         private void FormGame_Load(object sender, EventArgs e)
         {
+            //Stop Music Main Menu (MP3)
+            FormMenu.wMenuSound.controls.stop();
+
+            //Play Music (using MP3)
+            wGameSound = new WMPLib.WindowsMediaPlayer();
+            wGameSound.URL = Application.StartupPath + "\\Sound_Game.mp3";
+            wGameSound.controls.play();
+            timerGameSound.Start();
+
             //Create Player
             CreatePlayer();
             timerPlayerMove.Start();
@@ -450,7 +508,15 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region FormClosed
         private void FormGame_FormClosed(object sender, FormClosedEventArgs e)
         {
+            //Play Music (using MP3)
+            FormMenu.wMenuSound.controls.play();
+            wGameSound.controls.stop();
+            timerGameSound.Stop();
+
             ResetGame();
+
+            //Play Again Main Menu Music
+            FormMenu.StopMenuMusic = true;
         }
         #endregion
 
@@ -609,12 +675,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             buttonResume.Visible = true;
 
             //Buton Weapon Set To Enable False
-            pictureBoxButtonRock.Enabled = false;
-            pictureBoxRock.Enabled = false;
-            pictureBoxButtonKnife.Enabled = false;
-            pictureBoxKnife.Enabled = false;
-            pictureBoxButtonFire.Enabled = false;
-            pictureBoxFire.Enabled = false;
+            DisabledWeaponButton();
         }
         private void buttonOptions_MouseEnter(object sender, EventArgs e)
         {
@@ -649,12 +710,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             }
 
             //Buton Weapon Set To Enable True
-            pictureBoxButtonRock.Enabled = true;
-            pictureBoxRock.Enabled = true;
-            pictureBoxButtonKnife.Enabled = true;
-            pictureBoxKnife.Enabled = true;
-            pictureBoxButtonFire.Enabled = true;
-            pictureBoxFire.Enabled = true;
+            EnabledWeaponButton();
         }
         private void buttonResume_MouseEnter(object sender, EventArgs e)
         {
@@ -694,11 +750,13 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             try
             {
+                label1.Text = player.Picture.Top.ToString();
+
                 //Melakukan Pengecekan Weapon
                 SetWeapon();
 
-                //Pada saat pictureBox Enemy ada di di bawah koordinat 280 pictureBox akan turun
-                if (moveUp && player.Picture.Top >= 280)
+                //Pada saat pictureBox Enemy ada di di bawah koordinat 305 pictureBox akan turun
+                if (moveUp && player.Picture.Top >= 305)
                 {
                     player.MoveUp();
                     if (player.ShieldActive) // Check Apakah Ada Shield
@@ -708,8 +766,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     }
                     player.DisplayPicture(this);
                 }
-                //Pada saat pictureBox Enemy ada di atas  koordinat 710, pictureBox akan naik
-                if (moveDown && player.Picture.Top <= 710)
+                //Pada saat pictureBox Enemy ada di atas  koordinat 761, pictureBox akan naik
+                if (moveDown && player.Picture.Top <= 761)
                 {
                     player.MoveDown();
                     if (player.ShieldActive) // Check Apakah Ada Shield
@@ -740,8 +798,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 if (e.KeyCode == Keys.Space && allowThrowWeapon)
                 {
                     //Play Music
-                    //System.Media.SoundPlayer weaponSound = new System.Media.SoundPlayer(Properties.Resources.namaFile);
-                    //weaponSound.Play();
+                    WMPLib.WindowsMediaPlayer wWeaponPlayer = new WMPLib.WindowsMediaPlayer();
+                    wWeaponPlayer.URL = Application.StartupPath + "\\Sound_Weapon_Player.mp3";
+                    wWeaponPlayer.controls.play();
 
                     //Set Weapon
                     player.SetWeapon(player.Weapon.Name, player.Weapon.Picture.Image);
@@ -786,7 +845,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             if (enemy is Monster || enemy is MegaMonster)
             {
                 //Fireball Hit Dragon or Mega Dragon
-                if ((enemy.Name == "Dragon" || enemy.Name == "Mega Dragon") && player.Weapon.Name == "FireBall")
+                if ((enemy.Name == "Dragon" || enemy.Name == "Mega Dragon") && player.Weapon.Name == "Fire")
                 {
                     return true;
                 }
@@ -828,13 +887,13 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             try
             {
-                //Pada saat pictureBox Enemy ada di di bawah koordinat 280 pictureBox akan turun
-                if (enemy.Picture.Top <= 280)
+                //Pada saat pictureBox Enemy ada di di bawah koordinat 305 pictureBox akan turun
+                if (enemy.Picture.Top <= 305)
                 {
                     enemyMoveUp = false;
                 }
-                //Pada saat pictureBox Enemy ada di atas  koordinat 710, pictureBox akan naik
-                else if (enemy.Picture.Top >= 710)
+                //Pada saat pictureBox Enemy ada di atas  koordinat 761, pictureBox akan naik
+                else if (enemy.Picture.Top >= 761)
                 {
                     enemyMoveUp = true;
                 }
@@ -861,6 +920,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     //Tampilkan Weapon Enemy
                     enemy.DisplayWeapon(this);
                     timerWeaponEnemy.Start();
+
+                    //Play Sound Enemy When Attack
+                    WMPLib.WindowsMediaPlayer wWeaponEnemy = new WMPLib.WindowsMediaPlayer();
+                    wWeaponEnemy.URL = Application.StartupPath + "\\Sound_Weapon_Enemy.mp3";
+                    wWeaponEnemy.controls.play();
                 }
             }
             catch (Exception ex)
@@ -895,7 +959,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     buttonResume.Visible = false;
                     buttonExit.Visible = false;
                     //Call method DisenabledControl
-                    DisenabledControl();
+                    DisabledControl();
                 }
                 //Timer Countdown
                 else
@@ -932,6 +996,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 //Kalau PowerUp mengenai Player
                 if (player.PowerUp.Picture.Bounds.IntersectsWith(player.Picture.Bounds))
                 {
+                    //Play Sound PowerUp
+                    WMPLib.WindowsMediaPlayer wPowerUp = new WMPLib.WindowsMediaPlayer();
+                    wPowerUp.URL = Application.StartupPath + "\\Sound_Power_Up.mp3";
+                    wPowerUp.controls.play();
+
                     //timerPowerUp diberhentikan
                     timerPowerUp.Stop();
 
@@ -1032,9 +1101,10 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     //Check Weapon (sesuai dengan kelemahan musuh atau tidak waktu terkena)
                     if (CheckWeapon())
                     {
-                        //Play Music
-                        //System.Media.SoundPlayer hitSound = new System.Media.SoundPlayer(Properties.Resources.namaFile);
-                        //hitSound.Play();
+                        //Jalankan suara hit saat weapon player yang tepat mengenai enemy
+                        WMPLib.WindowsMediaPlayer wWeaponPlayer = new WMPLib.WindowsMediaPlayer();
+                        wWeaponPlayer.URL = Application.StartupPath + "\\Sound_Hit_Enemy.mp3";
+                        wWeaponPlayer.controls.play();
 
                         //Panggil method DefeatEnemy di class Player
                         player.DefeatEnemy(enemy);
@@ -1067,7 +1137,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                             buttonExit.Visible = false;
 
                             //Call method DisenabledControl
-                            DisenabledControl();
+                            DisabledControl();
 
                             // Change Focus supaya teken space ga nyambung ke button click
                             this.Focus();
@@ -1104,6 +1174,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 {
                     if (enemy.Weapon.Picture.Bounds.IntersectsWith(player.Shield.Picture.Bounds))
                     {
+                        //Jalankan suara hit saat weapon enemy mengenai player saat power up shield aktif
+                        WMPLib.WindowsMediaPlayer wShield = new WMPLib.WindowsMediaPlayer();
+                        wShield.URL = Application.StartupPath + "\\Sound_Shield.mp3";
+                        wShield.controls.play();
+
                         RemoveWeaponEnemy();
                         EnemyNotThrowingWeapon(ref enemyThrowingWeapon); // Set enemy throwing weapon status to false;
                     }
@@ -1125,6 +1200,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     //Kalau enemy weapon mengenai player
                     if (enemy.Weapon.Picture.Bounds.IntersectsWith(player.Picture.Bounds))
                     {
+                        //Jalankan suara hit saat weapon enemy mengenai player
+                        WMPLib.WindowsMediaPlayer wWeaponEnemy = new WMPLib.WindowsMediaPlayer();
+                        wWeaponEnemy.URL = Application.StartupPath + "\\Sound_Hit_Player.mp3";
+                        wWeaponEnemy.controls.play();
+
                         RemoveWeaponEnemy();
                         EnemyNotThrowingWeapon(ref enemyThrowingWeapon); // Set enemy throwing weapon status to false;
 
@@ -1160,7 +1240,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                             buttonExit.Visible = false;
 
                             //Call method DisenabledControl
-                            DisenabledControl();
+                            DisabledControl();
 
                             // Change Focus supaya teken space ga nyambung ke button click
                             this.Focus();
@@ -1184,6 +1264,18 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+
+        #region TimerGameSound
+        private void timerGameSound_Tick(object sender, EventArgs e)
+        {
+            AddGameSoundTime(ref gameSoundTime);
+            if (ResetGameSoundTime(ref gameSoundTime))
+            {
+                wGameSound.controls.stop();
+                wGameSound.controls.play();
             }
         }
         #endregion

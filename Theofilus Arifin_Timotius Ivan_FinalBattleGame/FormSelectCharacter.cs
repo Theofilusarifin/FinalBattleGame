@@ -42,11 +42,15 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 {
                     FormMenu.PlayerChoosen = "Woman";
                 }
+
+                //Stop Play Menu Music
+                FormMenu.StopMenuMusic = true;
+
                 Hide();
                 FormGame formGame = new FormGame();
                 formGame.Owner = this;
                 formGame.ShowDialog();
-                //Close();
+                Close();
             }
             catch (Exception ex)
             {

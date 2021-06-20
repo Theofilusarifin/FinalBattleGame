@@ -64,6 +64,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.timerPowerUp = new System.Windows.Forms.Timer(this.components);
             this.timerPowerUpActive = new System.Windows.Forms.Timer(this.components);
             this.labelPowerUp = new System.Windows.Forms.Label();
+            this.timerGameSound = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRock)).BeginInit();
             this.panelRock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonRock)).BeginInit();
@@ -480,11 +482,25 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.labelPowerUp.BackColor = System.Drawing.Color.Transparent;
             this.labelPowerUp.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
             this.labelPowerUp.ForeColor = System.Drawing.Color.White;
-            this.labelPowerUp.Location = new System.Drawing.Point(188, 204);
+            this.labelPowerUp.Location = new System.Drawing.Point(182, 204);
             this.labelPowerUp.Name = "labelPowerUp";
             this.labelPowerUp.Size = new System.Drawing.Size(0, 20);
             this.labelPowerUp.TabIndex = 0;
             this.labelPowerUp.Visible = false;
+            // 
+            // timerGameSound
+            // 
+            this.timerGameSound.Interval = 10000;
+            this.timerGameSound.Tick += new System.EventHandler(this.timerGameSound_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(508, 291);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "label1";
             // 
             // FormGame
             // 
@@ -493,6 +509,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.In_Game_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1055, 961);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelPowerUp);
             this.Controls.Add(this.panelMiddle);
             this.Controls.Add(this.labelTime);
@@ -571,5 +588,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.Timer timerPowerUp;
         private System.Windows.Forms.Timer timerPowerUpActive;
         private System.Windows.Forms.Label labelPowerUp;
+        private System.Windows.Forms.Timer timerGameSound;
+        private System.Windows.Forms.Label label1;
     }
 }

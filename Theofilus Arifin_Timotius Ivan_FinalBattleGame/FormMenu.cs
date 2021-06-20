@@ -14,6 +14,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
     {
         public static string LevelDifficulty;
         public static string PlayerChoosen;
+        public static bool StopMenuMusic = false;
+        public static WMPLib.WindowsMediaPlayer wMenuSound;
+        int menuSoundTime = 0;
         public FormMenu()
         {
             InitializeComponent();
@@ -29,6 +32,22 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 return cp;
             }
         }
+
+        #region MenuSoundTime
+        private void AddMenuSoundTime(ref int menuSoundTime)
+        {
+            menuSoundTime++;
+        }
+        private bool ResetMenuSoundTime(ref int menuSoundTime)
+        {
+            if (menuSoundTime >= 8)
+            {
+                menuSoundTime = 0;
+                return true;
+            }
+            return false;
+        }
+        #endregion
 
         //Design Button New Game
         private void buttonNewGame_MouseLeave(object sender, EventArgs e)
@@ -85,5 +104,27 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Close();
         }
         //End Design Button Quit
+
+        private void FormMenu_Load(object sender, EventArgs e)
+        {
+            //Play Music (using MP3)
+            wMenuSound = new WMPLib.WindowsMediaPlayer();
+            wMenuSound.URL = Application.StartupPath + "\\Sound_Main_Menu.mp3";
+            wMenuSound.controls.play();
+            timerMenuSound.Start();
+        }
+
+        private void timerMenuSound_Tick(object sender, EventArgs e)
+        {
+            if (!StopMenuMusic)
+            {
+                AddMenuSoundTime(ref menuSoundTime);
+                if (ResetMenuSoundTime(ref menuSoundTime))
+                {
+                    wMenuSound.controls.stop();
+                    wMenuSound.controls.play();
+                }
+            }
+        }
     }
 }

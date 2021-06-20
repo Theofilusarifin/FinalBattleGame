@@ -190,9 +190,6 @@
   <data name="Select_Character_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Select Character Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Woman_Death" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Woman Death.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="In_Game_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\In Game Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -207,9 +204,6 @@
   </data>
   <data name="Button_Hard_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Hard Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Man_Rock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Man Rock.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Selected Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Selected Man.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,12 +271,6 @@
   <data name="Unselected_Woman" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Unselected Woman.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Woman_Knife" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Woman Knife.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Man_Death" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Man Death.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dragon.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -292,20 +280,11 @@
   <data name="Almanac Ancient Witch" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Almanac Ancient Witch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Woman_Fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Woman Fire.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Woman_Rock" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Woman Rock.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Button_Resume_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Resume Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Main_Menu_Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Main Menu Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Man_Fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Man Fire.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Active_Background_Man" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Active Background Man.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -369,9 +348,6 @@
   </data>
   <data name="Button_Almanac_Hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Button Almanac Hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Man_Knife" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Man Knife.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Mega_Dragon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Mega Dragon.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

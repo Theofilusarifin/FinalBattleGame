@@ -90,12 +90,6 @@
       <DependentUpon>FormAlmanacWitch.cs</DependentUpon>
     </Compile>
     <Compile Include="GameActor.cs" />
-    <Compile Include="FormMessageBox.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMessageBox.Designer.cs">
-      <DependentUpon>FormMessageBox.cs</DependentUpon>
-    </Compile>
     <Compile Include="MegaMonster.cs" />
     <Compile Include="Monster.cs" />
     <Compile Include="Player.cs" />
@@ -134,9 +128,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAlmanacWitch.resx">
       <DependentUpon>FormAlmanacWitch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMessageBox.resx">
-      <DependentUpon>FormMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -573,6 +564,38 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound Weapon Monster.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound Weapon Player.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound Hit Enemy.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound Hit Player.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound In Game.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound Main Menu.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound Power Up.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

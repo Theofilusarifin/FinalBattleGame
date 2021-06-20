@@ -29,10 +29,12 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonNewGame = new System.Windows.Forms.Button();
             this.buttonAlmanac = new System.Windows.Forms.Button();
             this.buttonQuit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timerMenuSound = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,6 +113,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // timerMenuSound
+            // 
+            this.timerMenuSound.Interval = 10000;
+            this.timerMenuSound.Tick += new System.EventHandler(this.timerMenuSound_Tick);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -129,6 +136,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.Name = "FormMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Final Battle";
+            this.Load += new System.EventHandler(this.FormMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -140,6 +148,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.Button buttonAlmanac;
         private System.Windows.Forms.Button buttonQuit;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Timer timerMenuSound;
     }
 }
 
