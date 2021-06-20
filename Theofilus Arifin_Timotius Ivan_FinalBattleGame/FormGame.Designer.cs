@@ -105,9 +105,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.pictureBoxRock.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxRock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxRock.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Rock;
-            this.pictureBoxRock.Location = new System.Drawing.Point(13, 15);
+            this.pictureBoxRock.Location = new System.Drawing.Point(18, 18);
             this.pictureBoxRock.Name = "pictureBoxRock";
-            this.pictureBoxRock.Size = new System.Drawing.Size(61, 58);
+            this.pictureBoxRock.Size = new System.Drawing.Size(49, 47);
             this.pictureBoxRock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxRock.TabIndex = 5;
             this.pictureBoxRock.TabStop = false;

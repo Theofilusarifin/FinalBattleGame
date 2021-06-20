@@ -17,7 +17,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         Enemy enemy;
         Time time;
         bool moveUp, moveDown, enemyMoveUp;
-        bool allowThrowWeapon = true;
+        bool allowThrowWeapon, enemyThrowingWeapon = true;
+        bool powerUpActive = false;
         int weaponTime, powerUpTime, powerUpActiveTime = 0;
         #endregion
 
@@ -70,9 +71,27 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             }
             return false;
         }
+
+        //Set Wether power up is active or not when paused
+        private void PowerUpActive(ref bool powerUpActive)
+        {
+            powerUpActive = true;
+        }
+        private void PowerUpInactive(ref bool powerUpActive)
+        {
+            powerUpActive = false;
+        }
         #endregion
 
         #region SetThrowWeapon
+        private void EnemyThrowingWeapon (ref bool enemyThrowingWeapon)
+        {
+            enemyThrowingWeapon = true;
+        }
+        private void EnemyNotThrowingWeapon(ref bool enemyThrowingWeapon)
+        {
+            enemyThrowingWeapon = false;
+        }
         private void AllowThrowWeapon(ref bool allowThrowWeapon)
         {
             allowThrowWeapon = true;
@@ -500,6 +519,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 buttonPlayAgain.Visible = false;
                 buttonQuitGame.Visible = false;
                 pictureBoxNotifications.Visible = false;
+                
+                //set supaya bisa tekan option lagi
+                buttonOptions.Enabled = true;
 
                 //Change The focus, supaya ga nge bug waktu tekan space
                 this.Focus();
@@ -555,7 +577,26 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         //Design Button Resume (Options)
         private void buttonResume_Click(object sender, EventArgs e)
         {
+            //Changing panel visibility
             panelMiddle.Visible = false;
+            this.Focus();
+
+            // Start Timer Back
+            timerTime.Start();
+            timerEnemy.Start();
+            timerPowerUp.Start();
+            if (powerUpActive) //Kalau lagi pake power up di kembalikan waktunya
+            {
+                timerPowerUpActive.Start();
+            }
+            if (!allowThrowWeapon) // Kalau player weapon ada, dijalankan kembali
+            {
+                timerWeaponPlayer.Start();
+            }
+            if (enemyThrowingWeapon) // Kalau enemy weapon ada, dijalankan kembali
+            {
+                timerWeaponEnemy.Start();
+            }
         }
         private void buttonResume_MouseEnter(object sender, EventArgs e)
         {
@@ -573,7 +614,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             {
                 this.Close();
 
-                ResetGame();
+                ResetGame(); //Memastikan Control Lama Hilang Semua
             }
             catch (Exception ex)
             {
@@ -592,7 +633,30 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         //Design Button Options
         private void buttonOptions_Click(object sender, EventArgs e)
         {
+            //Stop Timer
+            timerTime.Stop();
+            timerEnemy.Stop();
+            timerPowerUp.Stop(); 
+            if (powerUpActive) //Kalau lagi pake power up durasi power upnya di stop dulu
+            {
+                timerPowerUpActive.Stop();
+            }
+            if (!allowThrowWeapon) // Kalau player weapon ada, dihentikan dahulu
+            {
+                timerWeaponPlayer.Stop();
+            }
+            else
+            {
+                DisallowThrowWeapon(ref allowThrowWeapon); // Supya tidak bisa mengeluarkan weapon saat pause
+            }
+            if (enemyThrowingWeapon) // Kalau enemy weapon ada, dihentikan dahulu
+            {
+                timerWeaponEnemy.Stop();
+            }
+
+            //Changing Panel Visibility
             panelMiddle.Visible = true;
+            panelMiddle.BringToFront();
             pictureBoxOptions.Visible = true;
             buttonExit.Visible = true;
             buttonResume.Visible = true;
@@ -774,6 +838,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     //Set Weapon Enemy
                     enemy.SetWeapon(enemy.Weapon.Name, enemy.Weapon.Picture.Image);
 
+                    EnemyThrowingWeapon(ref enemyThrowingWeapon); // Set enemy throwing weapon status to true
+
                     //Tampilkan Weapon Enemy
                     enemy.DisplayWeapon(this);
                     timerWeaponEnemy.Start();
@@ -891,6 +957,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             try
             {
+                PowerUpActive(ref powerUpActive);// Set power up status to active
                 AddPowerUpActiveTime(ref powerUpActiveTime); // Power Up Second + 1
                 if (ResetPowerUpActiveTime(ref powerUpActiveTime)) //Check apakah waktu power up sudah habis
                 {
@@ -904,6 +971,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                         player.RemoveShield();
                     }
                     player.ResetShield();
+                    PowerUpInactive(ref powerUpActive);// Set power up status to inactive
                 }
                 else
                 {
@@ -1014,11 +1082,13 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     if (enemy.Weapon.Picture.Bounds.IntersectsWith(player.Shield.Picture.Bounds))
                     {
                         RemoveWeaponEnemy();
+                        EnemyNotThrowingWeapon(ref enemyThrowingWeapon); // Set enemy throwing weapon status to false;
                     }
                     //Kalau Weapon sudah melewati Player
                     else if (enemy.Weapon.Picture.Location.X <= -50) //Koordinat -50 merupakan batas form game
                     {
                         RemoveWeaponEnemy();
+                        EnemyNotThrowingWeapon(ref enemyThrowingWeapon); // Set enemy throwing weapon status to false;
                     }
                     //Kalau Weapon Berjalan Menuju Player
                     else
@@ -1033,6 +1103,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     if (enemy.Weapon.Picture.Bounds.IntersectsWith(player.Picture.Bounds))
                     {
                         RemoveWeaponEnemy();
+                        EnemyNotThrowingWeapon(ref enemyThrowingWeapon); // Set enemy throwing weapon status to false;
 
                         //Panggil method DefeatEnemy di class Player
                         enemy.DefeatPlayer(player, FormMenu.LevelDifficulty);
@@ -1077,6 +1148,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                     else if (enemy.Weapon.Picture.Location.X <= -50) //Koordinat -50 merupakan batas form game
                     {
                         RemoveWeaponEnemy();
+                        EnemyNotThrowingWeapon(ref enemyThrowingWeapon); // Set enemy throwing weapon status to false;
                     }
                     //Kalau Weapon Berjalan Menuju Player
                     else
