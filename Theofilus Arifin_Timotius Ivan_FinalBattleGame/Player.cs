@@ -12,18 +12,16 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         #region FIELDS
         private string description;
         private int score;
-        private Ultimate ultimate;
         private WeaponPlayer weapon;
         private PowerUp powerUp;
         private Shield shield;
         private int speed;
         private int attackGained;
         private bool shieldActive;
-        private bool ultimateActive;
         #endregion
 
         #region CONSTRUCTORS
-        public Player(string name, int life, int health, Image image, Point position, Size size, string description, int score, int speed, bool ultimateActive) : 
+        public Player(string name, int life, int health, Image image, Point position, Size size, string description, int score, int speed) : 
                 base ( name, life, health, image, position, size)
         {
             this.Description = description;
@@ -58,11 +56,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 }
             } 
         }
-        public Ultimate Ultimate 
-        { 
-            get => ultimate; 
-            set => ultimate = value; 
-        }
         public WeaponPlayer Weapon 
         { 
             get => weapon; 
@@ -92,11 +85,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             get => shieldActive;
             private set => shieldActive = value;
-        }
-        public bool UltimateActive
-        {
-            get => ultimateActive;
-            set => ultimateActive = value;
         }
         #endregion
 

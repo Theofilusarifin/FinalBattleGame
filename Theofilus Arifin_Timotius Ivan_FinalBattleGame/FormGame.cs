@@ -26,8 +26,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             InitializeComponent();
         }
 
-        #region No Lag Method
-        //Optimized Form (Loading Screen)
+        #region No Tick Constrols
+        //Optimized Controls (No Tick)
         protected override CreateParams CreateParams
         {
             get
@@ -153,7 +153,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         // To reset weapon time, biar bilangan ga terlalu gede dan lag
         private void ResetWeaponTime(ref int weaponTime)
         {
-            if (weaponTime > 100)
+            if (weaponTime > 50)
             {
                 weaponTime = 0;
             }
@@ -165,21 +165,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             timerWeaponEnemy.Stop();
             enemy.RemoveWeapon();
-        }
-        #endregion
-
-        #region UseUltimate
-        private void pictureBoxButtonUltimate_Click(object sender, EventArgs e)
-        {
-            panelUltimate.BackgroundImage = Properties.Resources.Inactive_Ultimate;
-            pictureBoxUltimateIcon.Hide();
-            pictureBoxButtonUltimate.Hide();
-        }
-        private void pictureBoxUltimateIcon_Click(object sender, EventArgs e)
-        {
-            panelUltimate.BackgroundImage = Properties.Resources.Inactive_Ultimate;
-            pictureBoxUltimateIcon.Hide();
-            pictureBoxButtonUltimate.Hide();
         }
         #endregion
 
@@ -255,11 +240,11 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             Size playerSize = new Size(70, 107);
             if (FormMenu.PlayerChoosen == "Man")
             {
-                player = new Player("INCREDIBLE BOY", 10, 100, Properties.Resources.Man_Idle, startingPoint, playerSize, "I'm the superhero with incredible strength amd honor", 0, 15, false);
+                player = new Player("INCREDIBLE BOY", 10, 100, Properties.Resources.Man_Idle, startingPoint, playerSize, "I'm the superhero with incredible strength amd honor", 0, 15);
             }
             else
             {
-                player = new Player("PERFECTA GIRL", 10, 100, Properties.Resources.Woman_Idle, startingPoint, playerSize, "I'm the superhero with calm and perfect play", 0, 15, false);
+                player = new Player("PERFECTA GIRL", 10, 100, Properties.Resources.Woman_Idle, startingPoint, playerSize, "I'm the superhero with calm and perfect play", 0, 15);
             }
         }
         #endregion
@@ -341,26 +326,53 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                 //Daftar random --> 0 = Broom Witch, 1 = Ancient Witch, 2 = Green Witch
                 int witchType = random.Next(3);
 
-                //Buat Broom Witch ==> 0
-                if (witchType == 0)
+                if (FormMenu.LevelDifficulty == "Easy")
                 {
-                    enemySize = new Size(112, 98);
-                    enemy = new Witch(5, "Broom Witch", 1, 100, Properties.Resources.Broom_Witch, startingPoint, enemySize, 10);
-                    enemy.SetWeapon("Sphere Energy", Properties.Resources.Broom_Witch_Weapon);
+                    //Buat Broom Witch ==> 0
+                    if (witchType == 0)
+                    {
+                        enemySize = new Size(112, 98);
+                        enemy = new Witch(5, "Broom Witch", 1, 100, Properties.Resources.Broom_Witch, startingPoint, enemySize, 10);
+                        enemy.SetWeapon("Sphere Energy", Properties.Resources.Broom_Witch_Weapon);
+                    }
+                    //Buat Ancient Witch ==> 1
+                    else if (witchType == 1)
+                    {
+                        enemySize = new Size(84, 104);
+                        enemy = new Witch(5, "Ancient Witch", 3, 100, Properties.Resources.Ancient_Witch, startingPoint, enemySize, 20);
+                        enemy.SetWeapon("Cursed Spell", Properties.Resources.Ancient_Witch_Weapon);
+                    }
+                    //Buat Green Witch ==> 2
+                    else
+                    {
+                        enemySize = new Size(131, 98);
+                        enemy = new Witch(5, "Green Witch", 5, 100, Properties.Resources.Green_Witch, startingPoint, enemySize, 50);
+                        enemy.SetWeapon("Green Spirit", Properties.Resources.Green_Witch_Weapon);
+                    }
                 }
-                //Buat Ancient Witch ==> 1
-                else if (witchType == 1)
-                {
-                    enemySize = new Size(84, 104);
-                    enemy = new Witch(5, "Ancient Witch", 3, 100, Properties.Resources.Ancient_Witch, startingPoint, enemySize, 20);
-                    enemy.SetWeapon("Cursed Spell", Properties.Resources.Ancient_Witch_Weapon);
-                }
-                //Buat Green Witch ==> 2
                 else
                 {
-                    enemySize = new Size(131, 98);
-                    enemy = new Witch(5, "Green Witch", 5, 100, Properties.Resources.Green_Witch, startingPoint, enemySize, 50);
-                    enemy.SetWeapon("Green Spirit", Properties.Resources.Green_Witch_Weapon);
+                    //Buat Broom Witch ==> 0
+                    if (witchType == 0)
+                    {
+                        enemySize = new Size(112, 98);
+                        enemy = new Witch(5, "Broom Witch", 3, 100, Properties.Resources.Broom_Witch, startingPoint, enemySize, 10);
+                        enemy.SetWeapon("Sphere Energy", Properties.Resources.Broom_Witch_Weapon);
+                    }
+                    //Buat Ancient Witch ==> 1
+                    else if (witchType == 1)
+                    {
+                        enemySize = new Size(84, 104);
+                        enemy = new Witch(5, "Ancient Witch", 5, 100, Properties.Resources.Ancient_Witch, startingPoint, enemySize, 20);
+                        enemy.SetWeapon("Cursed Spell", Properties.Resources.Ancient_Witch_Weapon);
+                    }
+                    //Buat Green Witch ==> 2
+                    else
+                    {
+                        enemySize = new Size(131, 98);
+                        enemy = new Witch(5, "Green Witch", 7, 100, Properties.Resources.Green_Witch, startingPoint, enemySize, 50);
+                        enemy.SetWeapon("Green Spirit", Properties.Resources.Green_Witch_Weapon);
+                    }
                 }
             }
 
@@ -757,7 +769,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
                 ResetWeaponTime(ref weaponTime); //Reset WeaponTime apabila sudah lebih dari 100
                 AddWeaponTime(ref weaponTime); //Weapon Time ditambah
-                if (weaponTime % 100 == 0) //Tiap kelipatan 100, Enemy menembakkan weapon
+                if (weaponTime % 50 == 0) //Tiap kelipatan 50, Enemy menembakkan weapon
                 {
                     //Set Weapon Enemy
                     enemy.SetWeapon(enemy.Weapon.Name, enemy.Weapon.Picture.Image);
@@ -879,7 +891,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         {
             try
             {
-                label1.Text = powerUpActiveTime.ToString();
                 AddPowerUpActiveTime(ref powerUpActiveTime); // Power Up Second + 1
                 if (ResetPowerUpActiveTime(ref powerUpActiveTime)) //Check apakah waktu power up sudah habis
                 {
@@ -967,6 +978,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
                             //Call method DisenabledControl
                             DisenabledControl();
 
+                            // Change Focus supaya teken space ga nyambung ke button click
+                            this.Focus();
                         }
                     }
                 }
@@ -1054,6 +1067,9 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
                             //Call method DisenabledControl
                             DisenabledControl();
+
+                            // Change Focus supaya teken space ga nyambung ke button click
+                            this.Focus();
                         }
 
                     }

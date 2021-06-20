@@ -8,20 +8,19 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Player">
-    <Position X="5.25" Y="5.5" Width="1.5" />
+    <Position X="4.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEkAEIBEAEgAQoBICGIAAIBCAAAA0gEQAhAEAoAFCA=</HashCode>
+      <HashCode>AAEgAEIBEAEgAQoBICGIAAIBCAAAA0gEQAhAEAogECA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Ultimate" />
       <Property Name="Weapon" />
       <Property Name="PowerUp" />
       <Property Name="Shield" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Enemy">
-    <Position X="8.5" Y="5.75" Width="1.5" />
+    <Position X="8.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEgAAAAAAAAAAAAAAAAAAABCAAAAUgAQAhAAAAAICA=</HashCode>
       <FileName>Enemy.cs</FileName>
@@ -31,21 +30,21 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.WeaponPlayer">
-    <Position X="2.75" Y="6.25" Width="1.5" />
+    <Position X="1" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAIAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>WeaponPlayer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Monster">
-    <Position X="7.25" Y="11" Width="1.5" />
+    <Position X="6.5" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Monster.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Witch">
-    <Position X="9.75" Y="11" Width="1.5" />
+    <Position X="8.5" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEA=</HashCode>
       <FileName>Witch.cs</FileName>
@@ -58,38 +57,31 @@
       <FileName>Time.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Ultimate">
-    <Position X="2.75" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Ultimate.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.PowerUp">
-    <Position X="2.75" Y="9.5" Width="1.5" />
+    <Position X="1" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAIAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PowerUps.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.WeaponEnemy">
-    <Position X="11" Y="6.75" Width="1.5" />
+    <Position X="11.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAIAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>WeaponEnemy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.MegaMonster">
-    <Position X="12" Y="11" Width="1.5" />
+    <Position X="10.5" Y="11" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAEAIAAAAAAAAAAAAAEAIAA=</HashCode>
       <FileName>MegaMonster.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Shield">
-    <Position X="2.75" Y="12.5" Width="1.5" />
+    <Position X="1" Y="11" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAgAAAAIAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>Shield.cs</FileName>
     </TypeIdentifier>
   </Class>

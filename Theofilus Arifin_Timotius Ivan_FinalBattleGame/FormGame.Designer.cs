@@ -47,9 +47,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.labelTime = new System.Windows.Forms.Label();
             this.labelPlayerInfo = new System.Windows.Forms.Label();
             this.labelEnemyInfo = new System.Windows.Forms.Label();
-            this.panelUltimate = new System.Windows.Forms.Panel();
-            this.pictureBoxUltimateIcon = new System.Windows.Forms.PictureBox();
-            this.pictureBoxButtonUltimate = new System.Windows.Forms.PictureBox();
             this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.timerEnemy = new System.Windows.Forms.Timer(this.components);
             this.timerWeaponPlayer = new System.Windows.Forms.Timer(this.components);
@@ -66,7 +63,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.timerWeaponEnemy = new System.Windows.Forms.Timer(this.components);
             this.timerPowerUp = new System.Windows.Forms.Timer(this.components);
             this.timerPowerUpActive = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRock)).BeginInit();
             this.panelRock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonRock)).BeginInit();
@@ -79,9 +75,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panelUltimate.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUltimateIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonUltimate)).BeginInit();
             this.panelMiddle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOptions)).BeginInit();
@@ -286,42 +279,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.labelEnemyInfo.Size = new System.Drawing.Size(0, 20);
             this.labelEnemyInfo.TabIndex = 2;
             // 
-            // panelUltimate
-            // 
-            this.panelUltimate.BackColor = System.Drawing.Color.Transparent;
-            this.panelUltimate.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Active_Ultimate_Background;
-            this.panelUltimate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelUltimate.Controls.Add(this.pictureBoxUltimateIcon);
-            this.panelUltimate.Controls.Add(this.pictureBoxButtonUltimate);
-            this.panelUltimate.Location = new System.Drawing.Point(42, 853);
-            this.panelUltimate.Name = "panelUltimate";
-            this.panelUltimate.Size = new System.Drawing.Size(86, 86);
-            this.panelUltimate.TabIndex = 8;
-            // 
-            // pictureBoxUltimateIcon
-            // 
-            this.pictureBoxUltimateIcon.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxUltimateIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxUltimateIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxUltimateIcon.Image = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.Active_Ultimate_Gif;
-            this.pictureBoxUltimateIcon.Location = new System.Drawing.Point(11, 11);
-            this.pictureBoxUltimateIcon.Name = "pictureBoxUltimateIcon";
-            this.pictureBoxUltimateIcon.Size = new System.Drawing.Size(65, 67);
-            this.pictureBoxUltimateIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxUltimateIcon.TabIndex = 9;
-            this.pictureBoxUltimateIcon.TabStop = false;
-            this.pictureBoxUltimateIcon.Click += new System.EventHandler(this.pictureBoxUltimateIcon_Click);
-            // 
-            // pictureBoxButtonUltimate
-            // 
-            this.pictureBoxButtonUltimate.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxButtonUltimate.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxButtonUltimate.Name = "pictureBoxButtonUltimate";
-            this.pictureBoxButtonUltimate.Size = new System.Drawing.Size(86, 86);
-            this.pictureBoxButtonUltimate.TabIndex = 32;
-            this.pictureBoxButtonUltimate.TabStop = false;
-            this.pictureBoxButtonUltimate.Click += new System.EventHandler(this.pictureBoxButtonUltimate_Click);
-            // 
             // timerTime
             // 
             this.timerTime.Interval = 1000;
@@ -516,15 +473,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.timerPowerUpActive.Interval = 1000;
             this.timerPowerUpActive.Tick += new System.EventHandler(this.timerPowerUpActive_Tick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(499, 276);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "label1";
-            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -532,10 +480,8 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             this.BackgroundImage = global::Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties.Resources.In_Game_Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1055, 961);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelMiddle);
             this.Controls.Add(this.labelTime);
-            this.Controls.Add(this.panelUltimate);
             this.Controls.Add(this.labelEnemyInfo);
             this.Controls.Add(this.labelPlayerInfo);
             this.Controls.Add(this.panelFire);
@@ -569,9 +515,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panelUltimate.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUltimateIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtonUltimate)).EndInit();
             this.panelMiddle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNotifications)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOptions)).EndInit();
@@ -597,9 +540,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.Label labelTime;
         private System.Windows.Forms.Label labelPlayerInfo;
         private System.Windows.Forms.Label labelEnemyInfo;
-        private System.Windows.Forms.Panel panelUltimate;
-        private System.Windows.Forms.PictureBox pictureBoxUltimateIcon;
-        private System.Windows.Forms.PictureBox pictureBoxButtonUltimate;
         private System.Windows.Forms.Timer timerTime;
         private System.Windows.Forms.Timer timerEnemy;
         private System.Windows.Forms.Timer timerWeaponPlayer;
@@ -616,6 +556,5 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
         private System.Windows.Forms.Timer timerWeaponEnemy;
         private System.Windows.Forms.Timer timerPowerUp;
         private System.Windows.Forms.Timer timerPowerUpActive;
-        private System.Windows.Forms.Label label1;
     }
 }

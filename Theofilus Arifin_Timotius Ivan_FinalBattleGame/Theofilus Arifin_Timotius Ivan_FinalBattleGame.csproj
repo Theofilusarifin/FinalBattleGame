@@ -110,7 +110,6 @@
     <Compile Include="Round.cs" />
     <Compile Include="Shield.cs" />
     <Compile Include="Time.cs" />
-    <Compile Include="Ultimate.cs" />
     <Compile Include="Weapon.cs" />
     <Compile Include="WeaponEnemy.cs" />
     <Compile Include="WeaponPlayer.cs" />

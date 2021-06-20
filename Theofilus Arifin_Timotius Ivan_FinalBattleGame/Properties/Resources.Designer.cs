@@ -83,26 +83,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Active_Ultimate_Background {
-            get {
-                object obj = ResourceManager.GetObject("Active Ultimate Background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Active_Ultimate_Gif {
-            get {
-                object obj = ResourceManager.GetObject("Active Ultimate Gif", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Almanac_Ancient_Witch {
             get {
                 object obj = ResourceManager.GetObject("Almanac Ancient Witch", resourceCulture);
@@ -716,16 +696,6 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame.Properties {
         internal static System.Drawing.Bitmap In_Game_Background {
             get {
                 object obj = ResourceManager.GetObject("In_Game_Background", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Inactive_Ultimate {
-            get {
-                object obj = ResourceManager.GetObject("Inactive Ultimate", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
