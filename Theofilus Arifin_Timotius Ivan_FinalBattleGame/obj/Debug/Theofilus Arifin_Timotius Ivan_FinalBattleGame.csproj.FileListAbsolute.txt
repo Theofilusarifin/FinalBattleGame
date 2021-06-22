@@ -52,3 +52,4 @@ C:\Users\Timotius\Dropbox\My PC (LAPTOP-3M0G38V0)\Documents\Github Desktop\OOP U
 C:\Users\Timotius\Dropbox\My PC (LAPTOP-3M0G38V0)\Documents\Github Desktop\OOP UAS\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Theofilus Arifin_Timotius Ivan_FinalBattleGame.csproj.AssemblyReference.cache
 C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Interop.WMPLib.dll
 C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Theofilus Arifin_Timotius Ivan_FinalBattleGame.csproj.ResolveComReference.cache
+C:\Users\asus\Documents\GitHub\FinalBattleGame\Theofilus Arifin_Timotius Ivan_FinalBattleGame\obj\Debug\Theofilus Arifin_Timotius Ivan_FinalBattleGame.csproj.AssemblyReference.cache

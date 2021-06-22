@@ -495,7 +495,7 @@ namespace Theofilus_Arifin_Timotius_Ivan_FinalBattleGame
 
             //Play Music (using MP3)
             wGameSound = new WMPLib.WindowsMediaPlayer();
-            wGameSound.URL = Application.StartupPath + "\\Sound_Game.mp3";
+            wGameSound.URL = Application.StartupPath /*+ "\\Sound_Game.mp3"*/;
             wGameSound.controls.play();
             timerGameSound.Start();
 
